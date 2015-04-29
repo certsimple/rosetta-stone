@@ -15,7 +15,7 @@ As above.
 #### OpenBSD
 	whoami
 #### SmartOS
-	?
+	whoami
 
 ### Host name
 
@@ -35,7 +35,7 @@ As above.
 As above.
 
 
-### Run as a different user
+### Run command as a different user
 
 #### Windows Server
 	runas /user:[machine or domain name]\[admin account name] [command]
@@ -43,10 +43,10 @@ As above.
 	sudo [command]
 [System Administrator's Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sect-Gaining_Privileges-The_sudo_Command.html)
 #### Debian
-	sudo -i
+	sudo [command]
 [Debian Reference](https://www.debian.org/doc/manuals/debian-reference/)
 #### Ubuntu
-	sudo -i
+	sudo [command]
 [Ubuntu Help](https://help.ubuntu.com/community/RootSudo)
 #### OS X
 	sudo [command]
@@ -55,7 +55,7 @@ As above.
 	sudo [command]
 [Manual](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man8/sudo.8)
 #### SmartOS
-	?
+	sudo [command]
 
 
 ### Run shell as a different user
@@ -75,7 +75,7 @@ As above.
 #### OpenBSD
 	sudo -i
 #### SmartOS
-	?
+	sudo -i
 
 ## Hardware Inspection
 
@@ -84,6 +84,7 @@ As above.
 
 #### Windows Server
 	Get-WmiObject -Class Win32_BIOS
+[Technet](https://technet.microsoft.com/en-us/library/ee176860.aspx)
 #### Red Hat Enterprise Linux
 	dmidecode
 #### Debian
@@ -101,6 +102,7 @@ As above.
 ### CPU info
 #### Windows Server
 	Get-WmiObject -Class Win32_Processor
+[Technet](http://blogs.technet.com/b/heyscriptingguy/archive/2011/09/26/use-powershell-and-wmi-to-get-processor-information.aspx)
 #### Red Hat Enterprise Linux
 	less /proc/cpuinfo
 #### Debian
@@ -112,12 +114,13 @@ As above.
 #### OpenBSD
 	sysctl hw.ncpu
 #### SmartOS
-	?
+	sysinfo
+[Manual](https://smartos.org/man/1m/sysinfo)
 
 ### Physical memory
 
 #### Windows Server
-	Get-WmiObject -Class  Win32_PhysicalMemory
+	Get-WmiObject -Class Win32_PhysicalMemory
 #### Red Hat Enterprise Linux
 	less /proc/meminfo
 #### Debian
@@ -128,6 +131,9 @@ As above.
 	system_profiler SPMemoryDataType
 #### OpenBSD
 	?
+#### SmartOS
+	sysinfo
+[Manual](https://smartos.org/man/1m/sysinfo)
 
 ## Network Connectivity
 
@@ -193,10 +199,12 @@ As above.
 As above.
 #### OS X
 	ifconfig
+[Manual](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/ifconfig.8.html)
 #### OpenBSD
 	ifconfig
+[Manual](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man8/ifconfig.8?query=ifconfig)
 #### SmartOS
-	?
+[Manual](https://smartos.org/man/1M/ifconfig)
 
 ### Ethernet connectivity
 #### Windows Server
@@ -360,13 +368,14 @@ Apple System Log (also called ASL)
 
 ### Watch logs interactively
 #### Windows Server
-	?
+	Get-Eventlog [log name] -Newest 200
 #### Red Hat Enterprise Linux
-	?
+	journalctl -u [service name]
 #### Debian
-	?
+	journalctl -u [service name]
 #### Ubuntu
-	?
+	tail -f [syslog log file]
+See /etc/syslog.conf for log destinations.
 #### OS X
 	?
 #### OpenBSD
@@ -376,45 +385,63 @@ Apple System Log (also called ASL)
 
 
 ## Packaging
+
+### Searching for packages
+#### Windows Server
+	Find-Package [search term]
+[Package Management wiki](https://github.com/OneGet/oneget/wiki/cmdlets)
+#### Red Hat Enterprise Linux
+	yum search [search term]
+[System Administrator's Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sec-Working_with_Packages.html#sec-Searching_Packages)
+#### Debian
+	?
+#### Ubuntu
+	?
+#### OS X
+	brew search [search term]
+[Homebrew manual](https://github.com/Homebrew/homebrew/blob/master/Library/Homebrew/manpages/brew.1.md)
+#### OpenBSD
+	?
+#### SmartOS
+	?
+
 ### Install package file
 #### Windows Server
-	msiexec /package [msi file] /quiet
-[Reference](https://msdn.microsoft.com/en-us/library/aa372024%28v=vs.85%29.aspx)
+	Install-Package
+[Package Management wiki](https://github.com/OneGet/oneget/wiki/cmdlets)
 #### Red Hat Enterprise Linux
 	yum install [package name]
-or if the file is already downloaded:
-
-	rpm -Uvh [rpm file]
+[System Administrator's Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sec-Working_with_Packages.html#sec-Removing)
 #### Debian
-	dpkg -i [deb file]
+	apt-get install [package name]
+[Debian wiki](https://wiki.debian.org/DebianPackageManagement)
 #### Ubuntu
-As above.
+	apt-get install [package name]
+[Ubuntu LTS wiki](https://help.ubuntu.com/lts/serverguide/apt-get.html)
 #### OS X
-	?
+	brew install [package name]
+[Homebrew FAQ](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/FAQ.md)
 #### OpenBSD
 	pkg_add
 #### SmartOS
-	pkg_add
+	pkg_add [package name]
 
 ### Uninstall package
 #### Windows Server
-	$app = Get-WmiObject -Class Win32_Product | Where-Object {
-		$_.Name -match "Software Name"
-	}
-	$app.Uninstall()
+	Uninstall-Package
+[Package Management wiki](https://github.com/OneGet/oneget/wiki/cmdlets)
 #### Red Hat Enterprise Linux
 	yum remove [package name]
-or
-
-	rpm -e [package name]
+[System Administrator's Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sec-Working_with_Packages.html#sec-Removing)
 #### Debian
 	apt-get remove [package name]
 #### Ubuntu
 As above.
 #### OS X
-	?
+	brew uninstall [package name]
+[Homebrew FAQ](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/FAQ.md)
 #### OpenBSD
-	?
+	pkg_delete [package name]
 #### SmartOS
 	?
 
@@ -422,16 +449,19 @@ As above.
 
 ### List all installed packages
 #### Windows Server
-	Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | select DisplayName, Publisher, InstallDate
-[TechNet](http://blogs.technet.com/b/heyscriptingguy/archive/2013/11/15/use-powershell-to-find-installed-software.aspx)
+	Get-Package
+[Package Management wiki](https://github.com/OneGet/oneget/wiki/cmdlets)
 #### Red Hat Enterprise Linux
-	rpm -qa
+	yum list installed
+[System Administrator's Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sec-Working_with_Packages.html#sec-Listing_Packages)
 #### Debian
 	dpkg -l
 #### Ubuntu
-As above.
+	dpkg -l
+[Ubuntu LTS wiki](https://help.ubuntu.com/lts/serverguide/dpkg.html)
 #### OS X
-	?
+	brew list
+[Homebrew manual](https://github.com/Homebrew/homebrew/blob/master/Library/Homebrew/manpages/brew.1.md)
 #### OpenBSD
 	pkg_info
 #### SmartOS

@@ -21,7 +21,7 @@
           "<p><code>whoami\n</code></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p><code>whoami\n</code></p>"
         ]
       },
       "Host name": {
@@ -47,7 +47,7 @@
           "<p><code>hostname\n</code></p>"
         ]
       },
-      "Run as a different user": {
+      "Run command as a different user": {
         "Windows Server": [
           "<p><code>runas /user:[machine or domain name]\\[admin account name] [command]\n</code></p>"
         ],
@@ -56,11 +56,11 @@
           "<p><a href=\"https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sect-Gaining_Privileges-The_sudo_Command.html\">System Administrator's Guide</a></p>"
         ],
         "Debian": [
-          "<p><code>sudo -i\n</code></p>",
+          "<p><code>sudo [command]\n</code></p>",
           "<p><a href=\"https://www.debian.org/doc/manuals/debian-reference/\">Debian Reference</a></p>"
         ],
         "Ubuntu": [
-          "<p><code>sudo -i\n</code></p>",
+          "<p><code>sudo [command]\n</code></p>",
           "<p><a href=\"https://help.ubuntu.com/community/RootSudo\">Ubuntu Help</a></p>"
         ],
         "OS X": [
@@ -72,7 +72,7 @@
           "<p><a href=\"http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man8/sudo.8\">Manual</a></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p><code>sudo [command]\n</code></p>"
         ]
       },
       "Run shell as a different user": {
@@ -98,7 +98,7 @@
           "<p><code>sudo -i\n</code></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p><code>sudo -i\n</code></p>"
         ]
       }
     },
@@ -254,13 +254,15 @@
           "<p><code>ip addr\n</code></p>"
         ],
         "OS X": [
-          "<p><code>ifconfig\n</code></p>"
+          "<p><code>ifconfig\n</code></p>",
+          "<p><a href=\"https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/ifconfig.8.html\">Manual</a></p>"
         ],
         "OpenBSD": [
-          "<p><code>ifconfig\n</code></p>"
+          "<p><code>ifconfig\n</code></p>",
+          "<p><a href=\"http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man8/ifconfig.8?query=ifconfig\">Manual</a></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p><a href=\"https://smartos.org/man/1M/ifconfig\">Manual</a></p>"
         ]
       },
       "whois": {
@@ -464,16 +466,17 @@
       },
       "Watch logs interactively": {
         "Windows Server": [
-          "<p><code>?\n</code></p>"
+          "<p><code>Get-Eventlog [log name] -Newest 200\n</code></p>"
         ],
         "Red Hat Enterprise Linux": [
-          "<p><code>?\n</code></p>"
+          "<p><code>journalctl -u [service name]\n</code></p>"
         ],
         "Debian": [
-          "<p><code>?\n</code></p>"
+          "<p><code>journalctl -u [service name]\n</code></p>"
         ],
         "Ubuntu": [
-          "<p><code>?\n</code></p>"
+          "<p><code>tail -f [syslog log file]\n</code></p>",
+          "<p>See /etc/syslog.conf for log destinations.</p>"
         ],
         "OS X": [
           "<p><code>?\n</code></p>"
@@ -487,40 +490,68 @@
       }
     },
     "Packaging": {
+      "Searching for packages": {
+        "Windows Server": [
+          "<p><code>Find-Package [search term]\n</code></p>",
+          "<p><a href=\"https://github.com/OneGet/oneget/wiki/cmdlets\">Package Management wiki</a></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>yum search [search term]\n</code></p>",
+          "<p><a href=\"https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sec-Working_with_Packages.html#sec-Searching_Packages\">System Administrator's Guide</a></p>"
+        ],
+        "Debian": [
+          "<p><code>?\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>?\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>brew search [search term]\n</code></p>",
+          "<p><a href=\"https://github.com/Homebrew/homebrew/blob/master/Library/Homebrew/manpages/brew.1.md\">Homebrew manual</a></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>?\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
+        ]
+      },
       "Install package file": {
         "Windows Server": [
-          "<p><code>msiexec /package [msi file] /quiet\n</code></p>",
-          "<p><a href=\"https://msdn.microsoft.com/en-us/library/aa372024%28v=vs.85%29.aspx\">Reference</a></p>"
+          "<p><code>Install-Package\n</code></p>",
+          "<p><a href=\"https://github.com/OneGet/oneget/wiki/cmdlets\">Package Management wiki</a></p>"
         ],
         "Red Hat Enterprise Linux": [
           "<p><code>yum install [package name]\n</code></p>",
-          "<p>or if the file is already downloaded:</p>",
-          "<p><code>rpm -Uvh [rpm file]\n</code></p>"
+          "<p><a href=\"https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sec-Working_with_Packages.html#sec-Removing\">System Administrator's Guide</a></p>"
         ],
         "Debian": [
-          "<p><code>dpkg -i [deb file]\n</code></p>"
+          "<p><code>apt-get install [package name]\n</code></p>",
+          "<p><a href=\"https://wiki.debian.org/DebianPackageManagement\">Debian wiki</a></p>"
         ],
         "Ubuntu": [
-          "<p><code>dpkg -i [deb file]\n</code></p>"
+          "<p><code>apt-get install [package name]\n</code></p>",
+          "<p><a href=\"https://help.ubuntu.com/lts/serverguide/apt-get.html\">Ubuntu LTS wiki</a></p>"
         ],
         "OS X": [
-          "<p><code>?\n</code></p>"
+          "<p><code>brew install [package name]\n</code></p>",
+          "<p><a href=\"https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/FAQ.md\">Homebrew FAQ</a></p>"
         ],
         "OpenBSD": [
           "<p><code>pkg_add\n</code></p>"
         ],
         "SmartOS": [
-          "<p><code>pkg_add\n</code></p>"
+          "<p><code>pkg_add [package name]\n</code></p>"
         ]
       },
       "Uninstall package": {
         "Windows Server": [
-          "<p><code>$app = Get-WmiObject -Class Win32_Product | Where-Object {\n    $_.Name -match \"Software Name\"\n}\n$app.Uninstall()\n</code></p>"
+          "<p><code>Uninstall-Package\n</code></p>",
+          "<p><a href=\"https://github.com/OneGet/oneget/wiki/cmdlets\">Package Management wiki</a></p>"
         ],
         "Red Hat Enterprise Linux": [
           "<p><code>yum remove [package name]\n</code></p>",
-          "<p>or</p>",
-          "<p><code>rpm -e [package name]\n</code></p>"
+          "<p><a href=\"https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sec-Working_with_Packages.html#sec-Removing\">System Administrator's Guide</a></p>"
         ],
         "Debian": [
           "<p><code>apt-get remove [package name]\n</code></p>"
@@ -529,10 +560,11 @@
           "<p><code>apt-get remove [package name]\n</code></p>"
         ],
         "OS X": [
-          "<p><code>?\n</code></p>"
+          "<p><code>brew uninstall [package name]\n</code></p>",
+          "<p><a href=\"https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/FAQ.md\">Homebrew FAQ</a></p>"
         ],
         "OpenBSD": [
-          "<p><code>?\n</code></p>"
+          "<p><code>pkg_delete [package name]\n</code></p>"
         ],
         "SmartOS": [
           "<p><code>?\n</code></p>"
@@ -540,20 +572,23 @@
       },
       "List all installed packages": {
         "Windows Server": [
-          "<p><code>Get-ItemProperty HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\* | select DisplayName, Publisher, InstallDate\n</code></p>",
-          "<p><a href=\"http://blogs.technet.com/b/heyscriptingguy/archive/2013/11/15/use-powershell-to-find-installed-software.aspx\">TechNet</a></p>"
+          "<p><code>Get-Package\n</code></p>",
+          "<p><a href=\"https://github.com/OneGet/oneget/wiki/cmdlets\">Package Management wiki</a></p>"
         ],
         "Red Hat Enterprise Linux": [
-          "<p><code>rpm -qa\n</code></p>"
+          "<p><code>yum list installed\n</code></p>",
+          "<p><a href=\"https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sec-Working_with_Packages.html#sec-Listing_Packages\">System Administrator's Guide</a></p>"
         ],
         "Debian": [
           "<p><code>dpkg -l\n</code></p>"
         ],
         "Ubuntu": [
-          "<p><code>dpkg -l\n</code></p>"
+          "<p><code>dpkg -l\n</code></p>",
+          "<p><a href=\"https://help.ubuntu.com/lts/serverguide/dpkg.html\">Ubuntu LTS wiki</a></p>"
         ],
         "OS X": [
-          "<p><code>?\n</code></p>"
+          "<p><code>brew list\n</code></p>",
+          "<p><a href=\"https://github.com/Homebrew/homebrew/blob/master/Library/Homebrew/manpages/brew.1.md\">Homebrew manual</a></p>"
         ],
         "OpenBSD": [
           "<p><code>pkg_info\n</code></p>"
