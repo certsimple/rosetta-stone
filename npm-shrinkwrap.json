@@ -1,6 +1,6 @@
 {
   "name": "rosetta-stone",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "dependencies": {
     "brfs": {
       "version": "1.4.0",
@@ -281,65 +281,10 @@
       "from": "es6-shim@>=0.30.0 <0.31.0",
       "resolved": "https://registry.npmjs.org/es6-shim/-/es6-shim-0.30.0.tgz"
     },
-    "handlebars": {
-      "version": "3.0.3",
-      "from": "handlebars@>=3.0.2 <4.0.0",
-      "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-3.0.3.tgz",
-      "dependencies": {
-        "optimist": {
-          "version": "0.6.1",
-          "from": "optimist@>=0.6.1 <0.7.0",
-          "resolved": "https://registry.npmjs.org/optimist/-/optimist-0.6.1.tgz",
-          "dependencies": {
-            "wordwrap": {
-              "version": "0.0.2",
-              "from": "wordwrap@>=0.0.2 <0.1.0",
-              "resolved": "https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz"
-            },
-            "minimist": {
-              "version": "0.0.10",
-              "from": "minimist@>=0.0.1 <0.1.0",
-              "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.10.tgz"
-            }
-          }
-        },
-        "source-map": {
-          "version": "0.1.43",
-          "from": "source-map@>=0.1.40 <0.2.0",
-          "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.1.43.tgz",
-          "dependencies": {
-            "amdefine": {
-              "version": "0.1.0",
-              "from": "amdefine@>=0.0.4",
-              "resolved": "https://registry.npmjs.org/amdefine/-/amdefine-0.1.0.tgz"
-            }
-          }
-        },
-        "uglify-js": {
-          "version": "2.3.6",
-          "from": "uglify-js@>=2.3.0 <2.4.0",
-          "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-2.3.6.tgz",
-          "dependencies": {
-            "async": {
-              "version": "0.2.10",
-              "from": "async@>=0.2.6 <0.3.0",
-              "resolved": "https://registry.npmjs.org/async/-/async-0.2.10.tgz"
-            },
-            "optimist": {
-              "version": "0.3.7",
-              "from": "optimist@>=0.3.5 <0.4.0",
-              "resolved": "https://registry.npmjs.org/optimist/-/optimist-0.3.7.tgz",
-              "dependencies": {
-                "wordwrap": {
-                  "version": "0.0.2",
-                  "from": "wordwrap@>=0.0.2 <0.1.0",
-                  "resolved": "https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz"
-                }
-              }
-            }
-          }
-        }
-      }
+    "jquery": {
+      "version": "2.1.4",
+      "from": "jquery@*",
+      "resolved": "https://registry.npmjs.org/jquery/-/jquery-2.1.4.tgz"
     },
     "jsdom": {
       "version": "3.1.2",
@@ -874,6 +819,11 @@
           }
         }
       }
+    },
+    "ractive": {
+      "version": "0.7.3",
+      "from": "ractive@*",
+      "resolved": "https://registry.npmjs.org/ractive/-/ractive-0.7.3.tgz"
     }
   }
 }
