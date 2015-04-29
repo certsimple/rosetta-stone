@@ -1,0 +1,400 @@
+{
+  "sections": {
+    "Shell basics": {
+      "Logged in user account": {
+        "Windows Server": [
+          "<p><code>$env:username\n</code></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>whoami\n</code></p>"
+        ],
+        "Debian": [
+          "<p><code>whoami\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>whoami\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>whoami\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>whoami\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
+        ]
+      },
+      "Host name": {
+        "Windows Server": [
+          "<p><code>$env:COMPUTERNAME\n</code></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>hostname\n</code></p>"
+        ],
+        "Debian": [
+          "<p><code>hostname\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>hostname\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>hostname\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>hostname\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
+        ]
+      },
+      "Run as a different user": {
+        "Windows Server": [
+          "<p><code>runas /user:[machine or domain name]\\[admin account name] [command]\n</code></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>sudo [command]\n</code></p>"
+        ],
+        "Debian": [
+          "<p><code>sudo [command]\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>sudo [command]\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>sudo [command]\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>sudo [command]\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
+        ]
+      },
+      "Run shell as a different user": {
+        "Windows Server": [
+          "<p><code>Start-Process powershell -Verb runAs\n</code></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>sudo -i\n</code></p>"
+        ],
+        "Debian": [
+          "<p><code>sudo -i\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>sudo -i\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>sudo -i\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>sudo -i\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
+        ]
+      }
+    },
+    "Hardware Inspection": {
+      "EFI/BIOS serial numbers": {
+        "Windows Server": [
+          "<p><code>Get-WmiObject -Class Win32_BIOS\n</code></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>dmidecode\n</code></p>"
+        ],
+        "Debian": [
+          "<p><code>dmidecode\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>dmidecode\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>system_profiler SPHardwareDataType\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>dmidecode\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
+        ]
+      },
+      "CPU info": {
+        "Windows Server": [
+          "<p><code>Get-WmiObject -Class Win32_Processor\n</code></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>less /proc/cpuinfo\n</code></p>"
+        ],
+        "Debian": [
+          "<p><code>less /proc/cpuinfo\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>less /proc/cpuinfo\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>system_profiler SPHardwareDataType\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>sysctl hw.ncpu\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
+        ]
+      },
+      "Physical memory": {
+        "Windows Server": [
+          "<p><code>Get-WmiObject -Class  Win32_PhysicalMemory\n</code></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>less /proc/meminfo\n</code></p>"
+        ],
+        "Debian": [
+          "<p><code>less /proc/meminfo\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>less /proc/meminfo\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>system_profiler SPMemoryDataType\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>?\n</code></p>"
+        ]
+      }
+    },
+    "Network Connectivity": {
+      "Ethernet connectivity": {
+        "Windows Server": [
+          "<p><code>?\n</code></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>ethtool\n</code></p>"
+        ],
+        "Debian": [
+          "<p><code>ethtool\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>ethtool\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>?\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>?\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
+        ]
+      },
+      "IP connectivity": {
+        "Windows Server": [
+          "<p><code>Test-Connection \"[ip address]\"\n</code></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>ping\n</code></p>"
+        ],
+        "Debian": [
+          "<p><code>?\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>ping\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>ping\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>?#### SmartOS\n?\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
+        ]
+      },
+      "DNS resolution": {
+        "Windows Server": [
+          "<p><code>Resolve-DnsName \"[hostname]\"\n</code></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>host / dig\n</code></p>"
+        ],
+        "Debian": [
+          "<p><code>host / dig\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>host / dig\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>host / dig\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>host / dig\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
+        ]
+      },
+      "IP addressing": {
+        "Windows Server": [
+          "<p><code>Get-NetIPAddress\n</code></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>ip addr\n</code></p>"
+        ],
+        "Debian": [
+          "<p><code>ip addr\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>ip addr\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>ifconfig\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>ifconfig\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
+        ]
+      },
+      "whois": {
+        "Windows Server": [
+          "<p><code>$web = New-WebServiceProxy 'http://www.webservicex.net/whois.asmx?WSDL'\n$web.GetWhoIs('[domain name]')\n</code></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>whois 'domain [domain name]'\n</code></p>"
+        ],
+        "Debian": [
+          "<p><code>whois 'domain [domain name]'\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>whois 'domain [domain name]'\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>whois 'domain [domain name]'\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>?\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
+        ]
+      }
+    },
+    "Services": {
+      "Installed to": {
+        "Windows Server": [
+          "<p><code>Get-Service\n</code></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>/etc/system\n</code></p>"
+        ],
+        "Debian": [
+          "<p><code>/etc/system\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>/etc/init.d\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>/System/Library/LaunchDaemons/\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>?\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
+        ]
+      },
+      "List Services": {
+        "Windows Server": [
+          "<p><code>?\n</code></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>systemctl list-unit-files --type=service\n</code></p>"
+        ],
+        "Debian": [
+          "<p><code>systemctl list-unit-files --type=service\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>ls /etc/init.d\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>launchctl list\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>?\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
+        ]
+      },
+      "Start Service": {
+        "Windows Server": [
+          "<p><code>?\n</code></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>systemctl start servicename\n</code></p>"
+        ],
+        "Debian": [
+          "<p><code>systemctl start servicename\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>/etc/init.d/[service file] start\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>launchctl load -w /System/Library/LaunchDaemons/ssh.plist\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>?\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
+        ]
+      },
+      "Stop Service": {
+        "Windows Server": [
+          "<p><code>Stop-Service [servicename]\n</code></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>systemctl stop [servicename]\n</code></p>"
+        ],
+        "Debian": [
+          "<p><code>systemctl stop [servicename]\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>/etc/init.d/[service file] stop\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>launchctl unload -w /System/Library/LaunchDaemons/ssh.plist\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>pkill [process name of service]\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
+        ]
+      },
+      "Restart Service": {
+        "Windows Server": [
+          "<p><code>Restart-Service [servicename]\n</code></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>systemctl restart [servicename]\n</code></p>"
+        ],
+        "Debian": [
+          "<p><code>systemctl restart [servicename]\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>/etc/init.d/[service file] restart\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>?\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>?\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
+        ]
+      }
+    }
+  }
+}
