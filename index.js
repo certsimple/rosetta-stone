@@ -7,8 +7,7 @@ var rosettaTemplate = fs.readFileSync(__dirname + '/template.mustache', 'utf8');
 var rosettaData = JSON.parse(fs.readFileSync(__dirname + '/json/rosetta-stone.json', 'utf8'));
 
 var Ractive = require("ractive"),
-	$ = require("jquery"),
-	superagent = require("superagent");
+	$ = require("jquery");
 
 // For testing
 window.$ = $
