@@ -41,14 +41,19 @@ As above.
 	runas /user:[machine or domain name]\[admin account name] [command]
 #### Red Hat Enterprise Linux
 	sudo [command]
+[System Administrator's Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sect-Gaining_Privileges-The_sudo_Command.html)
 #### Debian
-As above.
+	sudo -i
+[Debian Reference](https://www.debian.org/doc/manuals/debian-reference/)
 #### Ubuntu
-As above.
+	sudo -i
+[Ubuntu Help](https://help.ubuntu.com/community/RootSudo)
 #### OS X
 	sudo [command]
+[Manual](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/sudo.8.html)
 #### OpenBSD
 	sudo [command]
+[Manual](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man8/sudo.8)
 #### SmartOS
 	?
 
@@ -59,8 +64,10 @@ As above.
 	Start-Process powershell -Verb runAs
 #### Red Hat Enterprise Linux
 	sudo -i
+[System Administrator's Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sect-Gaining_Privileges-The_sudo_Command.html)
 #### Debian
-As above.
+	sudo -i
+[Debian Reference](https://www.debian.org/doc/manuals/debian-reference/)
 #### Ubuntu
 As above.
 #### OS X
@@ -229,7 +236,7 @@ As above.
 
 ### Installed to
 #### Windows Server
-	Get-Service
+	?
 #### Red Hat Enterprise Linux
 	/etc/system
 #### Debian
@@ -245,7 +252,7 @@ As above.
 
 ### List Services
 #### Windows Server
-	?
+	Get-Service
 #### Red Hat Enterprise Linux
 	systemctl list-unit-files --type=service
 #### Debian
@@ -262,7 +269,8 @@ As above.
 
 ### Start Service
 #### Windows Server
-	?
+	Start-Service [servicename]
+[Technet](https://technet.microsoft.com/en-us/library/ee177001.aspx)
 #### Red Hat Enterprise Linux
 	systemctl start servicename
 #### Debian
@@ -280,6 +288,7 @@ As above.
 ### Stop Service
 #### Windows Server
 	Stop-Service [servicename]
+[Technet](https://technet.microsoft.com/en-us/library/ee177005.aspx)
 #### Red Hat Enterprise Linux
 	systemctl stop [servicename]
 #### Debian
@@ -297,6 +306,7 @@ As above.
 ### Restart Service
 #### Windows Server
 	Restart-Service [servicename]
+[Technet](https://technet.microsoft.com/en-us/library/ee176942.aspx)
 #### Red Hat Enterprise Linux
 	systemctl restart [servicename]
 #### Debian
@@ -309,7 +319,60 @@ As above.
 	?
 #### SmartOS
 	svcadm restart
-[Reference](https://wiki.smartos.org/display/DOC/SmartOS+Technical+FAQs)
+[SmartOS Wiki](https://wiki.smartos.org/display/DOC/SmartOS+Technical+FAQs)
+
+## Logging
+### Logs are written to
+#### Windows Server
+Event Log
+#### Red Hat Enterprise Linux
+journald
+#### Debian
+journald
+#### Ubuntu
+syslog
+#### OS X
+Apple System Log (also called ASL)
+#### OpenBSD
+	?
+#### SmartOS
+	?
+
+### Raise a log message from the shell
+#### Windows Server
+	Write-EventLog
+[Technet](https://technet.microsoft.com/en-us/library/hh849847.aspx)
+#### Red Hat Enterprise Linux
+	echo 'hello' | systemd-cat
+[Manual](http://www.freedesktop.org/software/systemd/man/systemd-cat.html)
+#### Debian
+	echo 'hello' | systemd-cat
+[Manual](http://www.freedesktop.org/software/systemd/man/systemd-cat.html)
+#### Ubuntu
+	logger
+[Manual](http://manpages.ubuntu.com/manpages/lucid/man1/logger.1.html)
+#### OS X
+	?
+#### OpenBSD
+	?
+#### SmartOS
+	?
+
+### Watch logs interactively
+#### Windows Server
+	?
+#### Red Hat Enterprise Linux
+	?
+#### Debian
+	?
+#### Ubuntu
+	?
+#### OS X
+	?
+#### OpenBSD
+	?
+#### SmartOS
+	?
 
 
 ## Packaging
@@ -319,8 +382,8 @@ As above.
 [Reference](https://msdn.microsoft.com/en-us/library/aa372024%28v=vs.85%29.aspx)
 #### Red Hat Enterprise Linux
 	yum install [package name]
-
 or if the file is already downloaded:
+
 	rpm -Uvh [rpm file]
 #### Debian
 	dpkg -i [deb file]
@@ -402,7 +465,7 @@ As above.
 #### Windows Server
 	?
 #### Red Hat Enterprise Linux
-	rpm -qf 'file'
+	rpm -qf [file]
 #### Debian
 	dpkg -S
 #### Ubuntu
@@ -410,7 +473,7 @@ As above.
 #### OS X
 	?
 #### OpenBSD
-	?
+	pkg_info -E [file]
 #### SmartOS
 	?
 

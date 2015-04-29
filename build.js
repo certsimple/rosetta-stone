@@ -54,7 +54,10 @@ var htmlToJson = function(window){
 					}
 					log('      ADDING TO CELL', currentCell, ':', elementText)
 					data[sectionTitle][rowName][cellName].push('<p>'+$element.html()+'</p>')
-					previousCellContents = data[sectionTitle][rowName][cellName]
+					// Commands might be the same, but don't copy references
+					if ( ! $element.is('a') ) {
+						previousCellContents = data[sectionTitle][rowName][cellName]
+					}
 				}
 			}
 		})

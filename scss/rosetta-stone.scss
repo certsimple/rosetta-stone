@@ -11,8 +11,11 @@ html {
 
 body {
 	font-family: Lato;
-	font-color: #222;
+	color: #222;
+	padding: 0;// 0 12px;
 }
+
+
 
 p {
 	margin: 6px;
@@ -27,16 +30,57 @@ th img {
 	max-height: 40px;
 }
 
-.enable-operating-systems img {
-  padding-right: 20px;
-  height: 40px;
-  max-width: 150px;
+.chop-box {
+	overflow: hidden;
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	top: 0;
+	right: 0;
+
+	.edit-me {
+		text-align: center;
+		color: white;
+		width: 250px;
+		background-color: #636363;
+		transform: rotate(45deg);
+		position: absolute;
+		top: 30px;
+		right: -70px;
+		padding: 3px;
+		text-decoration: none;
+	}
 }
 
 
+.enable-operating-systems {
+	padding: 12px;
+	img {
+		cursor: pointer;
+	  padding: 3px;
+	  margin-right: 20px;
+	  height: 40px;
+	  width: 100px;
+	  &.enabled {
+	  	border: 1px solid #ddd;
+	  }
+	}
+}
+
+.aside {
+	color: #ccc;
+	font-style: oblique;
+	font-weight: 200;
+	font-size: 10pt;
+}
+
+.commands {
+	max-width: 100%;
+	overflow: scroll;
+}
+
 // Technique from: https://techblog.livingsocial.com/blog/2015/04/06/responsive-tables-in-pure-css
 table {
-	width: 100%;
 	margin:0;
 	padding:0;
 	border-collapse: collapse;

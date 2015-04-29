@@ -17,7 +17,7 @@ log('rosettaData', rosettaData)
 rosettaData.operatingSystems = {
 	"Windows Server": {
 		"enabled": true,
-		"docs": "",
+		"docs": "https://technet.microsoft.com/en-us/library/bb978526.aspx",
 		"logo": "windows"
 	},
 	"Red Hat Enterprise Linux": {
@@ -27,7 +27,7 @@ rosettaData.operatingSystems = {
 	},
 	"Debian": {
 		"enabled": false,
-		"docs": "",
+		"docs": "https://www.debian.org/doc/manuals/debian-reference/",
 		"logo": "debian"
 	},
 	"Ubuntu": {
@@ -37,7 +37,7 @@ rosettaData.operatingSystems = {
 	},
 	"OS X": {
 		"enabled": true,
-		"docs": "",
+		"docs": "https://www.apple.com/uk/support/osxserver/",
 		"logo": "osx"
 	},
 	"OpenBSD": {

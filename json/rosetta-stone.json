@@ -52,19 +52,24 @@
           "<p><code>runas /user:[machine or domain name]\\[admin account name] [command]\n</code></p>"
         ],
         "Red Hat Enterprise Linux": [
-          "<p><code>sudo [command]\n</code></p>"
+          "<p><code>sudo [command]\n</code></p>",
+          "<p><a href=\"https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sect-Gaining_Privileges-The_sudo_Command.html\">System Administrator's Guide</a></p>"
         ],
         "Debian": [
-          "<p><code>sudo [command]\n</code></p>"
+          "<p><code>sudo -i\n</code></p>",
+          "<p><a href=\"https://www.debian.org/doc/manuals/debian-reference/\">Debian Reference</a></p>"
         ],
         "Ubuntu": [
-          "<p><code>sudo [command]\n</code></p>"
+          "<p><code>sudo -i\n</code></p>",
+          "<p><a href=\"https://help.ubuntu.com/community/RootSudo\">Ubuntu Help</a></p>"
         ],
         "OS X": [
-          "<p><code>sudo [command]\n</code></p>"
+          "<p><code>sudo [command]\n</code></p>",
+          "<p><a href=\"https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/sudo.8.html\">Manual</a></p>"
         ],
         "OpenBSD": [
-          "<p><code>sudo [command]\n</code></p>"
+          "<p><code>sudo [command]\n</code></p>",
+          "<p><a href=\"http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man8/sudo.8\">Manual</a></p>"
         ],
         "SmartOS": [
           "<p><code>?\n</code></p>"
@@ -75,13 +80,16 @@
           "<p><code>Start-Process powershell -Verb runAs\n</code></p>"
         ],
         "Red Hat Enterprise Linux": [
-          "<p><code>sudo -i\n</code></p>"
+          "<p><code>sudo -i\n</code></p>",
+          "<p><a href=\"https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sect-Gaining_Privileges-The_sudo_Command.html\">System Administrator's Guide</a></p>"
         ],
         "Debian": [
-          "<p><code>sudo -i\n</code></p>"
+          "<p><code>sudo -i\n</code></p>",
+          "<p><a href=\"https://www.debian.org/doc/manuals/debian-reference/\">Debian Reference</a></p>"
         ],
         "Ubuntu": [
-          "<p><code>sudo -i\n</code></p>"
+          "<p><code>sudo -i\n</code></p>",
+          "<p><a href=\"https://www.debian.org/doc/manuals/debian-reference/\">Debian Reference</a></p>"
         ],
         "OS X": [
           "<p><code>sudo -i\n</code></p>"
@@ -282,7 +290,7 @@
     "Services": {
       "Installed to": {
         "Windows Server": [
-          "<p><code>Get-Service\n</code></p>"
+          "<p><code>?\n</code></p>"
         ],
         "Red Hat Enterprise Linux": [
           "<p><code>/etc/system\n</code></p>"
@@ -305,7 +313,7 @@
       },
       "List Services": {
         "Windows Server": [
-          "<p><code>?\n</code></p>"
+          "<p><code>Get-Service\n</code></p>"
         ],
         "Red Hat Enterprise Linux": [
           "<p><code>systemctl list-unit-files --type=service\n</code></p>"
@@ -329,7 +337,8 @@
       },
       "Start Service": {
         "Windows Server": [
-          "<p><code>?\n</code></p>"
+          "<p><code>Start-Service [servicename]\n</code></p>",
+          "<p><a href=\"https://technet.microsoft.com/en-us/library/ee177001.aspx\">Technet</a></p>"
         ],
         "Red Hat Enterprise Linux": [
           "<p><code>systemctl start servicename\n</code></p>"
@@ -353,7 +362,8 @@
       },
       "Stop Service": {
         "Windows Server": [
-          "<p><code>Stop-Service [servicename]\n</code></p>"
+          "<p><code>Stop-Service [servicename]\n</code></p>",
+          "<p><a href=\"https://technet.microsoft.com/en-us/library/ee177005.aspx\">Technet</a></p>"
         ],
         "Red Hat Enterprise Linux": [
           "<p><code>systemctl stop [servicename]\n</code></p>"
@@ -377,7 +387,8 @@
       },
       "Restart Service": {
         "Windows Server": [
-          "<p><code>Restart-Service [servicename]\n</code></p>"
+          "<p><code>Restart-Service [servicename]\n</code></p>",
+          "<p><a href=\"https://technet.microsoft.com/en-us/library/ee176942.aspx\">Technet</a></p>"
         ],
         "Red Hat Enterprise Linux": [
           "<p><code>systemctl restart [servicename]\n</code></p>"
@@ -396,7 +407,82 @@
         ],
         "SmartOS": [
           "<p><code>svcadm restart\n</code></p>",
-          "<p><a href=\"https://wiki.smartos.org/display/DOC/SmartOS+Technical+FAQs\">Reference</a></p>"
+          "<p><a href=\"https://wiki.smartos.org/display/DOC/SmartOS+Technical+FAQs\">SmartOS Wiki</a></p>"
+        ]
+      }
+    },
+    "Logging": {
+      "Logs are written to": {
+        "Windows Server": [
+          "<p>Event Log</p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p>journald</p>"
+        ],
+        "Debian": [
+          "<p>journald</p>"
+        ],
+        "Ubuntu": [
+          "<p>syslog</p>"
+        ],
+        "OS X": [
+          "<p>Apple System Log (also called ASL)</p>"
+        ],
+        "OpenBSD": [
+          "<p><code>?\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
+        ]
+      },
+      "Raise a log message from the shell": {
+        "Windows Server": [
+          "<p><code>Write-EventLog\n</code></p>",
+          "<p><a href=\"https://technet.microsoft.com/en-us/library/hh849847.aspx\">Technet</a></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>echo 'hello' | systemd-cat\n</code></p>",
+          "<p><a href=\"http://www.freedesktop.org/software/systemd/man/systemd-cat.html\">Manual</a></p>"
+        ],
+        "Debian": [
+          "<p><code>echo 'hello' | systemd-cat\n</code></p>",
+          "<p><a href=\"http://www.freedesktop.org/software/systemd/man/systemd-cat.html\">Manual</a></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>logger\n</code></p>",
+          "<p><a href=\"http://manpages.ubuntu.com/manpages/lucid/man1/logger.1.html\">Manual</a></p>"
+        ],
+        "OS X": [
+          "<p><code>?\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>?\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
+        ]
+      },
+      "Watch logs interactively": {
+        "Windows Server": [
+          "<p><code>?\n</code></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>?\n</code></p>"
+        ],
+        "Debian": [
+          "<p><code>?\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>?\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>?\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>?\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
         ]
       }
     },
@@ -408,7 +494,8 @@
         ],
         "Red Hat Enterprise Linux": [
           "<p><code>yum install [package name]\n</code></p>",
-          "<p>or if the file is already downloaded:\n    rpm -Uvh [rpm file]</p>"
+          "<p>or if the file is already downloaded:</p>",
+          "<p><code>rpm -Uvh [rpm file]\n</code></p>"
         ],
         "Debian": [
           "<p><code>dpkg -i [deb file]\n</code></p>"
@@ -503,7 +590,7 @@
           "<p><code>?\n</code></p>"
         ],
         "Red Hat Enterprise Linux": [
-          "<p><code>rpm -qf 'file'\n</code></p>"
+          "<p><code>rpm -qf [file]\n</code></p>"
         ],
         "Debian": [
           "<p><code>dpkg -S\n</code></p>"
@@ -515,7 +602,7 @@
           "<p><code>?\n</code></p>"
         ],
         "OpenBSD": [
-          "<p><code>?\n</code></p>"
+          "<p><code>pkg_info -E [file]\n</code></p>"
         ],
         "SmartOS": [
           "<p><code>?\n</code></p>"
