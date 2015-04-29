@@ -27,6 +27,16 @@ th img {
 	max-height: 40px;
 }
 
+// References
+td a {
+  float: right;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(157, 157, 157);
+  font-size: 8pt;
+}
+
 /*https://techblog.livingsocial.com/blog/2015/04/06/responsive-tables-in-pure-css/*/
 
 table {
@@ -35,20 +45,23 @@ table {
 	padding:0;
 	border-collapse: collapse;
 	border-spacing: 0;
-	tbody tr {
-		border-top: 1px solid #ddd;
-	}
 	tr {
 		padding: 5px;
+		border-bottom: 1px solid #ddd;
 	}
 	th, td {
 		padding: 10px;
 		text-align: center;
+		min-width: 400px;
 		max-width: 400px;
 		padding: 10px;
 		text-align: center;
 		width: 400px;
 		overflow: scroll;
+	}
+	td {
+		border-left: 1px solid #ddd;
+		border-right: 1px solid #ddd;
 	}
 	th {
 		text-transform: uppercase;
