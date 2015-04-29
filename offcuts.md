@@ -1,3 +1,34 @@
+
+### List uninstalled package contents
+
+
+#### Red Hat Enterprise Linux
+	rpm -qlp [package name]
+
+#### OS X
+
+
+#### Windows Server
+
+
+
+
+
+
+
+### verify package contents
+
+
+#### Red Hat Enterprise Linux
+	rpm -V [package name]
+
+#### OS X
+
+
+#### Windows Server
+
+
+
 ## Logging
 
 
@@ -20,6 +51,20 @@
 
 #### Windows Server
 
+
+### Extract files from package without installing
+
+
+#### Red Hat Enterprise Linux
+	rpm -root /tmp -nodeps -noscripts
+	rpm2cpio (if installed)
+
+#### OS X
+
+
+#### Windows Server
+	dark.exe file.MSI file.XML /x
+	(Requires WiX)
 
 
 ## User Management
@@ -120,135 +165,3 @@
 	#### Windows Server
 
 
-	## Packaging
-
-	### Install
-
-	#### Red Hat Enterprise Linux
-	    rpm -Uvh [package name]
-
-	#### OS X
-	    ?
-
-	#### Windows Server
-	    msiexec
-
-
-	### Uninstall
-
-
-	#### Red Hat Enterprise Linux
-	    rpm -e [package name]
-
-	#### OS X
-
-
-	#### Windows Server
-
-
-	### List all installed packages
-
-
-	#### Red Hat Enterprise Linux
-	    rpm -qa
-
-
-	#### OS X
-
-
-	#### Windows Server
-
-
-
-
-
-
-	### Info
-
-
-	#### Red Hat Enterprise Linux
-	    rpm -i [package name]
-
-
-
-	#### OS X
-
-
-	#### Windows Server
-
-
-
-
-
-	### Determine package responsible for a file
-
-	#### Red Hat Enterprise Linux
-	    rpm -qf 'file'
-
-	#### OS X
-
-
-	#### Windows Server
-
-
-	### List installed package contents
-
-	#### Red Hat Enterprise Linux
-	    rpm -ql [package name]
-
-	#### OS X
-
-
-	#### Windows Server
-	    Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*
-
-
-
-
-
-
-	### List uninstalled package contents
-
-
-	#### Red Hat Enterprise Linux
-	    rpm -qlp [package name]
-
-	#### OS X
-
-
-	#### Windows Server
-
-
-
-
-
-
-
-	### verify package contents
-
-
-	#### Red Hat Enterprise Linux
-		rpm -V [package name]
-
-	#### OS X
-
-
-	#### Windows Server
-
-
-
-
-
-	### Extract files from package without installing
-
-
-	#### Red Hat Enterprise Linux
-		rpm -root /tmp -nodeps -noscripts
-		rpm2cpio (if installed)
-
-	#### OS X
-
-
-	#### Windows Server
-	    dark.exe file.MSI file.XML /x
-		(Requires WiX)

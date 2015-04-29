@@ -44,7 +44,7 @@
           "<p><code>hostname\n</code></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p><code>hostname\n</code></p>"
         ]
       },
       "Run as a different user": {
@@ -194,7 +194,7 @@
           "<p><code>ping\n</code></p>"
         ],
         "Debian": [
-          "<p><code>?\n</code></p>"
+          "<p><code>ping\n</code></p>"
         ],
         "Ubuntu": [
           "<p><code>ping\n</code></p>"
@@ -203,7 +203,7 @@
           "<p><code>ping\n</code></p>"
         ],
         "OpenBSD": [
-          "<p><code>?#### SmartOS\n?\n</code></p>"
+          "<p><code>?\n</code></p>"
         ],
         "SmartOS": [
           "<p><code>?\n</code></p>"
@@ -384,6 +384,150 @@
         ],
         "Ubuntu": [
           "<p><code>/etc/init.d/[service file] restart\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>?\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>?\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
+        ]
+      }
+    },
+    "Packaging": {
+      "Install package file": {
+        "Windows Server": [
+          "<p><code>msiexec /package [msi file] /quiet\n</code></p>",
+          "<p><a href=\"https://msdn.microsoft.com/en-us/library/aa372024%28v=vs.85%29.aspx\">Reference</a></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>yum install [package name]\n</code></p>",
+          "<p>or if the file is already downloaded:\n    rpm -Uvh [rpm file]</p>"
+        ],
+        "Debian": [
+          "<p><code>dpkg -i [deb file]\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>dpkg -i [deb file]\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>?\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>pkg_add\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>pkg_add\n</code></p>"
+        ]
+      },
+      "Uninstall package": {
+        "Windows Server": [
+          "<p><code>$app = Get-WmiObject -Class Win32_Product | Where-Object {\n    $_.Name -match \"Software Name\"\n}\n$app.Uninstall()\n</code></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>yum remove [package name]\n</code></p>",
+          "<p>or\n    rpm -e [package name]</p>"
+        ],
+        "Debian": [
+          "<p><code>apt-get remove [package name]\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>apt-get remove [package name]\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>?\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>?\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
+        ]
+      },
+      "List all installed packages": {
+        "Windows Server": [
+          "<p><code>Get-ItemProperty HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\* | select DisplayName, Publisher, InstallDate\n</code></p>",
+          "<p><a href=\"http://blogs.technet.com/b/heyscriptingguy/archive/2013/11/15/use-powershell-to-find-installed-software.aspx\">TechNet</a></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>rpm -qa\n</code></p>"
+        ],
+        "Debian": [
+          "<p><code>dpkg -l\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>dpkg -l\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>?\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>pkg_info\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
+        ]
+      },
+      "Describe what an installed package is": {
+        "Windows Server": [
+          "<p><code>?\n</code></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>rpm -qi [package name]\n</code></p>"
+        ],
+        "Debian": [
+          "<p><code>dpkg --status pkgname\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>dpkg --status pkgname\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>?\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>pkg_info\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
+        ]
+      },
+      "Determine package responsible for a file": {
+        "Windows Server": [
+          "<p><code>?\n</code></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>rpm -qf 'file'\n</code></p>"
+        ],
+        "Debian": [
+          "<p><code>dpkg -S\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>dpkg -S\n</code></p>"
+        ],
+        "OS X": [
+          "<p><code>?\n</code></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>?\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>?\n</code></p>"
+        ]
+      },
+      "List installed package contents": {
+        "Windows Server": [
+          "<p><code>Get-ItemProperty HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*\n</code></p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>rpm -ql [package name]\n</code></p>"
+        ],
+        "Debian": [
+          "<p><code>?\n</code></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>?\n</code></p>"
         ],
         "OS X": [
           "<p><code>?\n</code></p>"

@@ -15,7 +15,7 @@ As above.
 #### OpenBSD
 	whoami
 #### SmartOS
-    ?
+	?
 
 ### Host name
 
@@ -28,11 +28,11 @@ As above.
 #### Ubuntu
 As above.
 #### OS X
-	hostname
+As above.
 #### OpenBSD
-	hostname
+As above.
 #### SmartOS
-    ?
+As above.
 
 
 ### Run as a different user
@@ -50,7 +50,7 @@ As above.
 #### OpenBSD
 	sudo [command]
 #### SmartOS
-    ?
+	?
 
 
 ### Run shell as a different user
@@ -68,7 +68,7 @@ As above.
 #### OpenBSD
 	sudo -i
 #### SmartOS
-    ?
+	?
 
 ## Hardware Inspection
 
@@ -88,7 +88,7 @@ As above.
 #### OpenBSD
 	dmidecode
 #### SmartOS
-    ?
+	?
 
 
 ### CPU info
@@ -105,7 +105,7 @@ As above.
 #### OpenBSD
 	sysctl hw.ncpu
 #### SmartOS
-    ?
+	?
 
 ### Physical memory
 
@@ -141,7 +141,7 @@ As above.
 #### OpenBSD
 	?
 #### SmartOS
-    ?
+	?
 
 ### IP connectivity
 #### Windows Server
@@ -155,12 +155,9 @@ As above.
 #### OS X
 	ping
 #### OpenBSD
-	?#### SmartOS
-	?
-#### Debian
 	?
 #### SmartOS
-    ?
+	?
 
 ### DNS resolution
 #### Windows Server
@@ -176,7 +173,7 @@ As above.
 #### OpenBSD
 	host / dig
 #### SmartOS
-    ?
+	?
 
 ### IP addressing
 #### Windows Server
@@ -192,7 +189,7 @@ As above.
 #### OpenBSD
 	ifconfig
 #### SmartOS
-    ?
+	?
 
 ### Ethernet connectivity
 #### Windows Server
@@ -208,7 +205,7 @@ As above.
 #### OpenBSD
 	?
 #### SmartOS
-    ?
+	?
 
 ### whois
 #### Windows Server
@@ -225,7 +222,7 @@ As above.
 #### OpenBSD
 	?
 #### SmartOS
-    ?
+	?
 
 ## Services
 
@@ -244,7 +241,7 @@ As above.
 #### OpenBSD
 	?
 #### SmartOS
-    ?
+	?
 
 ### List Services
 #### Windows Server
@@ -260,7 +257,7 @@ As above.
 #### OpenBSD
 	?
 #### SmartOS
-    ?
+	?
 
 ### Start Service
 #### Windows Server
@@ -276,7 +273,7 @@ As above.
 #### OpenBSD
 	?
 #### SmartOS
-    ?
+	?
 
 ### Stop Service
 #### Windows Server
@@ -292,7 +289,7 @@ As above.
 #### OpenBSD
 	pkill [process name of service]
 #### SmartOS
-    ?
+	?
 
 ### Restart Service
 #### Windows Server
@@ -308,7 +305,132 @@ As above.
 #### OpenBSD
 	?
 #### SmartOS
-    ?
+	?
+
+
+## Packaging
+### Install package file
+#### Windows Server
+	msiexec /package [msi file] /quiet
+[Reference](https://msdn.microsoft.com/en-us/library/aa372024%28v=vs.85%29.aspx)
+#### Red Hat Enterprise Linux
+	yum install [package name]
+or if the file is already downloaded:
+	rpm -Uvh [rpm file]
+#### Debian
+	dpkg -i [deb file]
+#### Ubuntu
+As above.
+#### OS X
+	?
+#### OpenBSD
+	pkg_add
+#### SmartOS
+	pkg_add
+
+### Uninstall package
+#### Windows Server
+	$app = Get-WmiObject -Class Win32_Product | Where-Object {
+		$_.Name -match "Software Name"
+	}
+	$app.Uninstall()
+#### Red Hat Enterprise Linux
+	yum remove [package name]
+or
+	rpm -e [package name]
+#### Debian
+	apt-get remove [package name]
+#### Ubuntu
+As above.
+#### OS X
+	?
+#### OpenBSD
+	?
+#### SmartOS
+	?
+
+
+
+### List all installed packages
+#### Windows Server
+	Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | select DisplayName, Publisher, InstallDate
+[TechNet](http://blogs.technet.com/b/heyscriptingguy/archive/2013/11/15/use-powershell-to-find-installed-software.aspx)
+#### Red Hat Enterprise Linux
+	rpm -qa
+#### Debian
+	dpkg -l
+#### Ubuntu
+As above.
+#### OS X
+	?
+#### OpenBSD
+	pkg_info
+#### SmartOS
+	?
+
+
+
+
+### Describe what an installed package is
+#### Windows Server
+	?
+#### Red Hat Enterprise Linux
+	rpm -qi [package name]
+#### Debian
+	dpkg --status pkgname
+#### Ubuntu
+As above.
+#### OS X
+	?
+#### OpenBSD
+	pkg_info
+#### SmartOS
+	?
+
+
+
+
+
+
+### Determine package responsible for a file
+#### Windows Server
+	?
+#### Red Hat Enterprise Linux
+	rpm -qf 'file'
+#### Debian
+	dpkg -S
+#### Ubuntu
+As above.
+#### OS X
+	?
+#### OpenBSD
+	?
+#### SmartOS
+	?
+
+### List installed package contents
+#### Windows Server
+	Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*
+#### Red Hat Enterprise Linux
+	rpm -ql [package name]
+#### Debian
+	?
+#### Ubuntu
+As above.
+#### OS X
+	?
+#### OpenBSD
+	?
+#### SmartOS
+	?
+
+
+
+
+
+
+
+
 
 
 

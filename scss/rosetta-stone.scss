@@ -1,12 +1,21 @@
 $amount-of-os: 6;
 
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
-  font-family: Lato;
-  font-color: #222;
+	font-family: Lato;
+	font-color: #222;
 }
 
 p {
-  margin: 6px;
+	margin: 6px;
 }
 
 h1, h2 {
@@ -21,38 +30,40 @@ th img {
 /*https://techblog.livingsocial.com/blog/2015/04/06/responsive-tables-in-pure-css/*/
 
 table {
-  width: 100%;
-  margin:0;
-  padding:0;
-  border-collapse: collapse;
-  border-spacing: 0;
-  tbody tr {
-  	border-top: 1px solid #ddd;
-  }
-  tr {
-    padding: 5px;
-  }
-  th, td {
-    padding: 10px;
-    text-align: center;
-    width: 100% / ($amount-of-os + 1);
-    max-width: 100% / ($amount-of-os + 1);
-    overflow: scroll;
-  }
-  th {
-    text-transform: uppercase;
-    font-size: 14px;
-    letter-spacing: 1px;
-  }
+	width: 100%;
+	margin:0;
+	padding:0;
+	border-collapse: collapse;
+	border-spacing: 0;
+	tbody tr {
+		border-top: 1px solid #ddd;
+	}
+	tr {
+		padding: 5px;
+	}
+	th, td {
+		padding: 10px;
+		text-align: center;
+		max-width: 400px;
+		padding: 10px;
+		text-align: center;
+		width: 400px;
+		overflow: scroll;
+	}
+	th {
+		text-transform: uppercase;
+		font-size: 14px;
+		letter-spacing: 1px;
+	}
 }
 @media screen and (max-width: 600px) {
 
-  table {
-    border: 0;
-    thead {
-      display: none;
-    }
-    tr {
+	table {
+		border: 0;
+		thead {
+			display: none;
+		}
+		tr {
 			margin-bottom: 10px;
 			display: block;
 			border-bottom: 2px solid #ddd;
@@ -68,14 +79,14 @@ table {
 			border-bottom: 1px dotted #ccc;
 		}
 		td:last-child {
-		  border-bottom: 0;
+			border-bottom: 0;
 		}
 
 		td:before {
-		  content: attr(data-label);
-		  float: left;
-		  text-transform: uppercase;
-		  font-weight: bold;
+			content: attr(data-label);
+			float: left;
+			text-transform: uppercase;
+			font-weight: bold;
 		}
-  }
+	}
 }
