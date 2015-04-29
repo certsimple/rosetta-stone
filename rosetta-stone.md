@@ -257,7 +257,8 @@ As above.
 #### OpenBSD
 	?
 #### SmartOS
-	?
+	svcs
+[Reference](https://wiki.smartos.org/display/DOC/SmartOS+Technical+FAQs)
 
 ### Start Service
 #### Windows Server
@@ -273,7 +274,8 @@ As above.
 #### OpenBSD
 	?
 #### SmartOS
-	?
+	svcadm enable [service name]
+[Reference](https://wiki.smartos.org/display/DOC/SmartOS+Technical+FAQs)
 
 ### Stop Service
 #### Windows Server
@@ -287,9 +289,10 @@ As above.
 #### OS X
 	launchctl unload -w /System/Library/LaunchDaemons/ssh.plist
 #### OpenBSD
-	pkill [process name of service]
+	pkill [process name]
 #### SmartOS
-	?
+	svcadm disable
+[Reference](https://wiki.smartos.org/display/DOC/SmartOS+Technical+FAQs)
 
 ### Restart Service
 #### Windows Server
@@ -305,7 +308,8 @@ As above.
 #### OpenBSD
 	?
 #### SmartOS
-	?
+	svcadm restart
+[Reference](https://wiki.smartos.org/display/DOC/SmartOS+Technical+FAQs)
 
 
 ## Packaging
@@ -315,6 +319,7 @@ As above.
 [Reference](https://msdn.microsoft.com/en-us/library/aa372024%28v=vs.85%29.aspx)
 #### Red Hat Enterprise Linux
 	yum install [package name]
+
 or if the file is already downloaded:
 	rpm -Uvh [rpm file]
 #### Debian
@@ -337,6 +342,7 @@ As above.
 #### Red Hat Enterprise Linux
 	yum remove [package name]
 or
+
 	rpm -e [package name]
 #### Debian
 	apt-get remove [package name]

@@ -323,7 +323,8 @@
           "<p><code>?\n</code></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p><code>svcs\n</code></p>",
+          "<p><a href=\"https://wiki.smartos.org/display/DOC/SmartOS+Technical+FAQs\">Reference</a></p>"
         ]
       },
       "Start Service": {
@@ -346,7 +347,8 @@
           "<p><code>?\n</code></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p><code>svcadm enable [service name]\n</code></p>",
+          "<p><a href=\"https://wiki.smartos.org/display/DOC/SmartOS+Technical+FAQs\">Reference</a></p>"
         ]
       },
       "Stop Service": {
@@ -366,10 +368,11 @@
           "<p><code>launchctl unload -w /System/Library/LaunchDaemons/ssh.plist\n</code></p>"
         ],
         "OpenBSD": [
-          "<p><code>pkill [process name of service]\n</code></p>"
+          "<p><code>pkill [process name]\n</code></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p><code>svcadm disable\n</code></p>",
+          "<p><a href=\"https://wiki.smartos.org/display/DOC/SmartOS+Technical+FAQs\">Reference</a></p>"
         ]
       },
       "Restart Service": {
@@ -392,7 +395,8 @@
           "<p><code>?\n</code></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p><code>svcadm restart\n</code></p>",
+          "<p><a href=\"https://wiki.smartos.org/display/DOC/SmartOS+Technical+FAQs\">Reference</a></p>"
         ]
       }
     },
@@ -428,7 +432,8 @@
         ],
         "Red Hat Enterprise Linux": [
           "<p><code>yum remove [package name]\n</code></p>",
-          "<p>or\n    rpm -e [package name]</p>"
+          "<p>or</p>",
+          "<p><code>rpm -e [package name]\n</code></p>"
         ],
         "Debian": [
           "<p><code>apt-get remove [package name]\n</code></p>"

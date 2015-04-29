@@ -1,27 +1,37 @@
+<div class="enable-operating-systems">
+	{{# operatingSystems:os }}
+		{{# operatingSystems[os].enabled }}
+			<img data-operating-system="{{os}}" src="images/{{ operatingSystems[os].logo }}.svg">
+		{{ else }}
+			<img data-operating-system="{{os}}" src="images/{{ operatingSystems[os].logo }}-fade.svg">
+		{{/}}
+	{{/}}
+</div>
+
 {{#sections:title}}
 	<h2>{{ title }}</h2>
 	<table>
 		<thead>
 			<tr>
 				<th>task</th>
-				<th><a href="https://technet.microsoft.com/en-us/library/dn249523.aspx"><img src="images/windows.svg"></a></th>
-				<th><a href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/"><img src="images/rhel.svg"></a></th>
-				<th><img src="images/debian.svg"></th>
-				<th><a href="https://help.ubuntu.com/lts/serverguide/index.html"><img src="images/ubuntu.svg"></a></th>
-				<th><img src="images/osx.svg"></th>
-				<th><a href="http://www.openbsd.org/faq/"><img src="images/openbsd.svg"></a></th>
-				<th><a href="https://wiki.smartos.org/display/DOC/Home"><img src="images/smartos.svg"></a></th>
+				{{# operatingSystems:os }}
+					{{# operatingSystems[os].enabled }}
+						<th><a href="{{ operatingSystems[os].docs }}"><img src="images/{{ operatingSystems[os].logo }}.svg"></a></th>
+					{{/}}
+				{{/}}
 			</tr>
 		</thead>
 		{{#sections[title]:subtitle }}
 			<tr>
 			<th>{{ subtitle }}</th>
 			{{# sections[title][subtitle]:os }}
-				<td data-label="{{ os }}">
-					{{# sections[title][subtitle][os] }}
-						{{{ . }}}
-					{{/}}
-				</td>
+				{{# operatingSystems[os].enabled }}
+					<td data-label="{{ os }}">
+						{{# sections[title][subtitle][os] }}
+							{{{ . }}}
+						{{/}}
+					</td>
+				{{/}}
 			{{/}}
 			</tr>
 		{{/}}
