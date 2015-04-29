@@ -69,7 +69,8 @@ As above.
 	sudo -i
 [Debian Reference](https://www.debian.org/doc/manuals/debian-reference/)
 #### Ubuntu
-As above.
+	sudo -i
+[Ubunti wiki](https://help.ubuntu.com/community/RootSudo)
 #### OS X
 	sudo -i
 #### OpenBSD
@@ -161,16 +162,22 @@ As above.
 	Test-Connection "[ip address]"
 #### Red Hat Enterprise Linux
 	ping
+
 #### Debian
-As above.
+	ping
+[Manual](http://manpages.debian.org/cgi-bin/man.cgi?query=ping)
 #### Ubuntu
-As above.
+	ping
+[Manual](http://manpages.ubuntu.com/manpages/lucid/man8/ping.8.html)
 #### OS X
 	ping
+[Manual](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/ping.8.html)
 #### OpenBSD
-	?
+	ping
+[Manual](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man8/ping.8)
 #### SmartOS
-	?
+	ping
+[Manual](https://smartos.org/man/1M/PING)
 
 ### DNS resolution
 #### Windows Server
@@ -366,15 +373,16 @@ Apple System Log (also called ASL)
 #### SmartOS
 	?
 
-### Watch logs interactively
+### View logs live
 #### Windows Server
 	Get-Eventlog [log name] -Newest 200
 #### Red Hat Enterprise Linux
-	journalctl -u [service name]
+	journalctl -f -u [service name]
+[System Administrator's Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/s1-Using_the_Journal.html#s2-Viewing_Log_Files)
 #### Debian
-	journalctl -u [service name]
+	journalctl -f -u [service name]
 #### Ubuntu
-	tail -f [syslog log file]
+	tail [syslog log file]
 See /etc/syslog.conf for log destinations.
 #### OS X
 	?
