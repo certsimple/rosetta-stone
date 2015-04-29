@@ -89,7 +89,7 @@
         ],
         "Ubuntu": [
           "<p><code>sudo -i\n</code></p>",
-          "<p><a href=\"https://www.debian.org/doc/manuals/debian-reference/\">Debian Reference</a></p>"
+          "<p><a href=\"https://help.ubuntu.com/community/RootSudo\">Ubunti wiki</a></p>"
         ],
         "OS X": [
           "<p><code>sudo -i\n</code></p>"
@@ -105,7 +105,8 @@
     "Hardware Inspection": {
       "EFI/BIOS serial numbers": {
         "Windows Server": [
-          "<p><code>Get-WmiObject -Class Win32_BIOS\n</code></p>"
+          "<p><code>Get-WmiObject -Class Win32_BIOS\n</code></p>",
+          "<p><a href=\"https://technet.microsoft.com/en-us/library/ee176860.aspx\">Technet</a></p>"
         ],
         "Red Hat Enterprise Linux": [
           "<p><code>dmidecode\n</code></p>"
@@ -128,7 +129,8 @@
       },
       "CPU info": {
         "Windows Server": [
-          "<p><code>Get-WmiObject -Class Win32_Processor\n</code></p>"
+          "<p><code>Get-WmiObject -Class Win32_Processor\n</code></p>",
+          "<p><a href=\"http://blogs.technet.com/b/heyscriptingguy/archive/2011/09/26/use-powershell-and-wmi-to-get-processor-information.aspx\">Technet</a></p>"
         ],
         "Red Hat Enterprise Linux": [
           "<p><code>less /proc/cpuinfo\n</code></p>"
@@ -146,12 +148,13 @@
           "<p><code>sysctl hw.ncpu\n</code></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p><code>sysinfo\n</code></p>",
+          "<p><a href=\"https://smartos.org/man/1m/sysinfo\">Manual</a></p>"
         ]
       },
       "Physical memory": {
         "Windows Server": [
-          "<p><code>Get-WmiObject -Class  Win32_PhysicalMemory\n</code></p>"
+          "<p><code>Get-WmiObject -Class Win32_PhysicalMemory\n</code></p>"
         ],
         "Red Hat Enterprise Linux": [
           "<p><code>less /proc/meminfo\n</code></p>"
@@ -167,6 +170,10 @@
         ],
         "OpenBSD": [
           "<p><code>?\n</code></p>"
+        ],
+        "SmartOS": [
+          "<p><code>sysinfo\n</code></p>",
+          "<p><a href=\"https://smartos.org/man/1m/sysinfo\">Manual</a></p>"
         ]
       }
     },
@@ -202,19 +209,24 @@
           "<p><code>ping\n</code></p>"
         ],
         "Debian": [
-          "<p><code>ping\n</code></p>"
+          "<p><code>ping\n</code></p>",
+          "<p><a href=\"http://manpages.debian.org/cgi-bin/man.cgi?query=ping\">Manual</a></p>"
         ],
         "Ubuntu": [
-          "<p><code>ping\n</code></p>"
+          "<p><code>ping\n</code></p>",
+          "<p><a href=\"http://manpages.ubuntu.com/manpages/lucid/man8/ping.8.html\">Manual</a></p>"
         ],
         "OS X": [
-          "<p><code>ping\n</code></p>"
+          "<p><code>ping\n</code></p>",
+          "<p><a href=\"https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/ping.8.html\">Manual</a></p>"
         ],
         "OpenBSD": [
-          "<p><code>?\n</code></p>"
+          "<p><code>ping\n</code></p>",
+          "<p><a href=\"http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man8/ping.8\">Manual</a></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p><code>ping\n</code></p>",
+          "<p><a href=\"https://smartos.org/man/1M/PING\">Manual</a></p>"
         ]
       },
       "DNS resolution": {
@@ -464,18 +476,19 @@
           "<p><code>?\n</code></p>"
         ]
       },
-      "Watch logs interactively": {
+      "View logs live": {
         "Windows Server": [
           "<p><code>Get-Eventlog [log name] -Newest 200\n</code></p>"
         ],
         "Red Hat Enterprise Linux": [
-          "<p><code>journalctl -u [service name]\n</code></p>"
+          "<p><code>journalctl -f -u [service name]\n</code></p>",
+          "<p><a href=\"https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/s1-Using_the_Journal.html#s2-Viewing_Log_Files\">System Administrator's Guide</a></p>"
         ],
         "Debian": [
-          "<p><code>journalctl -u [service name]\n</code></p>"
+          "<p><code>journalctl -f -u [service name]\n</code></p>"
         ],
         "Ubuntu": [
-          "<p><code>tail -f [syslog log file]\n</code></p>",
+          "<p><code>tail [syslog log file]\n</code></p>",
           "<p>See /etc/syslog.conf for log destinations.</p>"
         ],
         "OS X": [
