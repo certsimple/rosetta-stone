@@ -118,7 +118,8 @@
           "<p><code>dmidecode\n</code></p>"
         ],
         "OS X": [
-          "<p><code>system_profiler SPHardwareDataType\n</code></p>"
+          "<p><code>system_profiler SPHardwareDataType\n</code></p>",
+          "<p><a href=\"https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/system_profiler.8.html\">Manual</a></p>"
         ],
         "OpenBSD": [
           "<p><code>dmidecode\n</code></p>"
@@ -135,14 +136,13 @@
         "Red Hat Enterprise Linux": [
           "<p><code>less /proc/cpuinfo\n</code></p>"
         ],
-        "Debian": [
-          "<p><code>less /proc/cpuinfo\n</code></p>"
-        ],
+        "Debian": [],
         "Ubuntu": [
           "<p><code>less /proc/cpuinfo\n</code></p>"
         ],
         "OS X": [
-          "<p><code>system_profiler SPHardwareDataType\n</code></p>"
+          "<p><code>system_profiler SPHardwareDataType\n</code></p>",
+          "<p><a href=\"https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/system_profiler.8.html\">Manual</a></p>"
         ],
         "OpenBSD": [
           "<p><code>sysctl hw.ncpu\n</code></p>"
@@ -677,6 +677,38 @@
         ],
         "SmartOS": [
           "<p><code>?\n</code></p>"
+        ]
+      }
+    },
+    "Crypto": {
+      "Generate an SSL CSR": {
+        "Windows Server": [
+          "<p><code>certreq\n</code></p>",
+          "<p><a href=\"https://technet.microsoft.com/en-gb/library/cc736326(v=ws.10\">Technet</a>.aspx)</p>"
+        ],
+        "Red Hat Enterprise Linux": [
+          "<p><code>openssl gen\n</code></p>",
+          "<p><a href=\"https://www.openssl.org/docs/apps/req.html\">OpenSSL</a></p>"
+        ],
+        "Debian": [
+          "<p><code>openssl gen\n</code></p>",
+          "<p><a href=\"https://www.openssl.org/docs/apps/req.html\">OpenSSL</a></p>"
+        ],
+        "Ubuntu": [
+          "<p><code>openssl gen\n</code></p>",
+          "<p><a href=\"https://www.openssl.org/docs/apps/req.html\">OpenSSL</a></p>"
+        ],
+        "OS X": [
+          "<p><code>openssl gen\n</code></p>",
+          "<p><a href=\"https://www.openssl.org/docs/apps/req.html\">OpenSSL</a></p>"
+        ],
+        "OpenBSD": [
+          "<p><code>openssl gen\n</code></p>",
+          "<p><a href=\"https://www.openssl.org/docs/apps/req.html\">OpenSSL</a></p>"
+        ],
+        "SmartOS": [
+          "<p><code>openssl gen\n</code></p>",
+          "<p><a href=\"https://www.openssl.org/docs/apps/req.html\">OpenSSL</a></p>"
         ]
       }
     }

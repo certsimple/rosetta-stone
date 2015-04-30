@@ -94,6 +94,7 @@ As above.
 As above.
 #### OS X
 	system_profiler SPHardwareDataType
+[Manual](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/system_profiler.8.html)
 #### OpenBSD
 	dmidecode
 #### SmartOS
@@ -107,11 +108,11 @@ As above.
 #### Red Hat Enterprise Linux
 	less /proc/cpuinfo
 #### Debian
-As above.
 #### Ubuntu
 As above.
 #### OS X
 	system_profiler SPHardwareDataType
+[Manual](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/system_profiler.8.html)
 #### OpenBSD
 	sysctl hw.ncpu
 #### SmartOS
@@ -531,8 +532,24 @@ As above.
 #### SmartOS
 	?
 
-
-
+## Crypto
+### Generate an SSL CSR
+#### Windows Server
+	certreq
+[Technet](https://technet.microsoft.com/en-gb/library/cc736326(v=ws.10).aspx)
+#### Red Hat Enterprise Linux
+	openssl gen
+[OpenSSL](https://www.openssl.org/docs/apps/req.html)
+#### Debian
+As above.
+#### Ubuntu
+As above.
+#### OS X
+As above.
+#### OpenBSD
+As above.
+#### SmartOS
+As above.
 
 
 
