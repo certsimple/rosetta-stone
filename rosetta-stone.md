@@ -536,7 +536,7 @@ As above.
 ### Generate an SSL CSR
 #### Windows Server
 	certreq
-[Technet](https://technet.microsoft.com/en-gb/library/cc736326(v=ws.10).aspx)
+[Technet](https://technet.microsoft.com/en-gb/library/cc736326%28v=ws.10%29.aspx)
 #### Red Hat Enterprise Linux
 	openssl gen
 [OpenSSL](https://www.openssl.org/docs/apps/req.html)
