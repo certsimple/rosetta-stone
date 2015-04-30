@@ -403,16 +403,20 @@ See /etc/syslog.conf for log destinations.
 	yum search [search term]
 [System Administrator's Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sec-Working_with_Packages.html#sec-Searching_Packages)
 #### Debian
-	?
+	apt-cache search
+[Debian FAQ](https://www.debian.org/doc/manuals/debian-faq/ch-pkgtools.en.html)
 #### Ubuntu
-	?
+	apt-cache search
+[Community Help Wiki](https://help.ubuntu.com/community/AptGet/Howto#Search_commands)
 #### OS X
 	brew search [search term]
 [Homebrew manual](https://github.com/Homebrew/homebrew/blob/master/Library/Homebrew/manpages/brew.1.md)
 #### OpenBSD
-	?
+List the packages on an [OpenBSD mirror](http://www.openbsd.org/ftp.html)
+[OpenBSD FAQ](http://www.openbsd.org/faq/faq15.html#PkgFind)
 #### SmartOS
-	?
+	pkgin av
+[SmartOS wiki](https://wiki.smartos.org/display/DOC/Working+with+Packages)
 
 ### Install package file
 #### Windows Server
@@ -433,7 +437,8 @@ See /etc/syslog.conf for log destinations.
 #### OpenBSD
 	pkg_add
 #### SmartOS
-	pkg_add [package name]
+	pkgin in [package name]
+[SmartOS wiki](https://wiki.smartos.org/display/DOC/Working+with+Packages)
 
 ### Uninstall package
 #### Windows Server
@@ -452,7 +457,8 @@ As above.
 #### OpenBSD
 	pkg_delete [package name]
 #### SmartOS
-	?
+	pkgin rm [package name]
+[SmartOS wiki](https://wiki.smartos.org/display/DOC/Working+with+Packages)
 
 
 
@@ -474,8 +480,8 @@ As above.
 #### OpenBSD
 	pkg_info
 #### SmartOS
-	?
-
+	pkgin ls
+[SmartOS wiki](https://wiki.smartos.org/display/DOC/Working+with+Packages)
 
 
 
@@ -518,7 +524,7 @@ As above.
 
 ### List installed package contents
 #### Windows Server
-	Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*
+	?
 #### Red Hat Enterprise Linux
 	rpm -ql [package name]
 #### Debian
