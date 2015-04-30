@@ -98,7 +98,7 @@ As above.
 #### OpenBSD
 	dmidecode
 #### SmartOS
-	?
+	sysinfo
 
 
 ### CPU info
@@ -156,7 +156,7 @@ As above.
 #### OpenBSD
 	?
 #### SmartOS
-	?
+	dladm
 
 ### IP connectivity
 #### Windows Server
@@ -194,7 +194,7 @@ As above.
 #### OpenBSD
 	host / dig
 #### SmartOS
-	?
+	host / dig / nslookup / getent hosts
 
 ### IP addressing
 #### Windows Server
@@ -212,6 +212,7 @@ As above.
 	ifconfig
 [Manual](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man8/ifconfig.8?query=ifconfig)
 #### SmartOS
+        ifconfig
 [Manual](https://smartos.org/man/1M/ifconfig)
 
 ### Ethernet connectivity
@@ -228,7 +229,8 @@ As above.
 #### OpenBSD
 	?
 #### SmartOS
-	?
+	dladm
+[Manual](https://smartos.org/man/1M/dladm)
 
 ### whois
 #### Windows Server
@@ -245,7 +247,7 @@ As above.
 #### OpenBSD
 	?
 #### SmartOS
-	?
+	whois
 
 ## Services
 
@@ -264,7 +266,7 @@ As above.
 #### OpenBSD
 	?
 #### SmartOS
-	?
+	/lib/svc/(manifest/method), /opt/local/lib/svc/(manifest/method), /lib/svc/(manifest/method)
 
 ### List Services
 #### Windows Server
@@ -420,7 +422,7 @@ See /etc/syslog.conf for log destinations, /var/adm/messages contains most messa
 List the packages on an [OpenBSD mirror](http://www.openbsd.org/ftp.html)
 [OpenBSD FAQ](http://www.openbsd.org/faq/faq15.html#PkgFind)
 #### SmartOS
-	pkgin av
+	pkgin av, pkgin search
 [SmartOS wiki](https://wiki.smartos.org/display/DOC/Working+with+Packages)
 
 ### Install package file
@@ -504,7 +506,7 @@ As above.
 #### OpenBSD
 	pkg_info
 #### SmartOS
-	?
+	pkgin pkg-descr [package name]
 
 
 
@@ -541,7 +543,7 @@ As above.
 #### OpenBSD
 	?
 #### SmartOS
-	?
+	pkgin provides [package name]
 
 ## Crypto
 ### Generate an SSL CSR
