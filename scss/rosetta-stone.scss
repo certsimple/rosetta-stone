@@ -100,6 +100,11 @@ table {
 	tr {
 		padding: 5px;
 		border-bottom: 1px solid $black;
+		// Only for headers inside rows
+		td, th {
+			border-left: 1px solid $black;
+			border-right: 1px solid $black;
+		}
 	}
 	th, td {
 		padding: 10px;
@@ -112,8 +117,7 @@ table {
 		overflow: scroll;
 	}
 	td {
-		border-left: 1px solid $black;
-		border-right: 1px solid $black;
+
 		// References
 		a {
 		  float: right;
