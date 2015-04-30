@@ -65,5 +65,5 @@ var htmlToJson = function(window){
 
 jsdom.env(originalHTML, ["http://code.jquery.com/jquery.js"], function (errors, window) {
 	var data = htmlToJson(window)
-	fs.writeFileSync('json/rosetta-stone.json', JSON.stringify({sections: data}, null, 2));
+	fs.writeFileSync('json/rosetta-stone.json', JSON.stringify({sections: data}, null));
 });
