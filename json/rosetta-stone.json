@@ -72,7 +72,8 @@
           "<p><a href=\"http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man8/sudo.8\">Manual</a></p>"
         ],
         "SmartOS": [
-          "<p><code>sudo [command]\n</code></p>"
+          "<p><code>sudo [command]\npfexec [command]\n</code></p>",
+          "<p><a href=\"https://smartos.org/man/1m/pfexec\">Manual</a></p>"
         ]
       },
       "Run shell as a different user": {

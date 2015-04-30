@@ -56,6 +56,8 @@ As above.
 [Manual](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man8/sudo.8)
 #### SmartOS
 	sudo [command]
+    pfexec [command]
+[Manual](https://smartos.org/man/1m/pfexec)
 
 
 ### Run shell as a different user
