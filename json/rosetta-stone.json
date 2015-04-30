@@ -125,7 +125,8 @@
           "<p><code>dmidecode\n</code></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p><code>sysinfo\n</code></p>",
+          "<p><a href=\"https://smartos.org/man/1m/sysinfo\">Manual</a></p>"
         ]
       },
       "CPU info": {
@@ -198,7 +199,7 @@
           "<p><code>?\n</code></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p><code>dladm\n</code></p>"
         ]
       },
       "IP connectivity": {
@@ -249,7 +250,7 @@
           "<p><code>host / dig\n</code></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p><code>host / dig\n</code></p>"
         ]
       },
       "IP addressing": {
@@ -274,7 +275,8 @@
           "<p><a href=\"http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man8/ifconfig.8?query=ifconfig\">Manual</a></p>"
         ],
         "SmartOS": [
-          "<p><a href=\"https://smartos.org/man/1M/ifconfig\">Manual</a></p>"
+          "<p><code>ipadm\n</code></p>",
+          "<p><a href=\"https://smartos.org/man/1M/ipadm\">Manual</a></p>"
         ]
       },
       "whois": {
@@ -297,7 +299,7 @@
           "<p><code>?\n</code></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p><code>whois 'domain [domain name]'\n</code></p>"
         ]
       }
     },
@@ -322,7 +324,12 @@
           "<p><code>?\n</code></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p>User installed</p>",
+          "<p><code>/opt/custom/smf\n</code></p>",
+          "<p>Pkgsrc installed</p>",
+          "<p><code>/opt/local/lib/svc/manifest\n</code></p>",
+          "<p>System</p>",
+          "<p><code>/lib/svc/manifest, /var/svc/manifest\n</code></p>"
         ]
       },
       "List Services": {
@@ -395,7 +402,7 @@
           "<p><code>pkill [process name]\n</code></p>"
         ],
         "SmartOS": [
-          "<p><code>svcadm disable\n</code></p>",
+          "<p><code>svcadm disable [service name]\n</code></p>",
           "<p><a href=\"https://wiki.smartos.org/display/DOC/SmartOS+Technical+FAQs\">Reference</a></p>"
         ]
       },
@@ -420,7 +427,7 @@
           "<p><code>?\n</code></p>"
         ],
         "SmartOS": [
-          "<p><code>svcadm restart\n</code></p>",
+          "<p><code>svcadm restart [service name]\n</code></p>",
           "<p><a href=\"https://wiki.smartos.org/display/DOC/SmartOS+Technical+FAQs\">SmartOS Wiki</a></p>"
         ]
       }
@@ -446,7 +453,7 @@
           "<p><code>?\n</code></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p>Rsyslog\n<a href=\"https://www.joyent.com/blog/log-management-on-smart-os-featuring-dtrace-and-node-js\">Joyent blog</a></p>"
         ]
       },
       "Raise a log message from the shell": {
@@ -467,13 +474,16 @@
           "<p><a href=\"http://manpages.ubuntu.com/manpages/lucid/man1/logger.1.html\">Manual</a></p>"
         ],
         "OS X": [
-          "<p><code>?\n</code></p>"
+          "<p><code>logger\n</code></p>",
+          "<p><a href=\"https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/logger.1.html\">Manual</a></p>"
         ],
         "OpenBSD": [
-          "<p><code>?\n</code></p>"
+          "<p><code>logger\n</code></p>",
+          "<p><a href=\"http://nixdoc.net/man-pages/openbsd/man1/logger.1.html\">Manual</a></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p><code>logger\n</code></p>",
+          "<p><a href=\"https://www.smartos.org/man/1/logger\">Manual</a></p>"
         ]
       },
       "View logs live": {
@@ -488,17 +498,20 @@
           "<p><code>journalctl -f -u [service name]\n</code></p>"
         ],
         "Ubuntu": [
-          "<p><code>tail [syslog log file]\n</code></p>",
-          "<p>See /etc/syslog.conf for log destinations.</p>"
+          "<p><code>tail -f [syslog log file]\n</code></p>",
+          "<p>See /etc/syslog.conf for log destinations, /var/log/messages contains most messages.</p>"
         ],
         "OS X": [
-          "<p><code>?\n</code></p>"
+          "<p><code>tail -f [syslog log file]\n</code></p>",
+          "<p>See /etc/syslog.conf for log destinations, /var/log/system.log contains most messages.</p>"
         ],
         "OpenBSD": [
           "<p><code>?\n</code></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p><code>tail -f [syslog log file]\n</code></p>",
+          "<p>See /etc/syslog.conf for log destinations, /var/adm/messages contains most messages.</p>",
+          "<p>For SMF:\n    tail -f $(svcs -L [service name])</p>"
         ]
       }
     },
@@ -513,20 +526,23 @@
           "<p><a href=\"https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sec-Working_with_Packages.html#sec-Searching_Packages\">System Administrator's Guide</a></p>"
         ],
         "Debian": [
-          "<p><code>?\n</code></p>"
+          "<p><code>apt-cache search\n</code></p>",
+          "<p><a href=\"https://www.debian.org/doc/manuals/debian-faq/ch-pkgtools.en.html\">Debian FAQ</a></p>"
         ],
         "Ubuntu": [
-          "<p><code>?\n</code></p>"
+          "<p><code>apt-cache search\n</code></p>",
+          "<p><a href=\"https://help.ubuntu.com/community/AptGet/Howto#Search_commands\">Community Help Wiki</a></p>"
         ],
         "OS X": [
           "<p><code>brew search [search term]\n</code></p>",
           "<p><a href=\"https://github.com/Homebrew/homebrew/blob/master/Library/Homebrew/manpages/brew.1.md\">Homebrew manual</a></p>"
         ],
         "OpenBSD": [
-          "<p><code>?\n</code></p>"
+          "<p>List the packages on an <a href=\"http://www.openbsd.org/ftp.html\">OpenBSD mirror</a>\n<a href=\"http://www.openbsd.org/faq/faq15.html#PkgFind\">OpenBSD FAQ</a></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p><code>pkgin av\n</code></p>",
+          "<p><a href=\"https://wiki.smartos.org/display/DOC/Working+with+Packages\">SmartOS wiki</a></p>"
         ]
       },
       "Install package file": {
@@ -554,7 +570,8 @@
           "<p><code>pkg_add\n</code></p>"
         ],
         "SmartOS": [
-          "<p><code>pkg_add [package name]\n</code></p>"
+          "<p><code>pkgin in [package name]\n</code></p>",
+          "<p><a href=\"https://wiki.smartos.org/display/DOC/Working+with+Packages\">SmartOS wiki</a></p>"
         ]
       },
       "Uninstall package": {
@@ -580,7 +597,8 @@
           "<p><code>pkg_delete [package name]\n</code></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p><code>pkgin rm [package name]\n</code></p>",
+          "<p><a href=\"https://wiki.smartos.org/display/DOC/Working+with+Packages\">SmartOS wiki</a></p>"
         ]
       },
       "List all installed packages": {
@@ -607,7 +625,8 @@
           "<p><code>pkg_info\n</code></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p><code>pkgin ls\n</code></p>",
+          "<p><a href=\"https://wiki.smartos.org/display/DOC/Working+with+Packages\">SmartOS wiki</a></p>"
         ]
       },
       "Describe what an installed package is": {
@@ -630,7 +649,7 @@
           "<p><code>pkg_info\n</code></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p><code>pkg_info\n</code></p>"
         ]
       },
       "Determine package responsible for a file": {
@@ -653,12 +672,12 @@
           "<p><code>pkg_info -E [file]\n</code></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p><code>pkg_info -Fe [file]\n</code></p>"
         ]
       },
       "List installed package contents": {
         "Windows Server": [
-          "<p><code>Get-ItemProperty HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*\n</code></p>"
+          "<p><code>?\n</code></p>"
         ],
         "Red Hat Enterprise Linux": [
           "<p><code>rpm -ql [package name]\n</code></p>"
@@ -676,7 +695,7 @@
           "<p><code>?\n</code></p>"
         ],
         "SmartOS": [
-          "<p><code>?\n</code></p>"
+          "<p><code>pkg_info -qL [package]\npkgin pc [package]\n</code></p>"
         ]
       }
     },
@@ -684,30 +703,30 @@
       "Generate an SSL CSR": {
         "Windows Server": [
           "<p><code>certreq\n</code></p>",
-          "<p><a href=\"https://technet.microsoft.com/en-gb/library/cc736326(v=ws.10\">Technet</a>.aspx)</p>"
+          "<p><a href=\"https://technet.microsoft.com/en-gb/library/cc736326%28v=ws.10%29.aspx\">Technet</a></p>"
         ],
         "Red Hat Enterprise Linux": [
-          "<p><code>openssl gen\n</code></p>",
+          "<p><code>openssl req\n</code></p>",
           "<p><a href=\"https://www.openssl.org/docs/apps/req.html\">OpenSSL</a></p>"
         ],
         "Debian": [
-          "<p><code>openssl gen\n</code></p>",
+          "<p><code>openssl req\n</code></p>",
           "<p><a href=\"https://www.openssl.org/docs/apps/req.html\">OpenSSL</a></p>"
         ],
         "Ubuntu": [
-          "<p><code>openssl gen\n</code></p>",
+          "<p><code>openssl req\n</code></p>",
           "<p><a href=\"https://www.openssl.org/docs/apps/req.html\">OpenSSL</a></p>"
         ],
         "OS X": [
-          "<p><code>openssl gen\n</code></p>",
+          "<p><code>openssl req\n</code></p>",
           "<p><a href=\"https://www.openssl.org/docs/apps/req.html\">OpenSSL</a></p>"
         ],
         "OpenBSD": [
-          "<p><code>openssl gen\n</code></p>",
+          "<p><code>openssl req\n</code></p>",
           "<p><a href=\"https://www.openssl.org/docs/apps/req.html\">OpenSSL</a></p>"
         ],
         "SmartOS": [
-          "<p><code>openssl gen\n</code></p>",
+          "<p><code>openssl req\n</code></p>",
           "<p><a href=\"https://www.openssl.org/docs/apps/req.html\">OpenSSL</a></p>"
         ]
       }
