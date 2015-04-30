@@ -1,12 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="520.536px" height="519.202px" viewBox="36.037 163.346 520.536 519.202"
-	 enable-background="new 36.037 163.346 520.536 519.202" xml:space="preserve">
-<path fill="#333333" d="M296.306,163.346c-142.813,0-260.269,116.12-260.269,260.269c0,142.812,116.118,258.934,260.269,258.934
-	c142.812,0,260.268-116.119,260.268-260.27C555.239,279.466,439.118,163.346,296.306,163.346z M296.306,671.871
-	c-137.476,0-249.591-112.115-249.591-249.592c0-137.475,112.115-249.59,249.591-249.59c137.475,0,249.59,112.116,249.59,249.59
-	C545.896,559.755,433.781,671.871,296.306,671.871z M416.429,270.123H391.07l-94.764,136.141l-96.1-136.141h-25.359l108.111,150.822
-	L172.177,575.771h25.36l97.434-140.145l98.768,140.145h25.36L308.318,420.945L416.429,270.123z"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="415px" height="155px" viewBox="0 0 415 155" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.1 (12002) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-1" sketch:type="MSArtboardGroup" font-size="58" font-family="Myriad Pro">
+            <text id="OS-X-" sketch:type="MSTextLayer" font-weight="normal">
+                <tspan x="38" y="97" fill="#222222">OS X</tspan>
+                <tspan x="151.97" y="97" fill="#24A222"> </tspan>
+            </text>
+            <text id="Yosemite" sketch:type="MSTextLayer" font-weight="260" fill="#222222">
+                <tspan x="169" y="97">Yosemite</tspan>
+            </text>
+        </g>
+    </g>
 </svg>
