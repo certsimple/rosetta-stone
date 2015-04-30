@@ -538,7 +538,7 @@ As above.
 	certreq
 [Technet](https://technet.microsoft.com/en-gb/library/cc736326%28v=ws.10%29.aspx)
 #### Red Hat Enterprise Linux
-	openssl gen
+	openssl req
 [OpenSSL](https://www.openssl.org/docs/apps/req.html)
 #### Debian
 As above.
