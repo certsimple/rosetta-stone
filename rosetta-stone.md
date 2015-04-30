@@ -352,7 +352,8 @@ Apple System Log (also called ASL)
 #### OpenBSD
 	?
 #### SmartOS
-	?
+Rsyslog
+[Joyent blog](https://www.joyent.com/blog/log-management-on-smart-os-featuring-dtrace-and-node-js)
 
 ### Raise a log message from the shell
 #### Windows Server
@@ -368,11 +369,14 @@ Apple System Log (also called ASL)
 	logger
 [Manual](http://manpages.ubuntu.com/manpages/lucid/man1/logger.1.html)
 #### OS X
-	?
+	logger
+[Manual](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/logger.1.html)
 #### OpenBSD
-	?
+	logger
+[Manual](http://nixdoc.net/man-pages/openbsd/man1/logger.1.html)
 #### SmartOS
-	?
+	logger
+[Manual](https://www.smartos.org/man/1/logger)
 
 ### View logs live
 #### Windows Server
@@ -383,15 +387,16 @@ Apple System Log (also called ASL)
 #### Debian
 	journalctl -f -u [service name]
 #### Ubuntu
-	tail [syslog log file]
-See /etc/syslog.conf for log destinations.
+	tail -f [syslog log file]
+See /etc/syslog.conf for log destinations, /var/log/messages contains most messages.
 #### OS X
-	?
+	tail -f [syslog log file]
+See /etc/syslog.conf for log destinations, /var/log/system.log contains most messages.
 #### OpenBSD
 	?
 #### SmartOS
-	?
-
+	tail -f [syslog log file]
+See /etc/syslog.conf for log destinations, /var/adm/messages contains most messages.
 
 ## Packaging
 
