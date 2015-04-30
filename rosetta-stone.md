@@ -56,7 +56,7 @@ As above.
 [Manual](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man8/sudo.8)
 #### SmartOS
 	sudo [command]
-    pfexec [command]
+	pfexec [command]
 [Manual](https://smartos.org/man/1m/pfexec)
 
 
@@ -216,7 +216,7 @@ As above.
 	ifconfig
 [Manual](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man8/ifconfig.8?query=ifconfig)
 #### SmartOS
-    ipadm
+	ipadm
 [Manual](https://smartos.org/man/1M/ipadm)
 
 ### Ethernet connectivity
@@ -234,6 +234,7 @@ As above.
 	?
 #### SmartOS
 	dladm
+[Manual](https://smartos.org/man/1M/dladm)
 
 ### whois
 #### Windows Server
@@ -271,15 +272,14 @@ As above.
 #### SmartOS
 User installed
 
-    /opt/custom/smf
+	/opt/custom/smf
 
 Pkgsrc installed
 
-    /opt/local/lib/svc/manifest
+	/opt/local/lib/svc/manifest
 
 System
-
-    /lib/svc/manifest, /var/svc/manifest
+	/lib/svc/manifest, /var/svc/manifest
 
 ### List Services
 #### Windows Server
@@ -414,7 +414,7 @@ See /etc/syslog.conf for log destinations, /var/log/system.log contains most mes
 See /etc/syslog.conf for log destinations, /var/adm/messages contains most messages.
 
 For SMF:
-    tail -f $(svcs -L [service name])
+	tail -f $(svcs -L [service name])
 
 ## Packaging
 
@@ -439,6 +439,7 @@ List the packages on an [OpenBSD mirror](http://www.openbsd.org/ftp.html)
 [OpenBSD FAQ](http://www.openbsd.org/faq/faq15.html#PkgFind)
 #### SmartOS
 	pkgin av
+	pkgin search
 [SmartOS wiki](https://wiki.smartos.org/display/DOC/Working+with+Packages)
 
 ### Install package file
@@ -522,8 +523,8 @@ As above.
 #### OpenBSD
 	pkg_info
 #### SmartOS
-	pkg_info
-
+	pkgin pkg-descr [package name]
+[pkgin](http://pkgin.net/)
 
 
 
@@ -559,8 +560,9 @@ As above.
 #### OpenBSD
 	?
 #### SmartOS
-	pkg_info -qL [package]
-    pkgin pc [package]
+	pkgin pc [package]
+	pkgin provides [package name]
+[pkgin](http://pkgin.net/)
 
 ## Crypto
 ### Generate an SSL CSR
