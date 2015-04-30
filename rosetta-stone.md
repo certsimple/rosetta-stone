@@ -56,6 +56,8 @@ As above.
 [Manual](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man8/sudo.8)
 #### SmartOS
 	sudo [command]
+    pfexec [command]
+[Manual](https://smartos.org/man/1m/pfexec)
 
 
 ### Run shell as a different user
@@ -98,7 +100,8 @@ As above.
 #### OpenBSD
 	dmidecode
 #### SmartOS
-	?
+	sysinfo
+[Manual](https://smartos.org/man/1m/sysinfo)
 
 
 ### CPU info
@@ -156,7 +159,8 @@ As above.
 #### OpenBSD
 	?
 #### SmartOS
-	?
+	dladm show-link | dladm show-vnic
+[Manual](https://smartos.org/man/1M/dladm)
 
 ### IP connectivity
 #### Windows Server
@@ -194,7 +198,7 @@ As above.
 #### OpenBSD
 	host / dig
 #### SmartOS
-	?
+	host / dig
 
 ### IP addressing
 #### Windows Server
@@ -212,7 +216,8 @@ As above.
 	ifconfig
 [Manual](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man8/ifconfig.8?query=ifconfig)
 #### SmartOS
-[Manual](https://smartos.org/man/1M/ifconfig)
+    ipadm
+[Manual](https://smartos.org/man/1M/ipadm)
 
 ### Ethernet connectivity
 #### Windows Server
@@ -228,7 +233,7 @@ As above.
 #### OpenBSD
 	?
 #### SmartOS
-	?
+	dladm
 
 ### whois
 #### Windows Server
@@ -245,7 +250,7 @@ As above.
 #### OpenBSD
 	?
 #### SmartOS
-	?
+	whois 'domain [domain name]'
 
 ## Services
 
@@ -264,7 +269,17 @@ As above.
 #### OpenBSD
 	?
 #### SmartOS
-	?
+User installed
+
+    /opt/custom/smf
+
+Pkgsrc installed
+
+    /opt/local/lib/svc/manifest
+
+System
+
+    /lib/svc/manifest, /var/svc/manifest
 
 ### List Services
 #### Windows Server
@@ -316,7 +331,7 @@ As above.
 #### OpenBSD
 	pkill [process name]
 #### SmartOS
-	svcadm disable
+	svcadm disable [service name]
 [Reference](https://wiki.smartos.org/display/DOC/SmartOS+Technical+FAQs)
 
 ### Restart Service
@@ -334,7 +349,7 @@ As above.
 #### OpenBSD
 	?
 #### SmartOS
-	svcadm restart
+	svcadm restart [service name]
 [SmartOS Wiki](https://wiki.smartos.org/display/DOC/SmartOS+Technical+FAQs)
 
 ## Logging
@@ -397,6 +412,9 @@ See /etc/syslog.conf for log destinations, /var/log/system.log contains most mes
 #### SmartOS
 	tail -f [syslog log file]
 See /etc/syslog.conf for log destinations, /var/adm/messages contains most messages.
+
+For SMF:
+    tail -f $(svcs -L [service name])
 
 ## Packaging
 
@@ -504,7 +522,7 @@ As above.
 #### OpenBSD
 	pkg_info
 #### SmartOS
-	?
+	pkg_info
 
 
 
@@ -525,7 +543,7 @@ As above.
 #### OpenBSD
 	pkg_info -E [file]
 #### SmartOS
-	?
+	pkg_info -Fe [file]
 
 ### List installed package contents
 #### Windows Server
@@ -541,7 +559,8 @@ As above.
 #### OpenBSD
 	?
 #### SmartOS
-	?
+	pkg_info -qL [package]
+    pkgin pc [package]
 
 ## Crypto
 ### Generate an SSL CSR
