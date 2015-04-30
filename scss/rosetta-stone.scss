@@ -19,6 +19,7 @@ body {
 	font-family: Lato;
 	color: $black;
 	padding: 0;
+	margin: 0;
 	background-color: white;
 }
 
@@ -36,10 +37,39 @@ p {
 h1, h2 {
 	font-family: Lato;
 	font-weight: 300;
+	margin: 0;
+	padding: 12px 0;
 }
 
 th img {
 	max-height: 40px;
+}
+
+.intro {
+	background-color: $ssl-green;
+	color: white;
+	padding: 24px;
+	h1 {
+	}
+	a {
+		color: white;
+		text-decoration: underline;
+		&:hover, &:active, &:visited {
+			color: white;
+			text-decoration: underline;
+		}
+	}
+	p {
+	  font-size: 10pt;
+	  text-transform: uppercase;
+	  &.aside {
+	  	color: white;
+	  	text-transform: none;
+	  }
+	}
+	img {
+		background-color: white;
+	}
 }
 
 .chop-box {
@@ -89,22 +119,20 @@ th img {
 .commands {
 	max-width: 100%;
 	overflow: scroll;
+	h2 {
+		padding: 12px;
+	}
 }
 
 // Technique from: https://techblog.livingsocial.com/blog/2015/04/06/responsive-tables-in-pure-css
 table {
-	margin:0;
-	padding: 12px;
+	margin: 12px;
+	padding: 0;
 	border-collapse: collapse;
 	border-spacing: 0;
 	tr {
 		padding: 5px;
 		border-bottom: 1px solid $black;
-		// Only for headers inside rows
-		td, th {
-			border-left: 1px solid $black;
-			border-right: 1px solid $black;
-		}
 	}
 	th, td {
 		padding: 10px;
@@ -115,6 +143,13 @@ table {
 		text-align: center;
 		width: 400px;
 		overflow: scroll;
+	}
+	tbody {
+		// Only for headers inside tbody
+		td, th {
+			border-left: 1px solid $black;
+			border-right: 1px solid $black;
+		}
 	}
 	td {
 
