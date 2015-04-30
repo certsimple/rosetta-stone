@@ -3,8 +3,8 @@ var fs = require("fs");
 
 var log = console.log.bind(console)
 
-var rosettaTemplate = fs.readFileSync(__dirname + '/template.mustache', 'utf8');
-var rosettaData = JSON.parse(fs.readFileSync(__dirname + '/json/rosetta-stone.json', 'utf8'));
+var rosettaTemplate = fs.readFileSync('mustache/template.mustache', 'utf8');
+var rosettaData = JSON.parse(fs.readFileSync('json/rosetta-stone.json', 'utf8'));
 
 var Ractive = require("ractive"),
 	$ = require("jquery");

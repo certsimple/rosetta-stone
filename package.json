@@ -4,15 +4,20 @@
   "description": "Convert command line tasks between common Operating Systems",
   "repository": "https://github.com/mikemaccana/rosetta-stone.git",
   "dependencies": {
+  },
+  "devDependencies": {
+    "gulp-webserver": "^0.9.0",
     "brfs": "^1.4.0",
     "es6-shim": "^0.30.0",
+    "gulp-autoprefixer": "^2.2.0",
+    "gulp-browserify": "^0.5.1",
     "jquery": "^2.1.4",
     "jsdom": "^3.1.2",
     "marked": "^0.3.3",
     "multiline": "^1.0.2",
-    "ractive": "^0.7.3"
+    "ractive": "^0.7.3",
+    "vinyl-source-stream": "^1.1.0"
   },
-  "devDependencies": {},
   "engines": {
     "node": ">= 0.12"
   },

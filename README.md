@@ -1,6 +1,6 @@
 # The Command Line Rosetta Stone
 
-A comparison and conversion chart of modern operating systems commands:
+A chart for comparing command line tasks on modern operating systems:
 
 - Windows
 - RHEL (and CentOS)
@@ -22,18 +22,13 @@ Simply edit `rosetta-stone.md` and send a pull request.
 
 You don't need to build to contribute, but if you want to build the HTML and see what your changes look like yourself:
 
-1. Install Node.js
-2. `git clone https://github.com/mikemaccana/rosetta-stone.git`
-2. `cd rosetta-stone; npm install`
+1. Install node.js
+2. npm install rosetta-stone
 3. Edit `rosettastone.md`
-4. `npm run-script build` to turn the markdown into JSON.
+4. Run `gulp`, and visit `http://localhost:7777`
 
 ## Motivation
 
-You can [read more about the rationale](https://certsimple.com/blog/recreating-unix-rosetta-stone).
+You can [read more about the rationale at CertSimple](https://certsimple.com/blog/recreating-unix-rosetta-stone).
 
 Inspired by the now out of date [Unix Rosetta Stone](http://bhami.com/rosetta.html).
-
-## License
-
-The MIT License (MIT)

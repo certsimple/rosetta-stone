@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 var marked = require('marked'),
 	fs = require('fs'),
-	multiline = require('multiline'),
-	jsdom = require("jsdom");
+	multiline = require('multiline');
 
 require('es6-shim')
 
@@ -15,11 +14,7 @@ if ( DEBUG ) {
 	log = function(){}
 }
 
-var source = fs.readFileSync('rosetta-stone.md', 'utf8')
-
-var originalHTML = marked(source)
-
-var htmlToJson = function(window){
+module.exports = function(window){
 	var $ = window.$;
 	var data = {}
 	var firstSection = $('h2').each(function(sectionIndex, sectionElement){
@@ -63,7 +58,4 @@ var htmlToJson = function(window){
 	return data
 }
 
-jsdom.env(originalHTML, ["http://code.jquery.com/jquery.js"], function (errors, window) {
-	var data = htmlToJson(window)
-	fs.writeFileSync('json/rosetta-stone.json', JSON.stringify({sections: data}, null));
-});
+
