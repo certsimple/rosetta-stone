@@ -2,7 +2,6 @@
 var marked = require('marked'),
 	fs = require('fs'),
 	multiline = require('multiline'),
-	Handlebars = require('handlebars'),
 	jsdom = require("jsdom");
 
 require('es6-shim')
@@ -17,7 +16,6 @@ if ( DEBUG ) {
 }
 
 var source = fs.readFileSync('rosetta-stone.md', 'utf8')
-var template = Handlebars.compile(fs.readFileSync('template.mustache', 'utf8'));
 
 var originalHTML = marked(source)
 
