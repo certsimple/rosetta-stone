@@ -1,6 +1,6 @@
 {
   "name": "rosetta-stone",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "dependencies": {
     "brfs": {
       "version": "1.4.0",
