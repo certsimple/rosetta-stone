@@ -560,6 +560,7 @@ As above.
 	rpm -ql [package name]
 #### Debian
 	dpkg -L [package name]
+[debian-handbook](http://debian-handbook.info/browse/stable/sect.manipulating-packages-with-dpkg.html)
 #### Ubuntu
 As above.
 #### OS X
