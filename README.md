@@ -10,9 +10,9 @@ A chart for comparing command line tasks on modern operating systems:
 - OpenBSD
 - SmartOS
 
-## So where is it?
+## Where can I see it online?
 
-[You can find the Command Line Rosetta Stone Right here](https://certsimple.com/rosetta-stone)
+[The Command Line Rosetta Stone](https://certsimple.com/rosetta-stone)
 
 ## Contributing
 
@@ -22,7 +22,7 @@ Simply edit `rosetta-stone.md` and send a pull request.
 
 You don't need to build to contribute, but if you want to build the HTML and see what your changes look like yourself:
 
-1. Install node.js
+1. Install node.js and gulp
 2. npm install rosetta-stone
 3. Edit `rosettastone.md`
 4. Run `gulp`, and visit `http://localhost:7777`
