@@ -31,7 +31,7 @@ gulp.task('markdown-to-json', function (cb) {
 });
 
 // Browserify our code
-// Don't depend on 'clean' - let new files overwrite old ones. Stops ugliness during deploy.
+// Since we the JSON is incorporated into our browserify bundle we depend on it.
 gulp.task('js', ['markdown-to-json'], function() {
 	// Browserify/bundle the JS.
 	gulp.src('./js/src/index.js')
