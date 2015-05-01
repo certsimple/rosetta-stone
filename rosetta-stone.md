@@ -559,7 +559,7 @@ As above.
 #### Red Hat Enterprise Linux
 	rpm -ql [package name]
 #### Debian
-	?
+	dpkg -L [package name]
 #### Ubuntu
 As above.
 #### OS X
