@@ -155,7 +155,8 @@ As above.
 #### Ubuntu
 As above.
 #### OS X
-	?
+	ifconfig [interface]
+The `status` field contains connectivity information, `media` contains link negotiation info.
 #### OpenBSD
 	?
 #### SmartOS
