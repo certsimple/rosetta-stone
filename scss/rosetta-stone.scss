@@ -50,11 +50,16 @@ th img {
 header {
 	background-color: $ssl-green;
 	color: white;
+	display:flex;
+	flex-direction: row;
+	align-items: center;
 	.intro {
 		max-width: $single-column-max-width;
 		padding: 24px;
 		margin: 0 auto;
+		text-align: center;
 		h1 {
+			font-weight: 500;
 		}
 		a {
 			color: white;
@@ -105,6 +110,7 @@ header {
 
 .enable-operating-systems {
 	padding: 12px;
+	text-align: center;
 	img {
 		cursor: pointer;
 	  padding: 3px;
@@ -112,7 +118,8 @@ header {
 	  height: 40px;
 	  width: 100px;
 	  &.enabled {
-	  	border: 1px solid $black;
+	  	border-radius: 3px;
+	  	border: 1px solid $ssl-green;
 	  }
 	}
 }
@@ -215,6 +222,7 @@ table {
 }
 
 .notes {
+	padding: 12px;
 	p {
 		font-size: 10pt;
 		color: $mid-grey;
