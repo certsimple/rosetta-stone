@@ -458,7 +458,7 @@ List the packages on an [OpenBSD mirror](http://www.openbsd.org/ftp.html)
 [Debian wiki](https://wiki.debian.org/DebianPackageManagement)
 #### Ubuntu
 	apt-get install [package name]
-[Ubuntu LTS wiki](https://help.ubuntu.com/lts/serverguide/apt-get.html)
+[Ubuntu Server Guide](https://help.ubuntu.com/14.04/serverguide/apt-get.html)
 #### OS X
 	brew install [package name]
 [Homebrew FAQ](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/FAQ.md)
@@ -478,7 +478,8 @@ List the packages on an [OpenBSD mirror](http://www.openbsd.org/ftp.html)
 #### Debian
 	apt-get remove [package name]
 #### Ubuntu
-As above.
+	apt-get remove [package name]
+[Ubuntu Server Guide](https://help.ubuntu.com/14.04/serverguide/apt-get.html)
 #### OS X
 	brew uninstall [package name]
 [Homebrew FAQ](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/FAQ.md)
@@ -501,7 +502,7 @@ As above.
 	dpkg -l
 #### Ubuntu
 	dpkg -l
-[Ubuntu LTS wiki](https://help.ubuntu.com/lts/serverguide/dpkg.html)
+[Ubuntu Server Guide](https://help.ubuntu.com/14.04/serverguide/dpkg.html)
 #### OS X
 	brew list
 [Homebrew manual](https://github.com/Homebrew/homebrew/blob/master/Library/Homebrew/manpages/brew.1.md)
@@ -542,7 +543,8 @@ As above.
 #### Debian
 	dpkg -S
 #### Ubuntu
-As above.
+	dpkg -S
+[Ubuntu Server Guide](https://help.ubuntu.com/14.04/serverguide/dpkg.html)
 #### OS X
 	?
 #### OpenBSD
