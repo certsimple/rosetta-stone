@@ -29,7 +29,7 @@
     ]
   },
   "scripts": {
-    "build": "./build.js"
+    "build": "gulp sass js"
   },
   "license": "MIT"
 }
