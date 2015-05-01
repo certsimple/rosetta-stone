@@ -501,6 +501,7 @@ List the packages on an [OpenBSD mirror](http://www.openbsd.org/ftp.html)
 [System Administrator's Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sec-Working_with_Packages.html#sec-Listing_Packages)
 #### Debian
 	dpkg -l
+[Manual](http://manpages.debian.org/cgi-bin/man.cgi?sektion=1&query=dpkg-query&apropos=0&manpath=sid&locale=en)
 #### Ubuntu
 	dpkg -l
 [Ubuntu Server Guide](https://help.ubuntu.com/14.04/serverguide/dpkg.html)
@@ -558,9 +559,10 @@ As above.
 	?
 #### Red Hat Enterprise Linux
 	rpm -ql [package name]
+[System Administrator's Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sec-Working_with_Packages.html#sec-Listing_Packages)
 #### Debian
 	dpkg -L [package name]
-[debian-handbook](http://debian-handbook.info/browse/stable/sect.manipulating-packages-with-dpkg.html)
+[Manual](http://manpages.debian.org/cgi-bin/man.cgi?sektion=1&query=dpkg-query)
 #### Ubuntu
 As above.
 #### OS X
