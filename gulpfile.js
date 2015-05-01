@@ -27,7 +27,7 @@ gulp.task('markdown-to-json', function () {
 	var originalHTML = marked(source)
 	jsdom.env(originalHTML, ["http://code.jquery.com/jquery.js"], function (errors, window) {
 		var data = htmlToJson(window)
-		fs.writeFileSync('json/rosetta-stone.json', JSON.stringify({sections: data}, null));
+		fs.writeFileSync('json/rosetta-stone.json', JSON.stringify({sections: data}, null, 2));
 	});
 });
 

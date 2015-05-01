@@ -279,7 +279,10 @@ Pkgsrc installed
 	/opt/local/lib/svc/manifest
 
 System
-	/lib/svc/manifest, /var/svc/manifest
+
+	/lib/svc/manifest
+
+	/var/svc/manifest
 
 ### List Services
 #### Windows Server
@@ -403,17 +406,18 @@ Rsyslog
 	journalctl -f -u [service name]
 #### Ubuntu
 	tail -f [syslog log file]
-See /etc/syslog.conf for log destinations, /var/log/messages contains most messages.
+See `/etc/syslog.conf` for log destinations, `/var/log/messages` contains most messages.
 #### OS X
 	tail -f [syslog log file]
-See /etc/syslog.conf for log destinations, /var/log/system.log contains most messages.
+See `/etc/syslog.conf` for log destinations, `/var/log/system.log` contains most messages.
 #### OpenBSD
 	?
 #### SmartOS
 	tail -f [syslog log file]
-See /etc/syslog.conf for log destinations, /var/adm/messages contains most messages.
+See `/etc/syslog.conf` for log destinations, `/var/adm/messages` contains most messages.
 
 For SMF:
+
 	tail -f $(svcs -L [service name])
 
 ## Packaging
