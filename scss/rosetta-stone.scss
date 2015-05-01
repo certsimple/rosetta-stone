@@ -1,4 +1,5 @@
 $single-column-max-width: 750px;
+$cell-width: 400px;
 
 $ssl-green: #24a222;
 $white: rgb(252, 252, 252);
@@ -125,7 +126,7 @@ header {
 }
 
 .aside {
-	color: #ccc;
+	color: $black;
 	font-style: oblique;
 	font-weight: 200;
 	font-size: 10pt;
@@ -151,11 +152,10 @@ table {
 	th, td {
 		padding: 10px;
 		text-align: center;
-		min-width: 400px;
-		max-width: 400px;
+		width: $cell-width;
 		padding: 10px;
 		text-align: center;
-		width: 400px;
+
 		overflow: scroll;
 	}
 	tbody {
@@ -187,8 +187,12 @@ table {
 	}
 }
 @media screen and (max-width: $single-column-max-width) {
-
+	.commands {
+		padding: 12px;
+	}
 	table {
+		width: 100%;
+		margin: 0;
 		border: 0;
 		thead {
 			display: none;
@@ -196,14 +200,17 @@ table {
 		tr {
 			margin-bottom: 10px;
 			display: block;
-			border-bottom: 2px solid $black;
+			border-bottom: 1px solid $black;
+			th {
+				border-top: 1px solid $black;
+			}
 		}
 		th, td {
+			display: block;
 			width: auto;
 			max-width: none;
 		}
 		td {
-			display: block;
 			text-align: right;
 			font-size: 13px;
 			border-bottom: 1px dotted $mid-grey;
