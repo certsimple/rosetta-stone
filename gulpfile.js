@@ -7,7 +7,6 @@ var gulp = require('gulp'),
 	marked = require('marked'),
 	htmlToJson = require('./html-to-json.js'),
 	sass = require('gulp-sass'),
-	jsdom = require("jsdom"),
 	webserver = require('gulp-webserver');
 
 var path = require('path');
@@ -25,11 +24,10 @@ gulp.task('sass', function () {
 gulp.task('markdown-to-json', function (cb) {
 	var source = fs.readFileSync('rosetta-stone.md', 'utf8')
 	var originalHTML = marked(source)
-	jsdom.env(originalHTML, ["http://code.jquery.com/jquery.js"], function (errors, window) {
-		var data = htmlToJson(window)
+	htmlToJson(originalHTML, function(data){
 		fs.writeFileSync('json/rosetta-stone.json', JSON.stringify({sections: data}, null, 2));
 		cb()
-	});
+	})
 });
 
 // Browserify our code
