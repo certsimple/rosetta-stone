@@ -258,7 +258,8 @@ As above.
 
 ### Installed to
 #### Windows Server
-	?
+	HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services
+[Microsoft Support](https://support.microsoft.com/en-us/kb/103000)
 #### Red Hat Enterprise Linux
 	/etc/system
 #### Debian
