@@ -157,6 +157,10 @@ table {
 	th, td {
 		padding: 10px;
 		text-align: center;
+		// min-width and max-width are required, even despite width setting
+		//  - tables are magic.
+		min-width: $cell-width;
+		max-width: 400px;
 		width: $cell-width;
 		padding: 10px;
 		text-align: center;
@@ -214,6 +218,7 @@ table {
 			display: block;
 			width: auto;
 			max-width: none;
+			min-width: none;
 		}
 		td {
 			text-align: right;
