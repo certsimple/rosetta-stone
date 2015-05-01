@@ -51,6 +51,8 @@ rosettaData.operatingSystems = {
 	}
 }
 
+rosettaData.isAnOSEnabled = true;
+
 var rosettaStoneUI = new Ractive({
 	el: '.rosetta-stone',
 	data: rosettaData,
@@ -63,6 +65,16 @@ var rosettaStoneUI = new Ractive({
 			rosettaStoneUI.set(enabledPath, ( ! isEnabled ) )
 		})
 	}
+})
+
+rosettaStoneUI.observe('operatingSystems.*.enabled', function(oldValue, newValue){
+	var operatingSystems = rosettaStoneUI.get('operatingSystems')
+	var operatingSystemNames = Object.keys(operatingSystems)
+	var isAnOSEnabled = operatingSystemNames.some(function(osName){
+		return operatingSystems[osName].enabled
+	})
+	log('isAnOSEnabled', isAnOSEnabled)
+	rosettaStoneUI.set('isAnOSEnabled', isAnOSEnabled)
 })
 
 // Debugging

@@ -24,44 +24,50 @@
 	<p class="aside">All commands below are for the latest server or 'long-term' versions. Want to <a href="https://github.com/mikemaccana/rosetta-stone">add or change something?</a></p>
 </div>
 
+{{#if isAnOSEnabled }}
+  <div class="commands">
+  	{{#sections:title}}
+  		<h2>{{ title }}</h2>
+  			<table>
+  				<thead>
+  					<tr>
+  						<th>task</th>
+  						{{# operatingSystems:os }}
+  							{{# operatingSystems[os].enabled }}
+  								<th><a href="{{ operatingSystems[os].docs }}"><img src="images/{{ operatingSystems[os].logo }}.svg"></a></th>
+  							{{/}}
+  						{{/}}
+  					</tr>
+  				</thead>
+  				<tbody>
+  					{{#sections[title]:subtitle }}
+  						<tr>
+  						<th>{{ subtitle }}</th>
+  						{{# sections[title][subtitle]:os }}
+  							{{# operatingSystems[os].enabled }}
+  								<td data-label="{{ os }}">
+  									{{# sections[title][subtitle][os] }}
+  										{{{ . }}}
+  									{{/}}
+  								</td>
+  							{{/}}
+  						{{/}}
+  						</tr>
+  					{{/}}
+  				</tbody>
+  			</table>
+
+  	{{/}}
+  </div>
+
+  <div class="notes">
+  	<p>Note 1: package manaagement instructions for Windows Server requires <a href="http://blogs.technet.com/b/packagemanagement/archive/2015/04/29/introducing-packagemanagement-in-windows-10.aspx">PackageManagement</a> (formerly called OneGet), part of Windows Management Framework 5.0 Preview.</p>
+  	<p>Note 2: package management on Mac OS X requires <a href="http://brew.sh/">Homebrew</a>. </p>
+  </div>
+{{ else}}
+	<div class="notes">
+	  <p>You should probably enable at least one Operating System.
+	</div>
+{{/if}}
 
 
-<div class="commands">
-	{{#sections:title}}
-		<h2>{{ title }}</h2>
-			<table>
-				<thead>
-					<tr>
-						<th>task</th>
-						{{# operatingSystems:os }}
-							{{# operatingSystems[os].enabled }}
-								<th><a href="{{ operatingSystems[os].docs }}"><img src="images/{{ operatingSystems[os].logo }}.svg"></a></th>
-							{{/}}
-						{{/}}
-					</tr>
-				</thead>
-				<tbody>
-					{{#sections[title]:subtitle }}
-						<tr>
-						<th>{{ subtitle }}</th>
-						{{# sections[title][subtitle]:os }}
-							{{# operatingSystems[os].enabled }}
-								<td data-label="{{ os }}">
-									{{# sections[title][subtitle][os] }}
-										{{{ . }}}
-									{{/}}
-								</td>
-							{{/}}
-						{{/}}
-						</tr>
-					{{/}}
-				</tbody>
-			</table>
-
-	{{/}}
-</div>
-
-<div class="notes">
-	<p>Note 1: package manaagement instructions for Windows Server requires <a href="http://blogs.technet.com/b/packagemanagement/archive/2015/04/29/introducing-packagemanagement-in-windows-10.aspx">PackageManagement</a> (formerly called OneGet), part of Windows Management Framework 5.0 Preview.</p>
-	<p>Note 2: package management on Mac OS X requires <a href="http://brew.sh/">Homebrew</a>. </p>
-</div>
