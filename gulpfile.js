@@ -22,18 +22,19 @@ gulp.task('sass', function () {
 		.pipe(gulp.dest('./css'));
 });
 
-gulp.task('markdown-to-json', function () {
+gulp.task('markdown-to-json', function (cb) {
 	var source = fs.readFileSync('rosetta-stone.md', 'utf8')
 	var originalHTML = marked(source)
 	jsdom.env(originalHTML, ["http://code.jquery.com/jquery.js"], function (errors, window) {
 		var data = htmlToJson(window)
 		fs.writeFileSync('json/rosetta-stone.json', JSON.stringify({sections: data}, null, 2));
+		cb()
 	});
 });
 
 // Browserify our code
 // Don't depend on 'clean' - let new files overwrite old ones. Stops ugliness during deploy.
-gulp.task('js', function() {
+gulp.task('js', ['markdown-to-json'], function() {
 	// Browserify/bundle the JS.
 	gulp.src('./js/src/index.js')
 		.pipe(browserify({
