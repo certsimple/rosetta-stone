@@ -31,4 +31,4 @@ You don't need to build to contribute, but if you want to build the HTML and see
 
 You can [read more about the rationale at CertSimple](https://certsimple.com/blog/recreating-unix-rosetta-stone).
 
-Inspired by the now out of date [Unix Rosetta Stone](http://bhami.com/rosetta.html).
+Inspired by the now out-of-date [Unix Rosetta Stone](http://bhami.com/rosetta.html).
