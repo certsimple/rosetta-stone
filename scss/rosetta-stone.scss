@@ -1,3 +1,5 @@
+$single-column-max-width: 750px;
+
 $ssl-green: #24a222;
 $white: rgb(252, 252, 252);
 $black: rgb(66, 66, 66);
@@ -45,30 +47,36 @@ th img {
 	max-height: 40px;
 }
 
-.intro {
+header {
 	background-color: $ssl-green;
 	color: white;
-	padding: 24px;
-	h1 {
-	}
-	a {
-		color: white;
-		text-decoration: underline;
-		&:hover, &:active, &:visited {
+	.intro {
+		max-width: $single-column-max-width;
+		padding: 24px;
+		margin: 0 auto;
+		h1 {
+		}
+		a {
 			color: white;
 			text-decoration: underline;
+			&:hover, &:active, &:visited {
+				color: white;
+				text-decoration: underline;
+			}
 		}
-	}
-	p {
-	  font-size: 10pt;
-	  text-transform: uppercase;
-	  &.aside {
-	  	color: white;
-	  	text-transform: none;
-	  }
-	}
-	img {
-		background-color: white;
+		p {
+		  font-size: 10pt;
+		  &.sponsor {
+		  	text-transform: uppercase;
+		  }
+		  &.aside {
+		  	color: white;
+		  	text-transform: none;
+		  }
+		}
+		img {
+			background-color: white;
+		}
 	}
 }
 
@@ -131,7 +139,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 	tr {
-		padding: 5px;
 		border-bottom: 1px solid $black;
 	}
 	th, td {
@@ -172,7 +179,7 @@ table {
 		letter-spacing: 1px;
 	}
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: $single-column-max-width) {
 
 	table {
 		border: 0;
