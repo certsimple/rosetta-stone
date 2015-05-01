@@ -11,11 +11,11 @@ $grey: #A6A6A6;
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 body {
@@ -71,14 +71,14 @@ header {
 			}
 		}
 		p {
-		  font-size: 10pt;
-		  &.sponsor {
-		  	text-transform: uppercase;
-		  }
-		  &.aside {
-		  	color: white;
-		  	text-transform: none;
-		  }
+			font-size: 10pt;
+			&.sponsor {
+				text-transform: uppercase;
+			}
+			&.aside {
+				color: white;
+				text-transform: none;
+			}
 		}
 		img {
 			background-color: white;
@@ -119,14 +119,14 @@ code {
 	text-align: center;
 	img {
 		cursor: pointer;
-	  padding: 3px;
-	  margin-right: 20px;
-	  height: 40px;
-	  width: 100px;
-	  &.enabled {
-	  	border-radius: 3px;
-	  	border: 1px solid $ssl-green;
-	  }
+		padding: 3px;
+		margin-right: 20px;
+		height: 40px;
+		width: 100px;
+		&.enabled {
+			border-radius: 3px;
+			border: 1px solid $ssl-green;
+		}
 	}
 }
 
@@ -174,15 +174,15 @@ table {
 
 		// References
 		a {
-		  float: right;
-		  display: block;
-		  text-transform: uppercase;
-		  text-decoration: none;
-		  color: $mid-grey;
-		  font-size: 8pt;
-		  &:hover, &:active, &:visited {
-		  	color: $mid-grey;
-		  }
+			float: right;
+			display: block;
+			text-transform: uppercase;
+			text-decoration: none;
+			color: $mid-grey;
+			font-size: 8pt;
+			&:hover, &:active, &:visited {
+				color: $mid-grey;
+			}
 		}
 	}
 	th {
