@@ -80,6 +80,13 @@ header {
 	}
 }
 
+/* See http://projectcerbera.com/web/articles/code-in-pre#style */
+code {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+}
+
 .chop-box {
 	overflow: hidden;
 	position: absolute;
