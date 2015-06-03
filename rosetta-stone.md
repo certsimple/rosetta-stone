@@ -327,6 +327,8 @@ System
 As above.
 #### Ubuntu
 	ls /etc/init.d
+#### Arch Linux
+	?
 #### OS X
 	launchctl list
 #### OpenBSD
@@ -434,7 +436,7 @@ Rsyslog
 #### Ubuntu
 	logger
 [Manual](http://manpages.ubuntu.com/manpages/lucid/man1/logger.1.html)
-#### Arch Linux 
+#### Arch Linux
 	?
 #### OS X
 	logger

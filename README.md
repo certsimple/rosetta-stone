@@ -3,9 +3,10 @@
 A chart for comparing command line tasks on modern operating systems:
 
 - Windows
-- RHEL (and CentOS)
+- Red Hat Enterprise Linux (and CentOS)
 - Debian
 - Ubuntu
+- Arch Linux
 - OS X
 - OpenBSD
 - SmartOS

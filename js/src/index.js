@@ -34,6 +34,11 @@ rosettaData.operatingSystems = {
 		"docs": "https://help.ubuntu.com/lts/serverguide/index.html",
 		"logo": "ubuntu"
 	},
+	"Arch Linux": {
+		"enabled": false,
+		"docs": "https://wiki.archlinux.org/",
+		"logo": "archlinux"
+	},
 	"OS X": {
 		"enabled": true,
 		"docs": "https://www.apple.com/uk/support/osxserver/",
