@@ -10,6 +10,8 @@
 As above.
 #### Ubuntu
 As above.
+#### Arch Linux
+As above.
 #### OS X
 	whoami
 #### OpenBSD
@@ -26,6 +28,8 @@ As above.
 #### Debian
 As above.
 #### Ubuntu
+As above.
+#### Arch Linux
 As above.
 #### OS X
 As above.
@@ -48,6 +52,9 @@ As above.
 #### Ubuntu
 	sudo [command]
 [Ubuntu Help](https://help.ubuntu.com/community/RootSudo)
+#### Arch Linux
+	sudo [command]
+[ArchWiki](https://wiki.archlinux.org/index.php/Sudo)
 #### OS X
 	sudo [command]
 [Manual](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/sudo.8.html)
@@ -73,6 +80,9 @@ As above.
 #### Ubuntu
 	sudo -i
 [Ubunti wiki](https://help.ubuntu.com/community/RootSudo)
+#### Arch Linux
+	sudo -i
+[ArchWiki](https://wiki.archlinux.org/index.php/Sudo)
 #### OS X
 	sudo -i
 #### OpenBSD
@@ -94,6 +104,8 @@ As above.
 As above.
 #### Ubuntu
 As above.
+#### Arch Linux
+As above.
 #### OS X
 	system_profiler SPHardwareDataType
 [Manual](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/system_profiler.8.html)
@@ -113,6 +125,8 @@ As above.
 #### Debian
 #### Ubuntu
 As above.
+#### Arch Linux
+As above.
 #### OS X
 	system_profiler SPHardwareDataType
 [Manual](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/system_profiler.8.html)
@@ -131,6 +145,8 @@ As above.
 #### Debian
 As above.
 #### Ubuntu
+As above.
+#### Arch Linux
 As above.
 #### OS X
 	system_profiler SPMemoryDataType
@@ -154,6 +170,8 @@ The select is required because netConnectionStatus isn't in the default properti
 As above.
 #### Ubuntu
 As above.
+#### Arch Linux
+As above.
 #### OS X
 	ifconfig [interface]
 The `status` field contains connectivity information, `media` contains link negotiation info.
@@ -175,6 +193,8 @@ The `status` field contains connectivity information, `media` contains link nego
 #### Ubuntu
 	ping
 [Manual](http://manpages.ubuntu.com/manpages/lucid/man8/ping.8.html)
+#### Arch Linux
+	ping
 #### OS X
 	ping
 [Manual](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/ping.8.html)
@@ -194,6 +214,8 @@ The `status` field contains connectivity information, `media` contains link nego
 As above.
 #### Ubuntu
 As above.
+#### Arch Linux
+As above.
 #### OS X
 	host / dig
 #### OpenBSD
@@ -209,6 +231,8 @@ As above.
 #### Debian
 As above.
 #### Ubuntu
+As above.
+#### Arch Linux
 As above.
 #### OS X
 	ifconfig
@@ -229,6 +253,8 @@ As above.
 As above.
 #### Ubuntu
 As above.
+#### Arch Linux
+As above.
 #### OS X
 	?
 #### OpenBSD
@@ -246,6 +272,8 @@ As above.
 #### Debian
 As above.
 #### Ubuntu
+As above.
+#### Arch Linux
 As above.
 #### OS X
 	whois 'domain [domain name]'
@@ -267,6 +295,9 @@ As above.
 As above.
 #### Ubuntu
 	/etc/init.d
+
+#### Arch Linux
+	?
 #### OS X
 	/System/Library/LaunchDaemons/
 #### OpenBSD
@@ -315,6 +346,9 @@ As above.
 As above.
 #### Ubuntu
 	/etc/init.d/[service file] start
+#### Arch Linux
+	systemctl start servicename
+[Arch Wiki](https://wiki.archlinux.org/index.php/Systemd#Using_units)
 #### OS X
 	launchctl load -w /System/Library/LaunchDaemons/ssh.plist
 #### OpenBSD
@@ -334,6 +368,9 @@ As above.
 As above.
 #### Ubuntu
 	/etc/init.d/[service file] stop
+#### Arch Linux
+	systemctl stop servicename
+[Arch Wiki](https://wiki.archlinux.org/index.php/Systemd#Using_units)
 #### OS X
 	launchctl unload -w /System/Library/LaunchDaemons/ssh.plist
 #### OpenBSD
@@ -352,6 +389,9 @@ As above.
 As above.
 #### Ubuntu
 	/etc/init.d/[service file] restart
+#### Arch Linux
+	systemctl restart servicename
+[Arch Wiki](https://wiki.archlinux.org/index.php/Systemd#Using_units)
 #### OS X
 	?
 #### OpenBSD
@@ -371,6 +411,8 @@ journald
 journald
 #### Ubuntu
 syslog
+#### Arch Linux
+	?
 #### OS X
 Apple System Log (also called ASL)
 #### OpenBSD
@@ -392,6 +434,8 @@ Rsyslog
 #### Ubuntu
 	logger
 [Manual](http://manpages.ubuntu.com/manpages/lucid/man1/logger.1.html)
+#### Arch Linux 
+	?
 #### OS X
 	logger
 [Manual](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/logger.1.html)
@@ -416,6 +460,8 @@ See `/etc/syslog.conf` for log destinations, `/var/log/messages` contains most m
 #### OS X
 	tail -f [syslog log file]
 See `/etc/syslog.conf` for log destinations, `/var/log/system.log` contains most messages.
+#### Arch Linux
+	?
 #### OpenBSD
 	tail -f [syslog log file]
 See `/etc/syslog.conf` for log destinations
@@ -443,6 +489,9 @@ For SMF:
 #### Ubuntu
 	apt-cache search
 [Community Help Wiki](https://help.ubuntu.com/community/AptGet/Howto#Search_commands)
+#### Arch Linux
+	pacman -Ss
+[Arch Wiki](https://wiki.archlinux.org/index.php/Pacman)
 #### OS X
 	brew search [search term]
 [Homebrew manual](https://github.com/Homebrew/homebrew/blob/master/Library/Homebrew/manpages/brew.1.md)
@@ -467,6 +516,9 @@ List the packages on an [OpenBSD mirror](http://www.openbsd.org/ftp.html)
 #### Ubuntu
 	apt-get install [package name]
 [Ubuntu Server Guide](https://help.ubuntu.com/14.04/serverguide/apt-get.html)
+#### Arch Linux
+	pacman -S
+[Arch Wiki](https://wiki.archlinux.org/index.php/Pacman)
 #### OS X
 	brew install [package name]
 [Homebrew FAQ](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/FAQ.md)
@@ -488,6 +540,9 @@ List the packages on an [OpenBSD mirror](http://www.openbsd.org/ftp.html)
 #### Ubuntu
 	apt-get remove [package name]
 [Ubuntu Server Guide](https://help.ubuntu.com/14.04/serverguide/apt-get.html)
+#### Arch Linux
+	pacman -Rc
+[Arch Wiki](https://wiki.archlinux.org/index.php/Pacman)
 #### OS X
 	brew uninstall [package name]
 [Homebrew FAQ](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/FAQ.md)
@@ -512,6 +567,9 @@ List the packages on an [OpenBSD mirror](http://www.openbsd.org/ftp.html)
 #### Ubuntu
 	dpkg -l
 [Ubuntu Server Guide](https://help.ubuntu.com/14.04/serverguide/dpkg.html)
+#### Arch Linux
+	pacman -Q
+[Arch Wiki](https://wiki.archlinux.org/index.php/Pacman)
 #### OS X
 	brew list
 [Homebrew manual](https://github.com/Homebrew/homebrew/blob/master/Library/Homebrew/manpages/brew.1.md)
@@ -532,6 +590,9 @@ List the packages on an [OpenBSD mirror](http://www.openbsd.org/ftp.html)
 	dpkg --status pkgname
 #### Ubuntu
 As above.
+#### Arch Linux
+	pacman -Qi
+[Arch Wiki](https://wiki.archlinux.org/index.php/Pacman)
 #### OS X
 	?
 #### OpenBSD
@@ -554,6 +615,9 @@ As above.
 #### Ubuntu
 	dpkg -S
 [Ubuntu Server Guide](https://help.ubuntu.com/14.04/serverguide/dpkg.html)
+#### Arch Linux
+	pacman -Qo
+[Arch Wiki](https://wiki.archlinux.org/index.php/Pacman)
 #### OS X
 	?
 #### OpenBSD
@@ -572,6 +636,9 @@ As above.
 [Manual](http://manpages.debian.org/cgi-bin/man.cgi?sektion=1&query=dpkg-query)
 #### Ubuntu
 As above.
+#### Arch Linux
+	pacman -Ql
+[Arch Wiki](https://wiki.archlinux.org/index.php/Pacman)
 #### OS X
 	?
 #### OpenBSD
@@ -592,6 +659,8 @@ As above.
 #### Debian
 As above.
 #### Ubuntu
+As above.
+#### Arch Linux
 As above.
 #### OS X
 As above.
