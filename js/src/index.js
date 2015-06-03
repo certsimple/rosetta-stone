@@ -20,7 +20,7 @@ rosettaData.operatingSystems = {
 		"logo": "windows"
 	},
 	"Red Hat Enterprise Linux": {
-		"enabled": true,
+		"enabled": false,
 		"docs": "https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/",
 		"logo": "rhel"
 	},
@@ -30,7 +30,7 @@ rosettaData.operatingSystems = {
 		"logo": "debian"
 	},
 	"Ubuntu": {
-		"enabled": false,
+		"enabled": true,
 		"docs": "https://help.ubuntu.com/lts/serverguide/index.html",
 		"logo": "ubuntu"
 	},
