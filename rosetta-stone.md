@@ -250,7 +250,7 @@ As above.
 #### OS X
 	whois 'domain [domain name]'
 #### OpenBSD
-	?
+	whois 'domain [domain name]'
 #### SmartOS
 	whois 'domain [domain name]'
 
@@ -270,7 +270,8 @@ As above.
 #### OS X
 	/System/Library/LaunchDaemons/
 #### OpenBSD
-	?
+	No services per se: binaries are launched as daemon processses via `/etc/rc.local`
+[OpenBSD FAQ](http://www.openbsd.org/faq/faq10.html)
 #### SmartOS
 User installed
 
@@ -298,7 +299,8 @@ As above.
 #### OS X
 	launchctl list
 #### OpenBSD
-	?
+	cat /etc/rc.local
+[OpenBSD FAQ](http://www.openbsd.org/faq/faq10.html)
 #### SmartOS
 	svcs
 [Reference](https://wiki.smartos.org/display/DOC/SmartOS+Technical+FAQs)
@@ -316,7 +318,8 @@ As above.
 #### OS X
 	launchctl load -w /System/Library/LaunchDaemons/ssh.plist
 #### OpenBSD
-	?
+	Launch directly from the binary
+[OpenBSD FAQ](http://www.openbsd.org/faq/faq10.html)
 #### SmartOS
 	svcadm enable [service name]
 [Reference](https://wiki.smartos.org/display/DOC/SmartOS+Technical+FAQs)
@@ -352,7 +355,8 @@ As above.
 #### OS X
 	?
 #### OpenBSD
-	?
+`kill` process, re-run binary
+[OpenBSD FAQ](http://www.openbsd.org/faq/faq10.html)
 #### SmartOS
 	svcadm restart [service name]
 [SmartOS Wiki](https://wiki.smartos.org/display/DOC/SmartOS+Technical+FAQs)
@@ -370,7 +374,7 @@ syslog
 #### OS X
 Apple System Log (also called ASL)
 #### OpenBSD
-	?
+syslog
 #### SmartOS
 Rsyslog
 [Joyent blog](https://www.joyent.com/blog/log-management-on-smart-os-featuring-dtrace-and-node-js)
@@ -413,7 +417,9 @@ See `/etc/syslog.conf` for log destinations, `/var/log/messages` contains most m
 	tail -f [syslog log file]
 See `/etc/syslog.conf` for log destinations, `/var/log/system.log` contains most messages.
 #### OpenBSD
-	?
+	tail -f [syslog log file]
+See `/etc/syslog.conf` for log destinations
+[Manual](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man5/syslog.conf.5?query=syslog%2econf&sec=5)
 #### SmartOS
 	tail -f [syslog log file]
 See `/etc/syslog.conf` for log destinations, `/var/adm/messages` contains most messages.
