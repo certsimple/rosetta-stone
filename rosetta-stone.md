@@ -16,6 +16,8 @@ As above.
 	whoami
 #### OpenBSD
 	whoami
+#### FreeBSD
+	whoami
 #### SmartOS
 	whoami
 
@@ -34,6 +36,8 @@ As above.
 #### OS X
 As above.
 #### OpenBSD
+As above.
+#### FreeBSD
 As above.
 #### SmartOS
 As above.
@@ -61,6 +65,11 @@ As above.
 #### OpenBSD
 	sudo [command]
 [Manual](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man8/sudo.8)
+#### FreeBSD
+    su [user] -c [command]
+    sudo [command]
+[su Manual](https://www.freebsd.org/cgi/man.cgi?query=su)
+(sudo available from ports)
 #### SmartOS
 	sudo [command]
 	pfexec [command]
@@ -87,6 +96,8 @@ As above.
 	sudo -i
 #### OpenBSD
 	sudo -i
+#### FreeBSD
+    su
 #### SmartOS
 	sudo -i
 
@@ -111,6 +122,9 @@ As above.
 [Manual](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/system_profiler.8.html)
 #### OpenBSD
 	dmidecode
+#### FreeBSD
+    devinfo -v
+[Manual](https://www.freebsd.org/cgi/man.cgi?query=devinfo)
 #### SmartOS
 	sysinfo
 [Manual](https://smartos.org/man/1m/sysinfo)
@@ -131,7 +145,9 @@ As above.
 	system_profiler SPHardwareDataType
 [Manual](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/system_profiler.8.html)
 #### OpenBSD
-	sysctl hw.ncpu
+	sysctl hw.model hw.machine hw.ncpu
+#### FreeBSD
+    sysctl hw.model hw.machine hw.ncpu
 #### SmartOS
 	sysinfo
 [Manual](https://smartos.org/man/1m/sysinfo)
@@ -152,6 +168,8 @@ As above.
 	system_profiler SPMemoryDataType
 #### OpenBSD
 	?
+#### FreeBSD
+	sysctl -a | grep mem
 #### SmartOS
 	sysinfo
 [Manual](https://smartos.org/man/1m/sysinfo)
@@ -177,6 +195,8 @@ As above.
 The `status` field contains connectivity information, `media` contains link negotiation info.
 #### OpenBSD
 	?
+#### FreeBSD
+	ifconfig [interface]
 #### SmartOS
 	dladm show-link | dladm show-vnic
 [Manual](https://smartos.org/man/1M/dladm)
@@ -201,6 +221,8 @@ The `status` field contains connectivity information, `media` contains link nego
 #### OpenBSD
 	ping
 [Manual](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man8/ping.8)
+#### FreeBSD
+    ping
 #### SmartOS
 	ping
 [Manual](https://smartos.org/man/1M/PING)
@@ -217,11 +239,11 @@ As above.
 #### Arch Linux
 As above.
 #### OS X
-	host / dig
+As above.
 #### OpenBSD
-	host / dig
+As above.
 #### SmartOS
-	host / dig
+As above.
 
 ### IP addressing
 #### Windows Server
@@ -240,6 +262,9 @@ As above.
 #### OpenBSD
 	ifconfig
 [Manual](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man8/ifconfig.8?query=ifconfig)
+#### FreeBSD
+    ifconfig
+[Manual](https://www.freebsd.org/cgi/man.cgi?query=ifconfig)
 #### SmartOS
 	ipadm
 [Manual](https://smartos.org/man/1M/ipadm)
@@ -259,6 +284,9 @@ As above.
 	?
 #### OpenBSD
 	?
+#### FreeBSD
+    ifconfig
+[Manual](https://www.freebsd.org/cgi/man.cgi?query=ifconfig)
 #### SmartOS
 	dladm
 [Manual](https://smartos.org/man/1M/dladm)
@@ -276,11 +304,13 @@ As above.
 #### Arch Linux
 As above.
 #### OS X
-	whois 'domain [domain name]'
+As above.
 #### OpenBSD
-	whois 'domain [domain name]'
+As above.
+#### FreeBSD
+As above.
 #### SmartOS
-	whois 'domain [domain name]'
+As above.
 
 ## Services
 
@@ -303,6 +333,8 @@ As above.
 #### OpenBSD
 	No services per se: binaries are launched as daemon processses via `/etc/rc.local`
 [OpenBSD FAQ](http://www.openbsd.org/faq/faq10.html)
+#### FreeBSD
+    /etc/rc.d/
 #### SmartOS
 User installed
 
@@ -334,6 +366,10 @@ As above.
 #### OpenBSD
 	cat /etc/rc.local
 [OpenBSD FAQ](http://www.openbsd.org/faq/faq10.html)
+#### FreeBSD
+    service -e
+    service -l
+[Reference](https://www.freebsd.org/doc/en_US.ISO8859-1/articles/linux-users/startup.html)
 #### SmartOS
 	svcs
 [Reference](https://wiki.smartos.org/display/DOC/SmartOS+Technical+FAQs)
@@ -356,6 +392,8 @@ As above.
 #### OpenBSD
 	Launch directly from the binary
 [OpenBSD FAQ](http://www.openbsd.org/faq/faq10.html)
+#### FreeBSD
+    service [name] start
 #### SmartOS
 	svcadm enable [service name]
 [Reference](https://wiki.smartos.org/display/DOC/SmartOS+Technical+FAQs)
@@ -377,6 +415,8 @@ As above.
 	launchctl unload -w /System/Library/LaunchDaemons/ssh.plist
 #### OpenBSD
 	pkill [process name]
+#### FreeBSD
+    service [name] stop
 #### SmartOS
 	svcadm disable [service name]
 [Reference](https://wiki.smartos.org/display/DOC/SmartOS+Technical+FAQs)
@@ -399,6 +439,9 @@ As above.
 #### OpenBSD
 `kill` process, re-run binary
 [OpenBSD FAQ](http://www.openbsd.org/faq/faq10.html)
+#### FreeBSD
+    service [name] stop
+    service [name] start
 #### SmartOS
 	svcadm restart [service name]
 [SmartOS Wiki](https://wiki.smartos.org/display/DOC/SmartOS+Technical+FAQs)
@@ -419,8 +462,11 @@ syslog
 Apple System Log (also called ASL)
 #### OpenBSD
 syslog
+#### FreeBSD
+* newsyslog
+* syslogd
 #### SmartOS
-Rsyslog
+rsyslog
 [Joyent blog](https://www.joyent.com/blog/log-management-on-smart-os-featuring-dtrace-and-node-js)
 
 ### Raise a log message from the shell
@@ -444,6 +490,8 @@ Rsyslog
 #### OpenBSD
 	logger
 [Manual](http://nixdoc.net/man-pages/openbsd/man1/logger.1.html)
+#### FreeBSD
+    logger
 #### SmartOS
 	logger
 [Manual](https://www.smartos.org/man/1/logger)
@@ -468,6 +516,9 @@ See `/etc/syslog.conf` for log destinations, `/var/log/system.log` contains most
 	tail -f [syslog log file]
 See `/etc/syslog.conf` for log destinations
 [Manual](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man5/syslog.conf.5?query=syslog%2econf&sec=5)
+#### FreeBSD
+	tail -f [syslog log file]
+See `/etc/syslog.conf` for log destinations
 #### SmartOS
 	tail -f [syslog log file]
 See `/etc/syslog.conf` for log destinations, `/var/adm/messages` contains most messages.
@@ -500,6 +551,9 @@ For SMF:
 #### OpenBSD
 List the packages on an [OpenBSD mirror](http://www.openbsd.org/ftp.html)
 [OpenBSD FAQ](http://www.openbsd.org/faq/faq15.html#PkgFind)
+#### FreeBSD
+    pkg search
+[FeeBSD Handbook](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/pkgng-intro.html)
 #### SmartOS
 	pkgin av
 	pkgin search
@@ -526,6 +580,8 @@ List the packages on an [OpenBSD mirror](http://www.openbsd.org/ftp.html)
 [Homebrew FAQ](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/FAQ.md)
 #### OpenBSD
 	pkg_add
+#### FreeBSD
+    pkg install
 #### SmartOS
 	pkgin in [package name]
 [SmartOS wiki](https://wiki.smartos.org/display/DOC/Working+with+Packages)
@@ -550,6 +606,8 @@ List the packages on an [OpenBSD mirror](http://www.openbsd.org/ftp.html)
 [Homebrew FAQ](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/FAQ.md)
 #### OpenBSD
 	pkg_delete [package name]
+#### FreeBSD
+    pkg delete [package name]
 #### SmartOS
 	pkgin rm [package name]
 [SmartOS wiki](https://wiki.smartos.org/display/DOC/Working+with+Packages)
@@ -577,6 +635,8 @@ List the packages on an [OpenBSD mirror](http://www.openbsd.org/ftp.html)
 [Homebrew manual](https://github.com/Homebrew/homebrew/blob/master/Library/Homebrew/manpages/brew.1.md)
 #### OpenBSD
 	pkg_info
+#### FreeBSD
+    pkg info
 #### SmartOS
 	pkgin ls
 [SmartOS wiki](https://wiki.smartos.org/display/DOC/Working+with+Packages)
@@ -599,6 +659,8 @@ As above.
 	?
 #### OpenBSD
 	pkg_info
+#### FreeBSD
+    pkg info [package name]
 #### SmartOS
 	pkgin pkg-descr [package name]
 [pkgin](http://pkgin.net/)
@@ -624,6 +686,8 @@ As above.
 	?
 #### OpenBSD
 	pkg_info -E [file]
+#### FreeBSD
+    pkg which [file]
 #### SmartOS
 	pkg_info -Fe [file]
 
@@ -645,6 +709,8 @@ As above.
 	?
 #### OpenBSD
 	?
+#### FreeBSD
+    pkg list [package]
 #### SmartOS
 	pkgin pc [package]
 	pkgin provides [package name]
@@ -667,6 +733,8 @@ As above.
 #### OS X
 As above.
 #### OpenBSD
+As above.
+#### FreeBSD
 As above.
 #### SmartOS
 As above.
