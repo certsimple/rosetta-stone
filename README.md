@@ -9,6 +9,7 @@ A chart for comparing command line tasks on modern operating systems:
 - Arch Linux
 - OS X
 - OpenBSD
+- FreeBSD
 - SmartOS
 
 ## Where can I see it online?
