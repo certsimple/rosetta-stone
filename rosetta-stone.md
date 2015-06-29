@@ -3,7 +3,8 @@
 ### Logged in user account
 
 #### Windows Server
-	$env:username
+	[Environment]::UserName
+[TechNet](https://technet.microsoft.com/en-us/library/ff730963.aspx)
 #### Red Hat Enterprise Linux
 	whoami
 #### Debian
@@ -43,7 +44,7 @@ As above.
 As above.
 
 
-### Run command as a different user
+### Run command as root/administrator (or another user)
 
 #### Windows Server
 	runas /user:[machine or domain name]\[admin account name] [command]
@@ -135,6 +136,7 @@ As above.
 #### Red Hat Enterprise Linux
 	less /proc/cpuinfo
 #### Debian
+As above.
 #### Ubuntu
 As above.
 #### Arch Linux
