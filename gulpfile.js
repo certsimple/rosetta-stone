@@ -1,12 +1,15 @@
 var gulp = require('gulp'),
 	prefixer = require('gulp-autoprefixer'),
-	browserify = require('gulp-browserify'),
+	browserify = require('browserify'),
+	uglify = require('gulp-uglify'),
 	source = require('vinyl-source-stream'),
 	brfs = require('brfs'),
 	fs = require('fs'),
+	buffer = require('vinyl-buffer'),
 	marked = require('marked'),
 	htmlToJson = require('./html-to-json.js'),
 	sass = require('gulp-sass'),
+	gulpIf = require('gulp-if'),
 	webserver = require('gulp-webserver');
 
 var path = require('path');
@@ -34,12 +37,15 @@ gulp.task('markdown-to-json', function (cb) {
 // Since we the JSON is incorporated into our browserify bundle we depend on it.
 gulp.task('js', ['markdown-to-json'], function() {
 	// Browserify/bundle the JS.
-	gulp.src('./js/src/index.js')
-		.pipe(browserify({
-			insertGlobals : true,
-			fullPaths: true, // For discify
-			debug : ! gulp.env.production
-		}))
+	browserify({
+		entries: './js/src/index.js',
+		insertGlobals : true,
+		fullPaths: true, // For discify
+		debug: ! gulp.env.production
+	}).bundle()
+		.pipe(source('index.js'))
+		.pipe(buffer())
+		.pipe(gulpIf(gulp.env.production, uglify()))
 		.pipe(gulp.dest('./js/dist'))
 
 });
