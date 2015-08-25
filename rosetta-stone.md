@@ -1,5 +1,32 @@
 ## Shell basics
 
+### OS version
+
+#### Windows Server
+	[Environment]::OSVersion
+[TechNet](http://blogs.technet.com/b/heyscriptingguy/archive/2014/04/25/use-powershell-to-find-operating-system-version.aspx)
+#### Red Hat Enterprise Linux
+	cat /etc/redhat-release
+[Red Hat Knowledgebase](https://access.redhat.com/solutions/401413)
+#### Debian
+	cat /etc/debian-version
+#### Ubuntu
+	lsb_release -a
+[Manual](http://manpages.ubuntu.com/manpages/precise/man1/lsb_release.1.html)
+#### Arch Linux
+[Arch Linux is a rolling release](https://wiki.archlinux.org/index.php/Arch_Linux#Principles)
+#### OS X
+	sw_vers -productVersion
+[Manual](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/sw_vers.1.html)
+#### OpenBSD
+	uname -r
+[Manual](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man3/uname.3?query=uname&sec=3)
+#### FreeBSD
+	freebsd-version
+[Manual](https://www.freebsd.org/cgi/man.cgi?query=freebsd-version&sektion=1)
+#### SmartOS
+	cat /etc/release
+
 ### Logged in user account
 
 #### Windows Server
@@ -25,7 +52,7 @@ As above.
 ### Host name
 
 #### Windows Server
-	$env:COMPUTERNAME
+	[Environment]::MachineName
 #### Red Hat Enterprise Linux
 	hostname
 #### Debian
@@ -47,7 +74,8 @@ As above.
 ### Run command as root/administrator (or another user)
 
 #### Windows Server
-	runas /user:[machine or domain name]\[admin account name] [command]
+	runas /user:[domain]\[account] [command]
+[TechNet](http://technet.microsoft.com/en-us/library/bb490994.aspx)
 #### Red Hat Enterprise Linux
 	sudo [command]
 [System Administrator's Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sect-Gaining_Privileges-The_sudo_Command.html)
@@ -79,6 +107,7 @@ As above.
 
 #### Windows Server
 	Start-Process powershell -Verb runAs
+[TechNet](https://technet.microsoft.com/en-us/library/hh849848.aspx)
 #### Red Hat Enterprise Linux
 	sudo -i
 [System Administrator's Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sect-Gaining_Privileges-The_sudo_Command.html)
@@ -99,6 +128,64 @@ As above.
 	su
 #### SmartOS
 	sudo -i
+
+## Process Management
+
+
+### Show running processes
+
+#### Windows Server
+	Get-Process
+[Technet](https://technet.microsoft.com/en-us/library/hh849832.aspx)
+#### Red Hat Enterprise Linux
+	ps
+[Manual](http://linux.die.net/man/1/ps)
+#### Debian
+As above.
+#### Ubuntu
+As above.
+#### Arch Linux
+As above.
+#### OS X
+	ps
+[Manual](https://developer.apple.com/library/prerelease/mac/documentation/Darwin/Reference/ManPages/man1/ps.1.html)
+#### OpenBSD
+	ps
+[Manual](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man1/ps.1?query=ps&sec=1)
+#### FreeBSD
+	ps
+[Manual](http://www.freebsd.org/cgi/man.cgi?ps)
+#### SmartOS
+	ps
+[Manual](https://smartos.org/man/1/ps)
+
+### Stop a process
+
+#### Windows Server
+	Stop-Process
+[Technet](https://technet.microsoft.com/en-us/library/hh849781.aspx)
+#### Red Hat Enterprise Linux
+	kill
+[Manual](http://linux.die.net/man/1/kill)
+#### Debian
+As above.
+#### Ubuntu
+As above.
+#### Arch Linux
+As above.
+#### OS X
+	kill
+[Manual](https://developer.apple.com/library/prerelease/mac/documentation/Darwin/Reference/ManPages/man1/kill.1.html)
+#### OpenBSD
+	kill
+[Manual](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man1/kill.1?query=kill&sec=1)
+#### FreeBSD
+	kill
+[Manual](http://www.freebsd.org/cgi/man.cgi?kill)
+#### SmartOS
+	kill
+[Manual](https://smartos.org/man/1/kill)
+
 
 ## Hardware Inspection
 
@@ -352,6 +439,7 @@ System
 ### List Services
 #### Windows Server
 	Get-Service
+[Technet](https://technet.microsoft.com/en-us/library/hh849804.aspx)
 #### Red Hat Enterprise Linux
 	systemctl list-unit-files --type=service
 #### Debian
@@ -736,12 +824,3 @@ As above.
 As above.
 #### SmartOS
 As above.
-
-
-
-
-
-
-
-
-
