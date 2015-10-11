@@ -1,7 +1,7 @@
 <header>
 	<div class="intro">
-		<h1>The Command Line Rosetta Stone</h1>
-		<h2>A comparison chart for modern operating systems</h2>
+		<h1>The Modern Unix Rosetta Stone</h1>
+		<h2>A comparison for current operating systems</h2>
 		<h3>Inspired by the classic Unix Rosetta Stone</h3>
 
 		<div class="chop-box">
@@ -17,9 +17,9 @@
 	<p>Choose operating systems:</p>
 		{{# operatingSystems:os }}
 			{{# operatingSystems[os].enabled }}
-				<img class="enabled" data-operating-system="{{os}}" src="images/{{ operatingSystems[os].logo }}.svg">
+				<img class="enabled" data-operating-system="{{os}}" src="images/rosetta-stone/{{ operatingSystems[os].logo }}.svg">
 			{{ else }}
-				<img data-operating-system="{{os}}" src="images/{{ operatingSystems[os].logo }}-fade.svg">
+				<img data-operating-system="{{os}}" src="images/rosetta-stone/{{ operatingSystems[os].logo }}-fade.svg">
 			{{/}}
 		{{/}}
 	<p class="aside">All commands below are for the latest server or 'long-term' versions. Want to <a href="https://github.com/mikemaccana/rosetta-stone">add or change something?</a></p>
@@ -35,7 +35,7 @@
   						<th>task</th>
   						{{# operatingSystems:os }}
   							{{# operatingSystems[os].enabled }}
-  								<th><a href="{{ operatingSystems[os].docs }}"><img src="images/{{ operatingSystems[os].logo }}.svg"></a></th>
+  								<th><a href="{{ operatingSystems[os].docs }}"><img src="images/rosetta-stone/{{ operatingSystems[os].logo }}.svg"></a></th>
   							{{/}}
   						{{/}}
   					</tr>

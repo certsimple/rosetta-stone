@@ -1,6 +1,6 @@
-# The Command Line Rosetta Stone
+# The Modern Unix Rosetta Stone
 
-A chart for comparing command line tasks on modern operating systems:
+Comparing command line tasks on current operating systems:
 
 - Windows
 - Red Hat Enterprise Linux (and CentOS)
@@ -11,6 +11,8 @@ A chart for comparing command line tasks on modern operating systems:
 - OpenBSD
 - FreeBSD
 - SmartOS
+
+Inspired by the original, but sadly no longer maintained, Unix Rosetta Stone.
 
 ## Where can I see it online?
 

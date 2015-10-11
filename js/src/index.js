@@ -49,11 +49,11 @@ rosettaData.operatingSystems = {
 		"docs": "http://www.openbsd.org/faq/",
 		"logo": "openbsd"
 	},
-    "FreeBSD": {
-        "enabled": false,
-        "docs": "http://www.freebsd.org/docs.html",
-        "logo": "freebsd"
-    },
+	"FreeBSD": {
+		"enabled": false,
+		"docs": "http://www.freebsd.org/docs.html",
+		"logo": "freebsd"
+	},
 	"SmartOS": {
 		"enabled": false,
 		"docs": "https://wiki.smartos.org/display/DOC/Home",
