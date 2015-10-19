@@ -1,6 +1,6 @@
 {
   "name": "rosetta-stone",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Convert command line tasks between common Operating Systems",
   "repository": "https://github.com/mikemaccana/rosetta-stone.git",
   "dependencies": {

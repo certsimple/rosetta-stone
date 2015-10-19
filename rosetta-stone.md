@@ -380,8 +380,7 @@ As above.
 
 ### whois
 #### Windows Server
-	$web = New-WebServiceProxy 'http://www.webservicex.net/whois.asmx?WSDL'
-	$web.GetWhoIs('[domain name]')
+Not inbuilt. See [PowerShell whois on GitHub](https://github.com/bone187/PowerShell-Whois/blob/master/whois.ps1).
 #### Red Hat Enterprise Linux
 	whois 'domain [domain name]'
 #### Debian
