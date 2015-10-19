@@ -380,7 +380,7 @@ As above.
 
 ### whois
 #### Windows Server
-Not inbuilt. See [PowerShell whois on GitHub](https://github.com/bone187/PowerShell-Whois/blob/master/whois.ps1).
+Not inbuilt. See link below. [PowerShell whois on GitHub](https://github.com/bone187/PowerShell-Whois).
 #### Red Hat Enterprise Linux
 	whois 'domain [domain name]'
 #### Debian
