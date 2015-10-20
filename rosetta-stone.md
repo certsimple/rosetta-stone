@@ -419,7 +419,14 @@ As above.
 	No services per se: binaries are launched as daemon processses via `/etc/rc.local`
 [OpenBSD FAQ](http://www.openbsd.org/faq/faq10.html)
 #### FreeBSD
+System
+
 	/etc/rc.d/
+	
+Ports/Pkg installed
+
+	/usr/local/etc/rc.d
+[rc man page](https://www.freebsd.org/cgi/man.cgi?rc)
 #### SmartOS
 User installed
 
