@@ -444,7 +444,7 @@ System
 #### Debian
 As above.
 #### Ubuntu
-	ls /etc/init.d
+	service --status-all
 #### Arch Linux
 	systemctl list-unit-files --type=service
 #### OS X
@@ -469,7 +469,7 @@ As above.
 #### Debian
 As above.
 #### Ubuntu
-	/etc/init.d/[service file] start
+	service [servicename] start
 #### Arch Linux
 	systemctl start servicename
 [Arch Wiki](https://wiki.archlinux.org/index.php/Systemd#Using_units)
@@ -493,7 +493,7 @@ As above.
 #### Debian
 As above.
 #### Ubuntu
-	/etc/init.d/[service file] stop
+	service [servicename] stop
 #### Arch Linux
 	systemctl stop servicename
 [Arch Wiki](https://wiki.archlinux.org/index.php/Systemd#Using_units)
@@ -516,7 +516,7 @@ As above.
 #### Debian
 As above.
 #### Ubuntu
-	/etc/init.d/[service file] restart
+	service [servicename] restart
 #### Arch Linux
 	systemctl restart servicename
 [Arch Wiki](https://wiki.archlinux.org/index.php/Systemd#Using_units)
