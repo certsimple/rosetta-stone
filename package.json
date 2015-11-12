@@ -1,12 +1,12 @@
 {
   "name": "rosetta-stone",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "description": "Convert command line tasks between common Operating Systems",
   "repository": "https://github.com/mikemaccana/rosetta-stone.git",
   "dependencies": {
     "brfs": "^1.4.0",
     "browserify": "^10.2.4",
-    "contextify": "github:rvagg/contextify#nan2",
+    "contextify": "^0.1.15",
     "es6-shim": "^0.30.0",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.2.0",
