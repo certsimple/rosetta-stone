@@ -92,8 +92,8 @@ As above.
 	sudo [command]
 [Manual](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/sudo.8.html)
 #### OpenBSD
-	sudo [command]
-[Manual](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man8/sudo.8)
+	doas [command]
+[Manual](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man1/doas.1)
 #### FreeBSD
 	su [user] -c [command]
 [Manual](https://www.freebsd.org/cgi/man.cgi?query=su)
@@ -422,7 +422,7 @@ As above.
 System
 
 	/etc/rc.d/
-	
+
 Ports/Pkg installed
 
 	/usr/local/etc/rc.d
