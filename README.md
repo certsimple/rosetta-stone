@@ -22,9 +22,11 @@ Inspired by the original, but sadly no longer maintained, Unix Rosetta Stone.
 
 Simply edit `rosetta-stone.md` and send a pull request. Please note:
 
- - Add references to official documentation, preferably from the distributor, since this will match the version distributed with the OS. If you can't find this, use a reference from the upstream Open Source project.
+ - Add **references to official documentation**, preferably from the distributor, since this will match the version distributed with the OS. If you can't find this, use a reference from the upstream Open Source project.
 
- - If there are two ways doing something, add the one the distributor uses in their own documentation
+ - If there are two ways doing something, **add the one the distributor uses in their own documentation**
+
+Eg, it's possible to use 'sudo' on OpenBSD. But OpenBSD team prefer 'doas', so that's what we use.
 
 ## Building
 
