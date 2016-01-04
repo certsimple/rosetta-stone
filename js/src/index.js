@@ -19,7 +19,7 @@ rosettaData.operatingSystems = {
 		"docs": "https://technet.microsoft.com/en-us/library/bb978526.aspx",
 		"logo": "windows"
 	},
-	"Red Hat Enterprise Linux": {
+	"Red Hat Enterprise Linux 7": {
 		"enabled": false,
 		"docs": "https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/",
 		"logo": "rhel"

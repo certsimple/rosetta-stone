@@ -5,7 +5,7 @@
 #### Windows Server
 	[Environment]::OSVersion
 [TechNet](http://blogs.technet.com/b/heyscriptingguy/archive/2014/04/25/use-powershell-to-find-operating-system-version.aspx)
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	cat /etc/redhat-release
 [Red Hat Knowledgebase](https://access.redhat.com/solutions/401413)
 #### Debian
@@ -32,7 +32,7 @@
 #### Windows Server
 	[Environment]::UserName
 [TechNet](https://technet.microsoft.com/en-us/library/ff730963.aspx)
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	whoami
 #### Debian
 As above.
@@ -53,7 +53,7 @@ As above.
 
 #### Windows Server
 	[Environment]::MachineName
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	hostname
 #### Debian
 As above.
@@ -76,7 +76,7 @@ As above.
 #### Windows Server
 	runas /user:[domain]\[account] [command]
 [TechNet](http://technet.microsoft.com/en-us/library/bb490994.aspx)
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	sudo [command]
 [System Administrator's Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sect-Gaining_Privileges-The_sudo_Command.html)
 #### Debian
@@ -108,7 +108,7 @@ As above.
 #### Windows Server
 	Start-Process powershell -Verb runAs
 [TechNet](https://technet.microsoft.com/en-us/library/hh849848.aspx)
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	sudo -i
 [System Administrator's Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sect-Gaining_Privileges-The_sudo_Command.html)
 #### Debian
@@ -137,7 +137,7 @@ As above.
 #### Windows Server
 	Get-Process
 [Technet](https://technet.microsoft.com/en-us/library/hh849832.aspx)
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	ps
 [Manual](http://linux.die.net/man/1/ps)
 #### Debian
@@ -164,7 +164,7 @@ As above.
 #### Windows Server
 	Stop-Process
 [Technet](https://technet.microsoft.com/en-us/library/hh849781.aspx)
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	kill
 [Manual](http://linux.die.net/man/1/kill)
 #### Debian
@@ -195,7 +195,7 @@ As above.
 #### Windows Server
 	Get-WmiObject -Class Win32_BIOS
 [Technet](https://technet.microsoft.com/en-us/library/ee176860.aspx)
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	dmidecode
 #### Debian
 As above.
@@ -220,7 +220,7 @@ As above.
 #### Windows Server
 	Get-WmiObject -Class Win32_Processor
 [Technet](http://blogs.technet.com/b/heyscriptingguy/archive/2011/09/26/use-powershell-and-wmi-to-get-processor-information.aspx)
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	less /proc/cpuinfo
 #### Debian
 As above.
@@ -243,7 +243,7 @@ As above.
 
 #### Windows Server
 	Get-WmiObject -Class Win32_PhysicalMemory
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	less /proc/meminfo
 #### Debian
 As above.
@@ -267,7 +267,7 @@ As above.
 #### Windows Server
 	Get-NetAdapter | select name, status
 [TechNet](https://technet.microsoft.com/en-us/library/jj130867.aspx)
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	ethtool
 #### Debian
 As above.
@@ -289,7 +289,7 @@ The `status` field contains connectivity information, `media` contains link nego
 ### IP connectivity
 #### Windows Server
 	Test-Connection "[ip address]"
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	ping
 
 #### Debian
@@ -315,7 +315,7 @@ The `status` field contains connectivity information, `media` contains link nego
 ### DNS resolution
 #### Windows Server
 	Resolve-DnsName "[hostname]"
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	host / dig
 #### Debian
 As above.
@@ -335,7 +335,7 @@ As above.
 ### IP addressing
 #### Windows Server
 	Get-NetIPAddress
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	ip addr
 #### Debian
 As above.
@@ -359,7 +359,7 @@ As above.
 ### Ethernet connectivity
 #### Windows Server
 	?
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	ethtool
 #### Debian
 As above.
@@ -381,7 +381,7 @@ As above.
 ### whois
 #### Windows Server
 Not inbuilt. See link below. [PowerShell whois on GitHub](https://github.com/bone187/PowerShell-Whois).
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	whois 'domain [domain name]'
 #### Debian
 As above.
@@ -405,7 +405,7 @@ As above.
 #### Windows Server
 	HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services
 [Microsoft Support](https://support.microsoft.com/en-us/kb/103000)
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	/etc/system
 #### Debian
 As above.
@@ -446,7 +446,7 @@ System
 #### Windows Server
 	Get-Service
 [Technet](https://technet.microsoft.com/en-us/library/hh849804.aspx)
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	systemctl list-unit-files --type=service
 #### Debian
 As above.
@@ -471,7 +471,7 @@ As above.
 #### Windows Server
 	Start-Service [servicename]
 [Technet](https://technet.microsoft.com/en-us/library/ee177001.aspx)
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	systemctl start servicename
 #### Debian
 As above.
@@ -495,7 +495,7 @@ As above.
 #### Windows Server
 	Stop-Service [servicename]
 [Technet](https://technet.microsoft.com/en-us/library/ee177005.aspx)
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	systemctl stop [servicename]
 #### Debian
 As above.
@@ -518,7 +518,7 @@ As above.
 #### Windows Server
 	Restart-Service [servicename]
 [Technet](https://technet.microsoft.com/en-us/library/ee176942.aspx)
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	systemctl restart [servicename]
 #### Debian
 As above.
@@ -543,7 +543,7 @@ As above.
 ### Logs are written to
 #### Windows Server
 Event Log
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 journald
 #### Debian
 journald
@@ -565,7 +565,7 @@ rsyslog
 #### Windows Server
 	Write-EventLog
 [Technet](https://technet.microsoft.com/en-us/library/hh849847.aspx)
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	echo 'hello' | systemd-cat
 [Manual](http://www.freedesktop.org/software/systemd/man/systemd-cat.html)
 #### Debian
@@ -591,7 +591,7 @@ rsyslog
 ### View logs live
 #### Windows Server
 	Get-Eventlog [log name] -Newest 200
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	journalctl -f -u [service name]
 [System Administrator's Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/s1-Using_the_Journal.html#s2-Viewing_Log_Files)
 #### Debian
@@ -625,7 +625,7 @@ For SMF:
 #### Windows Server
 	Find-Package [search term]
 [Package Management wiki](https://github.com/OneGet/oneget/wiki/cmdlets)
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	yum search [search term]
 [System Administrator's Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sec-Working_with_Packages.html#sec-Searching_Packages)
 #### Debian
@@ -655,7 +655,7 @@ List the packages on an [OpenBSD mirror](http://www.openbsd.org/ftp.html)
 #### Windows Server
 	Install-Package
 [Package Management wiki](https://github.com/OneGet/oneget/wiki/cmdlets)
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	yum install [package name]
 [System Administrator's Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sec-Working_with_Packages.html#sec-Removing)
 #### Debian
@@ -682,7 +682,7 @@ List the packages on an [OpenBSD mirror](http://www.openbsd.org/ftp.html)
 #### Windows Server
 	Uninstall-Package
 [Package Management wiki](https://github.com/OneGet/oneget/wiki/cmdlets)
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	yum remove [package name]
 [System Administrator's Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sec-Working_with_Packages.html#sec-Removing)
 #### Debian
@@ -710,7 +710,7 @@ List the packages on an [OpenBSD mirror](http://www.openbsd.org/ftp.html)
 #### Windows Server
 	Get-Package
 [Package Management wiki](https://github.com/OneGet/oneget/wiki/cmdlets)
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	yum list installed
 [System Administrator's Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sec-Working_with_Packages.html#sec-Listing_Packages)
 #### Debian
@@ -738,7 +738,7 @@ List the packages on an [OpenBSD mirror](http://www.openbsd.org/ftp.html)
 ### Describe what an installed package is
 #### Windows Server
 	?
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	rpm -qi [package name]
 #### Debian
 	dpkg --status pkgname
@@ -764,7 +764,7 @@ As above.
 ### Determine package responsible for a file
 #### Windows Server
 	?
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	rpm -qf [file]
 #### Debian
 	dpkg -S
@@ -786,7 +786,7 @@ As above.
 ### List installed package contents
 #### Windows Server
 	?
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	rpm -ql [package name]
 [System Administrator's Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sec-Working_with_Packages.html#sec-Listing_Packages)
 #### Debian
@@ -813,7 +813,7 @@ As above.
 #### Windows Server
 	certreq
 [Technet](https://technet.microsoft.com/en-gb/library/cc736326%28v=ws.10%29.aspx)
-#### Red Hat Enterprise Linux
+#### Red Hat Enterprise Linux 7
 	openssl req
 [OpenSSL](https://www.openssl.org/docs/apps/req.html)
 #### Debian
