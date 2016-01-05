@@ -3,7 +3,7 @@
 Comparing command line tasks on current operating systems:
 
 - Windows
-- Red Hat Enterprise Linux (and CentOS)
+- Red Hat Enterprise Linux (and CentOS) 7
 - Debian
 - Ubuntu
 - Arch Linux
