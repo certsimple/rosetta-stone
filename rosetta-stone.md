@@ -54,15 +54,17 @@ As above.
 #### Windows Server
 	[Environment]::MachineName
 #### Red Hat Enterprise Linux 7
-	hostname
+	hostnamectl
+[Manual](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Networking_Guide/sec_Configuring_Host_Names_Using_hostnamectl.html)
 #### Debian
-As above.
+	hostname
 #### Ubuntu
 As above.
 #### Arch Linux
-As above.
+	hostnamectl
+[ArchWiki](https://wiki.archlinux.org/index.php/Network_configuration#Set_the_hostname)
 #### OS X
-As above.
+	hostname
 #### OpenBSD
 As above.
 #### FreeBSD
