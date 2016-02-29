@@ -3,7 +3,7 @@ $cell-width: 300px;
 
 $ssl-green: #15A960;
 $white: rgb(252, 252, 252);
-$black: rgb(66, 66, 66);
+$black: #292929;
 
 $pale-grey: #DEDEDE;
 $mid-grey: rgb(165, 165, 165);
@@ -49,7 +49,7 @@ th img {
 }
 
 header {
-	background-color: $ssl-green;
+	background-color: $black;
 	color: white;
 	display:flex;
 	flex-direction: row;
@@ -60,10 +60,10 @@ header {
 		margin: 0 auto;
 		text-align: center;
 		h1 {
-			font-weight: 500;
+			font-weight: 100;
+			color: white;
 		}
 		a {
-			color: white;
 			text-decoration: underline;
 			&:hover, &:active, &:visited {
 				color: white;
@@ -71,7 +71,9 @@ header {
 			}
 		}
 		p {
+			font-family: Lato;
 			font-size: 10pt;
+			color: white;
 			&.sponsor {
 				text-transform: uppercase;
 			}
@@ -83,6 +85,32 @@ header {
 		img {
 			background-color: white;
 		}
+		.chop-box {
+			overflow: hidden;
+			position: absolute;
+			width: 120px;
+			height: 120px;
+			top: 0;
+			right: 0;
+
+
+
+			.edit-me {
+				text-align: center;
+				color: white;
+				width: 250px;
+				color: $ssl-green;
+				background-color: white;
+				transform: rotate(45deg);
+				position: absolute;
+				top: 30px;
+				right: -70px;
+				padding: 3px;
+				text-decoration: none;
+				font-weight: 400;
+			}
+		}
+
 	}
 }
 
@@ -91,27 +119,6 @@ code {
 	white-space: pre-wrap;
 }
 
-.chop-box {
-	overflow: hidden;
-	position: absolute;
-	width: 120px;
-	height: 120px;
-	top: 0;
-	right: 0;
-
-	.edit-me {
-		text-align: center;
-		color: white;
-		width: 250px;
-		background-color: $black;
-		transform: rotate(45deg);
-		position: absolute;
-		top: 30px;
-		right: -70px;
-		padding: 3px;
-		text-decoration: none;
-	}
-}
 
 
 .enable-operating-systems {
