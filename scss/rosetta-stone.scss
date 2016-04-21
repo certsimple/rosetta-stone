@@ -146,101 +146,103 @@ code {
 
 .commands {
 	max-width: 100%;
-	overflow: scroll;
 	h2 {
 		padding: 12px;
 	}
 }
 
 // Technique from: https://techblog.livingsocial.com/blog/2015/04/06/responsive-tables-in-pure-css
-table {
-	margin: 12px;
-	padding: 0;
-	border-collapse: collapse;
-	border-spacing: 0;
-	tr {
-		border-bottom: 1px solid $black;
-	}
-	th, td {
-		padding: 10px;
-		text-align: center;
-		// min-width and max-width are required, even despite width setting
-		//  - tables are magic.
-		min-width: $cell-width;
-		max-width: 400px;
-		width: $cell-width;
-		padding: 10px;
-		text-align: center;
-
-		overflow: scroll;
-	}
-	tbody {
-		// Only for headers inside tbody
-		td, th {
-			border-left: 1px solid $black;
-			border-right: 1px solid $black;
-		}
-	}
-	td {
-
-		// References
-		a {
-			float: right;
-			display: block;
-			text-transform: uppercase;
-			text-decoration: none;
-			color: $mid-grey;
-			font-size: 8pt;
-			&:hover, &:active, &:visited {
-				color: $mid-grey;
-			}
-		}
-	}
-	th {
-		text-transform: uppercase;
-		font-size: 14px;
-		letter-spacing: 1px;
-	}
-}
-@media screen and (max-width: $single-column-max-width) {
-	.commands {
-		padding: 12px;
-	}
+.table-container {
+	overflow-x: scroll; 
 	table {
-		width: 100%;
-		margin: 0;
-		border: 0;
-		thead {
-			display: none;
-		}
+		margin: 12px;
+		padding: 0;
+		border-collapse: collapse;
+		border-spacing: 0;
 		tr {
-			margin-bottom: 10px;
-			display: block;
 			border-bottom: 1px solid $black;
-			th {
-				border-top: 1px solid $black;
-			}
 		}
 		th, td {
-			display: block;
-			width: auto;
-			max-width: none;
-			min-width: none;
+			padding: 10px;
+			text-align: center;
+			// min-width and max-width are required, even despite width setting
+			//	- tables are magic.
+			min-width: $cell-width;
+			max-width: 400px;
+			width: $cell-width;
+			padding: 10px;
+			text-align: center;
+
+			overflow: scroll;
+		}
+		tbody {
+			// Only for headers inside tbody
+			td, th {
+				border-left: 1px solid $black;
+				border-right: 1px solid $black;
+			}
 		}
 		td {
-			text-align: right;
-			font-size: 13px;
-			border-bottom: 1px dotted $mid-grey;
-		}
-		td:last-child {
-			border-bottom: 0;
-		}
 
-		td:before {
-			content: attr(data-label);
-			float: left;
+			// References
+			a {
+				float: right;
+				display: block;
+				text-transform: uppercase;
+				text-decoration: none;
+				color: $mid-grey;
+				font-size: 8pt;
+				&:hover, &:active, &:visited {
+					color: $mid-grey;
+				}
+			}
+		}
+		th {
 			text-transform: uppercase;
-			font-weight: bold;
+			font-size: 14px;
+			letter-spacing: 1px;
+		}
+	}
+	@media screen and (max-width: $single-column-max-width) {
+		.commands {
+			padding: 12px;
+		}
+		table {
+			width: 100%;
+			margin: 0;
+			border: 0;
+			thead {
+				display: none;
+			}
+			tr {
+				margin-bottom: 10px;
+				display: block;
+				border-bottom: 1px solid $black;
+				th {
+					border-top: 1px solid $black;
+				}
+			}
+			th, td {
+				display: block;
+				width: auto;
+				max-width: none;
+				min-width: none;
+			}
+			td {
+				text-align: right;
+				font-size: 13px;
+				border-bottom: 1px dotted $mid-grey;
+			}
+			td:last-child {
+				border-bottom: 0;
+			}
+
+			td:before {
+				content: attr(data-label);
+				float: left;
+				text-transform: uppercase;
+				font-weight: bold;
+			}
 		}
 	}
 }
