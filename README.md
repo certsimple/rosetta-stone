@@ -40,7 +40,7 @@ You don't need to build to contribute, but if you want to build the HTML and see
 
 3. Clone the repo:
 
-	git clone git@github.com:mikemaccana/rosetta-stone.git
+	git clone git@github.com:certsimple/rosetta-stone.git
 
 3. Edit `rosettastone.md`
 
