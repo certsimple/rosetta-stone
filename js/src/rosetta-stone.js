@@ -72,14 +72,13 @@ var rosettaStoneUI = new Ractive({
 	}
 })
 
-rosettaStoneUI.observe('operatingSystems.*.enabled', function(oldValue, newValue){
+rosettaStoneUI.observe('operatingSystems.*.enabled', async function(oldValue, newValue){
 	var operatingSystems = rosettaStoneUI.get('operatingSystems')
 	var operatingSystemNames = Object.keys(operatingSystems)
 	var isAnOSEnabled = operatingSystemNames.some(function(osName){
 		return operatingSystems[osName].enabled
 	})
-	log('isAnOSEnabled', isAnOSEnabled)
-	rosettaStoneUI.set('isAnOSEnabled', isAnOSEnabled)
+	await rosettaStoneUI.set('isAnOSEnabled', isAnOSEnabled)
 })
 
 // Debugging
