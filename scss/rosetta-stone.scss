@@ -139,8 +139,6 @@ code {
 	white-space: pre-wrap;
 }
 
-
-
 .enable-operating-systems {
 	padding: 12px;
 	text-align: center;
@@ -150,9 +148,11 @@ code {
 		margin-right: 20px;
 		height: 40px;
 		width: 100px;
+		opacity: 0.4;
 		&.enabled {
 			border-radius: 3px;
 			border: 1px solid $theme-color;
+			opacity: 1.0;
 		}
 	}
 }
