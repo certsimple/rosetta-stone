@@ -38,12 +38,12 @@ gulp.task('markdown-to-json', function (cb) {
 gulp.task('js', ['markdown-to-json'], function() {
 	// Browserify/bundle the JS.
 	browserify({
-		entries: './js/src/index.js',
+		entries: './js/src/rosetta-stone.js',
 		insertGlobals : true,
 		fullPaths: true, // For discify
 		debug: ! gulp.env.production
 	}).bundle()
-		.pipe(source('index.js'))
+		.pipe(source('rosetta-stone.js'))
 		.pipe(buffer())
 		.pipe(gulpIf(gulp.env.production, uglify()))
 		.pipe(gulp.dest('./js/dist'))
