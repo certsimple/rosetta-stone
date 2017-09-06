@@ -1,76 +1,76 @@
 module.exports = `<header>
-  <div class="intro">
-    <h1>The Command Line Rosetta Stone</h1>
-    <h2>A comparison for current operating systems inspired by the classic Unix Rosetta Stone</h2>
+	<div class="intro">
+		<h1>The Command Line Rosetta Stone</h1>
+		<h2>A comparison for current operating systems inspired by the classic Unix Rosetta Stone</h2>
 
-    <div class="chop-box">
-    <a class="edit-me" href="https://github.com/certsimple/rosetta-stone">Edit me!</a>
-    </div>
+		<div class="chop-box">
+		<a class="edit-me" href="https://github.com/certsimple/rosetta-stone">Edit me!</a>
+		</div>
 
-    <a class="logo" href="https://certsimple.com">
-      <h1><img src="/images/logo.svg">CertSimple <small>Fast painless EV HTTPS</small></h1>
-      </a>
-  </div>
+		<a class="logo" href="https://certsimple.com">
+			<h1><img src="/images/logo.svg">CertSimple <small>Fast painless EV HTTPS</small></h1>
+			</a>
+	</div>
 </header>
 
 
 <div class="enable-operating-systems">
-  <p>Choose operating systems:</p>
-    {{# operatingSystems:os }}
-      {{# operatingSystems[os].enabled }}
-        <img class="enabled" data-operating-system="{{os}}" src="images/rosetta-stone/{{ operatingSystems[os].logo }}.svg">
-      {{ else }}
-        <img data-operating-system="{{os}}" src="images/rosetta-stone/{{ operatingSystems[os].logo }}-fade.svg">
-      {{/}}
-    {{/}}
-  <p class="aside">All commands below are for the latest server or 'long-term' versions. Want to <a href="https://github.com/certsimple/rosetta-stone">add or change something?</a></p>
+	<p>Choose operating systems:</p>
+		{{# operatingSystems:os }}
+			{{# operatingSystems[os].enabled }}
+				<img class="enabled" data-operating-system="{{os}}" src="images/rosetta-stone/{{ operatingSystems[os].logo }}.svg">
+			{{ else }}
+				<img data-operating-system="{{os}}" src="images/rosetta-stone/{{ operatingSystems[os].logo }}-fade.svg">
+			{{/}}
+		{{/}}
+	<p class="aside">All commands below are for the latest server or 'long-term' versions. Want to <a href="https://github.com/certsimple/rosetta-stone">add or change something?</a></p>
 </div>
 
 {{#if isAnOSEnabled }}
-  <div class="commands">
-    {{#sections:title}}
-      <h2>{{ title }}</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>task</th>
-              {{# operatingSystems:os }}
-                {{# operatingSystems[os].enabled }}
-                  <th><a href="{{ operatingSystems[os].docs }}"><img src="images/rosetta-stone/{{ operatingSystems[os].logo }}.svg"></a></th>
-                {{/}}
-              {{/}}
-            </tr>
-          </thead>
-          <tbody>
-            {{#sections[title]:subtitle }}
-              <tr>
-              <th>{{ subtitle }}</th>
-              {{# sections[title][subtitle]:os }}
-                {{# operatingSystems[os].enabled }}
-                  <td data-label="{{ os }}">
-                    {{# sections[title][subtitle][os] }}
-                      {{{ . }}}
-                    {{/}}
-                  </td>
-                {{/}}
-              {{/}}
-              </tr>
-            {{/}}
-          </tbody>
-        </table>
+	<div class="commands">
+		{{#sections:title}}
+			<h2>{{ title }}</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>task</th>
+							{{# operatingSystems:os }}
+								{{# operatingSystems[os].enabled }}
+									<th><a href="{{ operatingSystems[os].docs }}"><img src="images/rosetta-stone/{{ operatingSystems[os].logo }}.svg"></a></th>
+								{{/}}
+							{{/}}
+						</tr>
+					</thead>
+					<tbody>
+						{{#sections[title]:subtitle }}
+							<tr>
+							<th>{{ subtitle }}</th>
+							{{# sections[title][subtitle]:os }}
+								{{# operatingSystems[os].enabled }}
+									<td data-label="{{ os }}">
+										{{# sections[title][subtitle][os] }}
+											{{{ . }}}
+										{{/}}
+									</td>
+								{{/}}
+							{{/}}
+							</tr>
+						{{/}}
+					</tbody>
+				</table>
 
-    {{/}}
-  </div>
+		{{/}}
+	</div>
 
-  <div class="notes">
-    <p>Note 1: Unix commands including cd, ls, rm, cp, mv, mkdir, cp, mv, cat, & clear work on PowerShell as <a href="https://technet.microsoft.com/en-us/library/dd347739.aspx">aliases to their Powershell equivalents</a>. New PowerShell users should at minimum be familiar with <a href="http://windowsitpro.com/powershell/powershell-basics-filtering-objects">where</a> and <a href="http://windowsitpro.com/powershell/powershell-basics-filtering-objects">select</a>.</p>
-    <p>Note 2: package management on Mac OS X requires <a href="http://brew.sh/">Homebrew</a>. </p>
-    <p>Note 3: on FreeBSD, su is included and generally preferred over sudo, which is available from ports. </p>
-  </div>
+	<div class="notes">
+		<p>Note 1: Unix commands including cd, ls, rm, cp, mv, mkdir, cp, mv, cat, & clear work on PowerShell as <a href="https://technet.microsoft.com/en-us/library/dd347739.aspx">aliases to their Powershell equivalents</a>. New PowerShell users should at minimum be familiar with <a href="http://windowsitpro.com/powershell/powershell-basics-filtering-objects">where</a> and <a href="http://windowsitpro.com/powershell/powershell-basics-filtering-objects">select</a>.</p>
+		<p>Note 2: package management on Mac OS X requires <a href="http://brew.sh/">Homebrew</a>. </p>
+		<p>Note 3: on FreeBSD, su is included and generally preferred over sudo, which is available from ports. </p>
+	</div>
 {{ else}}
-  <div class="notes">
-    <p>You should probably enable at least one Operating System.
-  </div>
+	<div class="notes">
+		<p>You should probably enable at least one Operating System.
+	</div>
 {{/if}}`
 
 
