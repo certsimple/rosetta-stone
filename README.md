@@ -7,7 +7,7 @@ Comparing command line tasks on current operating systems:
 - Debian
 - Ubuntu
 - Arch Linux
-- OS X
+- macOS
 - OpenBSD
 - FreeBSD
 - SmartOS

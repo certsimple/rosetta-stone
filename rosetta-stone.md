@@ -15,7 +15,7 @@
 [Manual](http://manpages.ubuntu.com/manpages/precise/man1/lsb_release.1.html)
 #### Arch Linux
 [Arch Linux is a rolling release](https://wiki.archlinux.org/index.php/Arch_Linux#Principles)
-#### OS X
+#### macOS
 	sw_vers -productVersion
 [Manual](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/sw_vers.1.html)
 #### OpenBSD
@@ -40,7 +40,7 @@ As above.
 As above.
 #### Arch Linux
 As above.
-#### OS X
+#### macOS
 	whoami
 #### OpenBSD
 	whoami
@@ -63,7 +63,7 @@ As above.
 #### Arch Linux
 	hostnamectl
 [ArchWiki](https://wiki.archlinux.org/index.php/Network_configuration#Set_the_hostname)
-#### OS X
+#### macOS
 	hostname
 #### OpenBSD
 As above.
@@ -90,7 +90,7 @@ As above.
 #### Arch Linux
 	sudo [command]
 [ArchWiki](https://wiki.archlinux.org/index.php/Sudo)
-#### OS X
+#### macOS
 	sudo [command]
 [Manual](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/sudo.8.html)
 #### OpenBSD
@@ -122,7 +122,7 @@ As above.
 #### Arch Linux
 	sudo -i
 [ArchWiki](https://wiki.archlinux.org/index.php/Sudo)
-#### OS X
+#### macOS
 	sudo -i
 #### OpenBSD
 	sudo -i
@@ -148,7 +148,7 @@ As above.
 As above.
 #### Arch Linux
 As above.
-#### OS X
+#### macOS
 	ps
 [Manual](https://developer.apple.com/library/prerelease/mac/documentation/Darwin/Reference/ManPages/man1/ps.1.html)
 #### OpenBSD
@@ -175,7 +175,7 @@ As above.
 As above.
 #### Arch Linux
 As above.
-#### OS X
+#### macOS
 	kill
 [Manual](https://developer.apple.com/library/prerelease/mac/documentation/Darwin/Reference/ManPages/man1/kill.1.html)
 #### OpenBSD
@@ -205,7 +205,7 @@ As above.
 As above.
 #### Arch Linux
 As above.
-#### OS X
+#### macOS
 	system_profiler SPHardwareDataType
 [Manual](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/system_profiler.8.html)
 #### OpenBSD
@@ -230,7 +230,7 @@ As above.
 As above.
 #### Arch Linux
 As above.
-#### OS X
+#### macOS
 	system_profiler SPHardwareDataType
 [Manual](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/system_profiler.8.html)
 #### OpenBSD
@@ -253,7 +253,7 @@ As above.
 As above.
 #### Arch Linux
 As above.
-#### OS X
+#### macOS
 	system_profiler SPMemoryDataType
 #### OpenBSD
 	?
@@ -277,7 +277,7 @@ As above.
 As above.
 #### Arch Linux
 As above.
-#### OS X
+#### macOS
 	ifconfig [interface]
 The `status` field contains connectivity information, `media` contains link negotiation info.
 #### OpenBSD
@@ -302,7 +302,7 @@ The `status` field contains connectivity information, `media` contains link nego
 [Manual](http://manpages.ubuntu.com/manpages/lucid/man8/ping.8.html)
 #### Arch Linux
 	ping
-#### OS X
+#### macOS
 	ping
 [Manual](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/ping.8.html)
 #### OpenBSD
@@ -325,7 +325,7 @@ As above.
 As above.
 #### Arch Linux
 As above.
-#### OS X
+#### macOS
 As above.
 #### OpenBSD
 As above.
@@ -345,7 +345,7 @@ As above.
 As above.
 #### Arch Linux
 As above.
-#### OS X
+#### macOS
 	ifconfig
 [Manual](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/ifconfig.8.html)
 #### OpenBSD
@@ -369,7 +369,7 @@ As above.
 As above.
 #### Arch Linux
 As above.
-#### OS X
+#### macOS
 	?
 #### OpenBSD
 	?
@@ -391,7 +391,7 @@ As above.
 As above.
 #### Arch Linux
 As above.
-#### OS X
+#### macOS
 As above.
 #### OpenBSD
 As above.
@@ -415,7 +415,7 @@ As above.
 	/etc/init.d
 #### Arch Linux
 	/etc/system
-#### OS X
+#### macOS
 	/System/Library/LaunchDaemons/
 #### OpenBSD
 	No services per se: binaries are launched as daemon processses via `/etc/rc.local`
@@ -456,7 +456,7 @@ As above.
 	service --status-all
 #### Arch Linux
 	systemctl list-unit-files --type=service
-#### OS X
+#### macOS
 	launchctl list
 #### OpenBSD
 	cat /etc/rc.local
@@ -482,7 +482,7 @@ As above.
 #### Arch Linux
 	systemctl start servicename
 [Arch Wiki](https://wiki.archlinux.org/index.php/Systemd#Using_units)
-#### OS X
+#### macOS
 	launchctl load -w /System/Library/LaunchDaemons/ssh.plist
 #### OpenBSD
 	Launch directly from the binary
@@ -506,7 +506,7 @@ As above.
 #### Arch Linux
 	systemctl stop servicename
 [Arch Wiki](https://wiki.archlinux.org/index.php/Systemd#Using_units)
-#### OS X
+#### macOS
 	launchctl unload -w /System/Library/LaunchDaemons/ssh.plist
 #### OpenBSD
 	pkill [process name]
@@ -529,7 +529,7 @@ As above.
 #### Arch Linux
 	systemctl restart servicename
 [Arch Wiki](https://wiki.archlinux.org/index.php/Systemd#Using_units)
-#### OS X
+#### macOS
 	?
 #### OpenBSD
 `kill` process, re-run binary
@@ -553,7 +553,7 @@ journald
 syslog
 #### Arch Linux
 journald
-#### OS X
+#### macOS
 Apple System Log (also called ASL)
 #### OpenBSD
 syslog
@@ -578,7 +578,7 @@ rsyslog
 [Manual](http://manpages.ubuntu.com/manpages/lucid/man1/logger.1.html)
 #### Arch Linux
 	logger
-#### OS X
+#### macOS
 	logger
 [Manual](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/logger.1.html)
 #### OpenBSD
@@ -601,7 +601,7 @@ rsyslog
 #### Ubuntu
 	tail -f [syslog log file]
 See `/etc/syslog.conf` for log destinations, `/var/log/messages` contains most messages.
-#### OS X
+#### macOS
 	tail -f [syslog log file]
 See `/etc/syslog.conf` for log destinations, `/var/log/system.log` contains most messages.
 #### Arch Linux
@@ -639,7 +639,7 @@ For SMF:
 #### Arch Linux
 	pacman -Ss
 [Arch Wiki](https://wiki.archlinux.org/index.php/Pacman)
-#### OS X
+#### macOS
 	brew search [search term]
 [Homebrew manual](https://github.com/Homebrew/homebrew/blob/master/Library/Homebrew/manpages/brew.1.md)
 #### OpenBSD
@@ -669,7 +669,7 @@ List the packages on an [OpenBSD mirror](http://www.openbsd.org/ftp.html)
 #### Arch Linux
 	pacman -S
 [Arch Wiki](https://wiki.archlinux.org/index.php/Pacman)
-#### OS X
+#### macOS
 	brew install [package name]
 [Homebrew FAQ](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/FAQ.md)
 #### OpenBSD
@@ -695,7 +695,7 @@ List the packages on an [OpenBSD mirror](http://www.openbsd.org/ftp.html)
 #### Arch Linux
 	pacman -Rc
 [Arch Wiki](https://wiki.archlinux.org/index.php/Pacman)
-#### OS X
+#### macOS
 	brew uninstall [package name]
 [Homebrew FAQ](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/FAQ.md)
 #### OpenBSD
@@ -724,7 +724,7 @@ List the packages on an [OpenBSD mirror](http://www.openbsd.org/ftp.html)
 #### Arch Linux
 	pacman -Q
 [Arch Wiki](https://wiki.archlinux.org/index.php/Pacman)
-#### OS X
+#### macOS
 	brew list
 [Homebrew manual](https://github.com/Homebrew/homebrew/blob/master/Library/Homebrew/manpages/brew.1.md)
 #### OpenBSD
@@ -749,7 +749,7 @@ As above.
 #### Arch Linux
 	pacman -Qi
 [Arch Wiki](https://wiki.archlinux.org/index.php/Pacman)
-#### OS X
+#### macOS
 	?
 #### OpenBSD
 	pkg_info
@@ -776,7 +776,7 @@ As above.
 #### Arch Linux
 	pacman -Qo
 [Arch Wiki](https://wiki.archlinux.org/index.php/Pacman)
-#### OS X
+#### macOS
 	?
 #### OpenBSD
 	pkg_info -E [file]
@@ -799,7 +799,7 @@ As above.
 #### Arch Linux
 	pacman -Ql
 [Arch Wiki](https://wiki.archlinux.org/index.php/Pacman)
-#### OS X
+#### macOS
 	?
 #### OpenBSD
 	?
@@ -824,7 +824,7 @@ As above.
 As above.
 #### Arch Linux
 As above.
-#### OS X
+#### macOS
 As above.
 #### OpenBSD
 As above.

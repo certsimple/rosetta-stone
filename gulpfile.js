@@ -51,17 +51,19 @@ gulp.task('js', ['markdown-to-json'], function() {
 });
 
 gulp.task('webserver', function() {
-  gulp.src('./')
-    .pipe(webserver({
-      livereload: true,
-      port: 7777,
-      fallback: 'html/index.html',
-      open: true
-    }));
+	gulp.src('./')
+		.pipe(webserver({
+			livereload: true,
+			port: 7777,
+			fallback: 'html/index.html',
+			open: true
+		}));
 });
 
 // The default task (called when you run `gulp`)
 gulp.task('default', ['markdown-to-json', 'js', 'sass', 'webserver'], function() {
-
+	// Watch files and run tasks if they change
+	gulp.watch('./scss/*.scss', ['sass']);
+	gulp.watch('./js/src/*.js', ['js']);
 });
 

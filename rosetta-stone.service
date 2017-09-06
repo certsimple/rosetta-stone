@@ -1,0 +1,14 @@
+[Unit]
+Description=CertSimple Marketing site
+
+[Service]
+ExecStart=/var/www/rosetta-stone/node_modules/.bin/gulp webserver
+Restart=always
+User=nobody
+Group=nobody
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/var/www/rosetta-stone
+
+[Install]
+WantedBy=multi-user.target

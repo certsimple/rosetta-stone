@@ -1,12 +1,9 @@
 #!/usr/bin/env node
-var marked = require('marked'),
+const marked = require('marked'),
 	fs = require('fs'),
-	jsdom = require("jsdom"),
-	multiline = require('multiline');
+	jsdom = require("jsdom/lib/old-api.js");
 
-require('es6-shim')
-
-var DEBUG = false
+var DEBUG = false;
 
 var log;
 if ( DEBUG ) {

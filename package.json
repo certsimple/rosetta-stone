@@ -1,29 +1,27 @@
 {
   "name": "rosetta-stone",
-  "version": "1.6.4",
+  "version": "2.0.0",
   "description": "Convert command line tasks between common Operating Systems",
   "repository": "https://github.com/mikemaccana/rosetta-stone.git",
   "dependencies": {
-    "brfs": "^1.4.0",
-    "browserify": "^10.2.4",
-    "es6-shim": "^0.30.0",
-    "gulp": "^3.8.11",
-    "gulp-autoprefixer": "^2.2.0",
-    "gulp-if": "^1.2.5",
-    "gulp-sass": "^2.0.4",
-    "gulp-uglify": "^1.2.0",
-    "gulp-webserver": "^0.9.0",
-    "jquery": "^2.1.4",
-    "jsdom": "^7.0.2",
-    "marked": "^0.3.3",
+    "brfs": "^1.4.3",
+    "browserify": "^14.4.0",
+    "jquery": "^3.2.1",
+    "jsdom": "^11.2.0",
+    "marked": "^0.3.6",
     "multiline": "^1.0.2",
-    "node-sass": "^3.3.3",
-    "ractive": "^0.7.3",
+    "node-sass": "^4.5.3",
+    "ractive": "^0.9.3",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
   "devDependencies": {
-    "gulp": "^3.8.11"
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-webserver": "^0.9.1"
   },
   "engines": {
     "node": ">= 0.12"

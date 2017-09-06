@@ -1,12 +1,7 @@
-// Note this can't be merged into another var statement, due to the way brfs works.
-var fs = require("fs");
-
-var log = console.log.bind(console)
-
-var rosettaTemplate = fs.readFileSync('mustache/template.mustache', 'utf8');
-var rosettaData = JSON.parse(fs.readFileSync('json/rosetta-stone.json', 'utf8'));
-
-var Ractive = require("ractive"),
+const log = console.log.bind(console),
+	rosettaTemplate = require('../../mustache/template.mustache'),
+	rosettaData = require('../../json/rosetta-stone.json'),
+	Ractive = require("ractive"),
 	$ = require("jquery");
 
 // For testing
@@ -39,10 +34,10 @@ rosettaData.operatingSystems = {
 		"docs": "https://wiki.archlinux.org/",
 		"logo": "archlinux"
 	},
-	"OS X": {
+	"macOS": {
 		"enabled": true,
-		"docs": "https://www.apple.com/uk/support/osxserver/",
-		"logo": "osx"
+		"docs": "https://www.apple.com/uk/support/macosserver/",
+		"logo": "macos"
 	},
 	"OpenBSD": {
 		"enabled": false,
