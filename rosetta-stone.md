@@ -527,7 +527,7 @@ As above.
 #### Ubuntu
 As above.
 #### Arch Linux
-	As above.
+	systemctl restart [servicename]
 [Arch Wiki](https://wiki.archlinux.org/index.php/Systemd#Using_units)
 #### macOS
 	?
