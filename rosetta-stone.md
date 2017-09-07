@@ -412,9 +412,9 @@ As above.
 #### Debian
 As above.
 #### Ubuntu
-	/etc/init.d
+As above.
 #### Arch Linux
-	/etc/system
+As above.
 #### macOS
 	/System/Library/LaunchDaemons/
 #### OpenBSD
@@ -453,9 +453,9 @@ System
 #### Debian
 As above.
 #### Ubuntu
-	service --status-all
+As above.
 #### Arch Linux
-	systemctl list-unit-files --type=service
+As above.
 #### macOS
 	launchctl list
 #### OpenBSD
@@ -478,7 +478,7 @@ As above.
 #### Debian
 As above.
 #### Ubuntu
-	service [servicename] start
+As above.
 #### Arch Linux
 	systemctl start servicename
 [Arch Wiki](https://wiki.archlinux.org/index.php/Systemd#Using_units)
@@ -502,9 +502,9 @@ As above.
 #### Debian
 As above.
 #### Ubuntu
-	service [servicename] stop
+As above.
 #### Arch Linux
-	systemctl stop servicename
+	systemctl stop [servicename]
 [Arch Wiki](https://wiki.archlinux.org/index.php/Systemd#Using_units)
 #### macOS
 	launchctl unload -w /System/Library/LaunchDaemons/ssh.plist
@@ -527,7 +527,7 @@ As above.
 #### Ubuntu
 	service [servicename] restart
 #### Arch Linux
-	systemctl restart servicename
+	As above.
 [Arch Wiki](https://wiki.archlinux.org/index.php/Systemd#Using_units)
 #### macOS
 	?
