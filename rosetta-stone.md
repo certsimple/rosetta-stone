@@ -525,7 +525,7 @@ As above.
 #### Debian
 As above.
 #### Ubuntu
-	service [servicename] restart
+As above.
 #### Arch Linux
 	As above.
 [Arch Wiki](https://wiki.archlinux.org/index.php/Systemd#Using_units)
