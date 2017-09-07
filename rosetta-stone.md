@@ -550,7 +550,7 @@ journald
 #### Debian
 journald
 #### Ubuntu
-syslog
+journald
 #### Arch Linux
 journald
 #### macOS
@@ -574,10 +574,10 @@ rsyslog
 	echo 'hello' | systemd-cat
 [Manual](http://www.freedesktop.org/software/systemd/man/systemd-cat.html)
 #### Ubuntu
-	logger
+	echo 'hello' | systemd-cat
 [Manual](http://manpages.ubuntu.com/manpages/lucid/man1/logger.1.html)
 #### Arch Linux
-	logger
+	echo 'hello' | systemd-cat
 #### macOS
 	logger
 [Manual](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/logger.1.html)
@@ -599,8 +599,7 @@ rsyslog
 #### Debian
 	journalctl -f -u [service name]
 #### Ubuntu
-	tail -f [syslog log file]
-See `/etc/syslog.conf` for log destinations, `/var/log/messages` contains most messages.
+	journalctl -f -u [service name]
 #### macOS
 	tail -f [syslog log file]
 See `/etc/syslog.conf` for log destinations, `/var/log/system.log` contains most messages.
