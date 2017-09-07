@@ -1,4 +1,4 @@
-# The Modern Unix Rosetta Stone
+# The Command Line Rosetta Stone
 
 Comparing command line tasks on current operating systems:
 
@@ -20,7 +20,9 @@ Inspired by the original, but sadly no longer maintained, Unix Rosetta Stone.
 
 ## Contributing
 
-Simply edit `rosetta-stone.md` and send a pull request. Please note:
+**Simply edit `rosetta-stone.md` and send a pull request.**
+
+Please note:
 
  - Add **references to official documentation**, preferably from the distributor, since this will match the version distributed with the OS. If you can't find this, use a reference from the upstream Open Source project.
 
