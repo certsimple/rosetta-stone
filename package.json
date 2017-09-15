@@ -13,14 +13,14 @@
     "node-sass": "^4.5.3",
     "ractive": "^0.9.3",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
-  },
-  "devDependencies": {
+    "vinyl-source-stream": "^1.1.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-if": "^2.0.2",
     "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0",
+    "gulp-uglify": "^3.0.0"
+  },
+  "devDependencies": {
     "gulp-webserver": "^0.9.1"
   },
   "engines": {
