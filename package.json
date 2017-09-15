@@ -18,10 +18,10 @@
     "gulp-autoprefixer": "^4.0.0",
     "gulp-if": "^2.0.2",
     "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0"
+    "gulp-uglify": "^3.0.0",
+    "gulp-webserver": "^0.9.1"
   },
   "devDependencies": {
-    "gulp-webserver": "^0.9.1"
   },
   "engines": {
     "node": ">= 0.12"
