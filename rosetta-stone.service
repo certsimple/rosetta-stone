@@ -1,5 +1,5 @@
 [Unit]
-Description=CertSimple Marketing site
+Description=Command Line Rosetta Stone
 
 [Service]
 ExecStart=/var/www/rosetta-stone/node_modules/.bin/gulp webserver
