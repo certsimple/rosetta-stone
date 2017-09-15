@@ -76,8 +76,7 @@ As above.
 ### Run command as root/administrator (or another user)
 
 #### Windows Server
-	runas /user:[domain]\[account] [command]
-[TechNet](http://technet.microsoft.com/en-us/library/bb490994.aspx)
+	Invoke-Elevated [PSCX](https://github.com/Pscx/Pscx)
 #### Red Hat Enterprise Linux 7
 	sudo [command]
 [System Administrator's Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/sect-Gaining_Privileges-The_sudo_Command.html)
@@ -293,7 +292,6 @@ The `status` field contains connectivity information, `media` contains link nego
 	Test-Connection "[ip address]"
 #### Red Hat Enterprise Linux 7
 	ping
-
 #### Debian
 	ping
 [Manual](http://manpages.debian.org/cgi-bin/man.cgi?query=ping)
@@ -370,7 +368,9 @@ As above.
 #### Arch Linux
 As above.
 #### macOS
-	?
+	system_profiler
+and
+	ifconfig
 #### OpenBSD
 	?
 #### FreeBSD
@@ -399,6 +399,68 @@ As above.
 As above.
 #### SmartOS
 As above.
+
+### Routing
+#### Windows Server
+	Get-NetRoute
+[Microsoft docs](https://docs.microsoft.com/en-us/powershell/module/nettcpip/get-netroute)
+#### Red Hat Enterprise Linux 7
+	ip route
+#### Debian
+	ip route
+#### Ubuntu
+	ip route
+#### Arch Linux
+	ip route
+#### macOS
+	route
+#### OpenBSD
+	route
+#### FreeBSD
+	route
+#### SmartOS
+	route
+
+### ARP tables
+#### Windows Server
+	Get-NetNeighbor
+[Microsoft Docs](https://docs.microsoft.com/en-us/powershell/module/nettcpip/get-netneighbor?view=win10-ps)
+#### Red Hat Enterprise Linux 7
+	ip neighbor
+#### Debian
+	ip neighbor
+#### Ubuntu
+	ip neighbor
+#### Arch Linux
+	ip neighbor
+#### macOS
+	arp
+#### OpenBSD
+	arp
+#### FreeBSD
+	arp
+#### SmartOS
+	arp
+
+### Sockets
+#### Windows Server
+	?
+#### Red Hat Enterprise Linux 7
+	ss -a
+#### Debian
+	ss -a
+#### Ubuntu
+	ss -a
+#### Arch Linux
+	ss -a
+#### macOS
+	netstat -a
+#### OpenBSD
+	netstat -a
+#### FreeBSD
+	netstat -a
+#### SmartOS
+	netstat -a
 
 ## Services
 
