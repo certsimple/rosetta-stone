@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+# Exit if any failures - see http://redsymbol.net/articles/unofficial-bash-strict-mode/
+set -euo pipefail
+IFS=$'\n\t'
+
+export NODE_ENV=production
+
+cd /var/www/rosetta-stone
+
+# removes all untracked files
+# Agressive - removes node_modules
+# git clean -df
+# Faster (keeps node_modules)
+git clean -d -x -f -e node_modules -e public/css
+
+# clears all unstaged changes
+git checkout -- .
+
+# Fetch new code and overwrite anything locally
+git fetch origin
+git reset --hard origin/master
+
+# Install any dependencies
+# Avoiding npm 5.0.0 to 5.4.1 due to https://github.com/npm/npm/issues/17927
+# Also the yawn 'workspaces' feature is used for 'packages' dir.
+yarn;
+
+# Build MD and CSS
+gulp markdown-to-json;
+gulp js;
+gulp sass;
+
+# Restart service
+sudo systemctl restart rosetta-stone;
+
+# Show logs
+sudo journalctl -n 60 -u rosetta-stone
