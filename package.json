@@ -1,6 +1,6 @@
 {
   "name": "rosetta-stone",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Convert command line tasks between common Operating Systems",
   "repository": "https://github.com/certsimple/rosetta-stone.git",
   "dependencies": {
