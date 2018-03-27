@@ -194,7 +194,7 @@ As above.
 ### EFI/BIOS serial numbers
 
 #### Windows Server
-	Get-WmiObject -Class Win32_BIOS
+	Get-CimInstance -Class Win32_BIOS
 [Technet](https://technet.microsoft.com/en-us/library/ee176860.aspx)
 #### Red Hat Enterprise Linux 7
 	dmidecode
@@ -219,7 +219,7 @@ As above.
 
 ### CPU info
 #### Windows Server
-	Get-WmiObject -Class Win32_Processor
+	Get-CimInstance -Class Win32_Processor
 [Technet](http://blogs.technet.com/b/heyscriptingguy/archive/2011/09/26/use-powershell-and-wmi-to-get-processor-information.aspx)
 #### Red Hat Enterprise Linux 7
 	less /proc/cpuinfo
@@ -243,7 +243,7 @@ As above.
 ### Physical memory
 
 #### Windows Server
-	Get-WmiObject -Class Win32_PhysicalMemory
+	Get-CimInstance -Class Win32_PhysicalMemory
 #### Red Hat Enterprise Linux 7
 	less /proc/meminfo
 #### Debian
