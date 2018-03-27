@@ -18,17 +18,17 @@ Inspired by the original, but sadly no longer maintained, Unix Rosetta Stone.
 
 [The Command Line Rosetta Stone](https://certsimple.com/rosetta-stone)
 
-## Contributing
+## If you can edit markdown, you can make changes
 
 **Simply edit `rosetta-stone.md` and send a pull request.**
 
 Please note:
 
- - Add **references to official documentation**, preferably from the distributor, since this will match the version distributed with the OS. If you can't find this, use a reference from the upstream Open Source project.
+ - Add **references to official documentation**, preferably from the **OS distributor**, since this will match the version distributed with the OS. If you can't find this, use a reference from the upstream Open Source project.
 
- - If there are two ways doing something, **add the one the distributor uses in their own documentation**
-
-Eg, it's possible to use 'sudo' on OpenBSD. But OpenBSD team prefer 'doas', so that's what we use.
+ - If there are two ways doing something, **add the one the distributor uses in their own documentation**. Eg, it's possible to use 'sudo' on OpenBSD. But OpenBSD team prefer 'doas', so that's what we use.
+ 
+ - Use current, maintained methods. For example, that means `ip` not `ifconfig` on Linux OSs, and [`Get-CimInstance`](https://blogs.msdn.microsoft.com/powershell/2012/08/24/introduction-to-cim-cmdlets/) not `Get-WmiObject` on Windows.
 
 ## Building
 
