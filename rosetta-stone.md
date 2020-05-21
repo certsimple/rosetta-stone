@@ -552,7 +552,13 @@ As above.
 #### FreeBSD
 	service [name] start
 #### SmartOS
+
 	svcadm enable [service name]
+
+If in maintenance:
+
+	svcadm clear [service name]
+
 [Reference](https://wiki.smartos.org/display/DOC/SmartOS+Technical+FAQs)
 
 ### Stop Service
