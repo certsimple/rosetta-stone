@@ -8,7 +8,7 @@
     "browserify": "^14.4.0",
     "jquery": "^3.2.1",
     "jsdom": "^11.2.0",
-    "marked": "^0.3.6",
+    "marked": "^4.0.10",
     "multiline": "^1.0.2",
     "node-sass": "^4.5.3",
     "ractive": "^0.9.3",
